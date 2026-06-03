@@ -1,8 +1,12 @@
 # Saturated-removal lifetime manifold — interactive viewer
 
 An interactive 3-D view of the lifetime **constraint surface** of the saturated-removal aging model,
-with fitted species placed in the dimensionless coordinates — removal $\rho_\beta$, production
-$\rho_\eta$, diffusion $\rho_\epsilon$.
+with fitted species placed in the dimensionless coordinates
+
+$$\rho_\beta = L\beta/X_c \ \text{(removal)}, \qquad \rho_\eta = L^2\eta/X_c \ \text{(production)}, \qquad \rho_\epsilon = L\epsilon/X_c^2 \ \text{(diffusion)},$$
+
+formed from the mean lifetime $L$, the lethal threshold $X_c$, the maximal removal rate $\beta$, the
+production-acceleration $\eta$ (production $=\eta t$), and the diffusion strength $\epsilon$.
 
 ## ▶ Open the viewer
 
