@@ -281,12 +281,42 @@ for cls in sorted(zims["class"].unique()):
     tax_hier[cls] = orders
 tax_hier_json = json.dumps(tax_hier)
 
-# ── Class checkboxes HTML ─────────────────────────────────────────────────────
-cls_cb_html = ""
-for cls in classes:
-    col = CLASS_COLOR[cls]; em = CLASS_EMOJI[cls]
-    cls_cb_html += (f'<label class="cb-row" style="border-left:3px solid {col};padding-left:5px;">'
-                    f'<input type="checkbox" class="cls-cb" value="{cls}"> {em} {cls}</label>\n')
+# ── Collapsible taxonomy tree HTML ───────────────────────────────────────────
+def _tcnt(zims, **kw):
+    m = zims
+    for col, val in kw.items():
+        m = m[m[col]==val]
+    return int(m["binSpecies"].nunique())
+
+def tree_li(path, label, count, color, children_html, leaf=False):
+    tog = (f'<span class="tt" onclick="ttTog(this)">&#9656;</span>'
+           if children_html else '<span class="tt-sp"></span>')
+    cb  = f'<input type="checkbox" class="tcb" data-path="{path}" onchange="tcbChange(this)">'
+    lbl = f'<span class="tlbl" style="color:{color};">{label}</span>'
+    cnt = f'<span class="tcnt">{count}</span>'
+    inner = (f'<ul class="tch">{children_html}</ul>' if children_html else "")
+    return f'<li>{tog}{cb}{lbl}{cnt}{inner}</li>'
+
+tree_html = ""
+for cls in sorted(tax_hier.keys()):
+    cc = CLASS_COLOR[cls]; em = CLASS_EMOJI[cls]
+    orders_html = ""
+    for ord_ in sorted(tax_hier[cls].keys()):
+        fams_html = ""
+        for fam in sorted(tax_hier[cls][ord_].keys()):
+            genera = tax_hier[cls][ord_][fam]
+            gens_html = ""
+            for gen in sorted(genera):
+                n = _tcnt(zims, **{"class":cls,"order":ord_,"family":fam,"genus":gen})
+                gens_html += tree_li(f"{cls}/{ord_}/{fam}/{gen}", gen, n, "#9ca3af", "")
+            n = _tcnt(zims, **{"class":cls,"order":ord_,"family":fam})
+            fams_html += tree_li(f"{cls}/{ord_}/{fam}", fam, n, "#d1d5db", gens_html)
+        n = _tcnt(zims, **{"class":cls,"order":ord_})
+        orders_html += tree_li(f"{cls}/{ord_}", ord_, n, "#e5e7eb", fams_html)
+    n = _tcnt(zims, **{"class":cls})
+    tree_html += tree_li(cls, f"{em} {cls}", n, cc, orders_html)
+
+tree_html = f'<ul class="taxon-tree">{tree_html}</ul>'
 
 # ── Naveh species checkboxes HTML ─────────────────────────────────────────────
 naveh_cb_html = ""
@@ -331,7 +361,7 @@ inject = f"""
 
 /* ── overlay views (2D, Phylo) ── */
 .sr-view{{
-  display:none;position:fixed;top:42px;left:0;right:270px;bottom:0;
+  display:none;position:fixed;top:42px;left:270px;right:0;bottom:0;
   z-index:9000;background:#111827;
 }}
 .sr-view.active{{display:flex;}}
@@ -341,13 +371,25 @@ inject = f"""
                background:#1f2937;border-top:1px solid #374151;
                font-family:Arial,sans-serif;}}
 
-/* ── filter panel ── */
+/* ── filter panel (left) ── */
 #sr-panel{{
-  position:fixed;top:42px;right:0;bottom:0;width:270px;z-index:9500;
-  background:#1f2937;border-left:1px solid #374151;
+  position:fixed;top:42px;left:0;bottom:0;width:270px;z-index:9500;
+  background:#1f2937;border-right:1px solid #374151;
   overflow-y:auto;padding:10px;font-size:12px;color:#e5e7eb;
   font-family:Arial,sans-serif;
 }}
+
+/* ── collapsible taxonomy tree ── */
+ul.taxon-tree,ul.tch{{list-style:none;margin:0;padding:0;}}
+ul.tch{{padding-left:14px;display:none;}}
+ul.taxon-tree>li{{margin-bottom:1px;}}
+ul.taxon-tree li{{line-height:1.6;}}
+.tt{{display:inline-block;width:14px;cursor:pointer;font-size:9px;
+     color:#6b7280;user-select:none;text-align:center;transition:transform .15s;}}
+.tt-sp{{display:inline-block;width:14px;}}
+.tcb{{margin:0 3px 0 0;cursor:pointer;flex-shrink:0;vertical-align:middle;}}
+.tlbl{{cursor:default;font-size:11px;vertical-align:middle;}}
+.tcnt{{font-size:9px;color:#4b5563;margin-left:3px;vertical-align:middle;}}
 .sec{{margin-bottom:2px;border-radius:6px;overflow:hidden;background:#111827;}}
 .sec-hdr{{
   display:flex;justify-content:space-between;align-items:center;
@@ -490,8 +532,14 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       🌍 ZIMS Zoo Animals <span class="arrow">▶</span>
     </div>
     <div class="sec-body">
-      <h5>Class</h5>
-      {cls_cb_html}
+      <h5>Taxon (check to show)</h5>
+      <div class="btn-row">
+        <button class="mini-btn" onclick="setAllTree(true)">Check all</button>
+        <button class="mini-btn" onclick="setAllTree(false)">Uncheck all</button>
+      </div>
+      <div style="max-height:260px;overflow-y:auto;border:1px solid #374151;border-radius:4px;padding:4px;background:#111827;">
+        {tree_html}
+      </div>
       <h5 style="margin-top:5px;">Sex</h5>
       <div class="row2">
         <label class="cb-row"><input type="checkbox" id="zims-f" checked onchange="applyFilter()"> ♀ Female</label>
@@ -508,20 +556,6 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       <h5 style="margin-top:5px;">Dot size <span class="rms-val" id="sz-disp">4</span></h5>
       <input type="range" id="sz-slider" min="1" max="12" value="4" step="1"
              oninput="document.getElementById('sz-disp').textContent=this.value;applyFilter()">
-      <h5 style="margin-top:5px;">Taxon filter</h5>
-      <select id="tax-cls" onchange="updateTaxonMenu('cls')">
-        <option value="">— All classes —</option>
-        {''.join(f'<option value="{c}">{CLASS_EMOJI[c]} {c}</option>' for c in classes)}
-      </select>
-      <select id="tax-ord" style="display:none" onchange="updateTaxonMenu('ord')">
-        <option value="">— All orders —</option>
-      </select>
-      <select id="tax-fam" style="display:none" onchange="updateTaxonMenu('fam')">
-        <option value="">— All families —</option>
-      </select>
-      <select id="tax-gen" style="display:none" onchange="updateTaxonMenu('gen')">
-        <option value="">— All genera —</option>
-      </select>
       <div class="note">
         ● ♀ circle &nbsp; ■ ♂ square<br>
         Median RMS: <span class="good">{zims['rms'].median():.4f}</span><br>
@@ -550,12 +584,30 @@ var sunburstTrace = {sunburst_json};
 var taxHier       = {tax_hier_json};
 var itpStart, zimsStart;
 var tab2done=false, tabPhyloDone=false;
-var taxonFilter   = null;
 
 // ── section collapse ──────────────────────────────────────────────────────────
 window.toggleSec = function(hdr) {{
   hdr.classList.toggle('open');
   hdr.nextElementSibling.classList.toggle('open');
+}};
+
+// ── taxonomy tree ──────────────────────────────────────────────────────────────
+window.ttTog = function(span) {{
+  var li = span.parentElement;
+  var ch = li.querySelector('ul.tch');
+  if (!ch) return;
+  var open = ch.style.display === 'block';
+  ch.style.display = open ? 'none' : 'block';
+  span.innerHTML = open ? '&#9656;' : '&#9662;';
+}};
+window.tcbChange = function(cb) {{
+  // cascade to all descendants within same <li>
+  cb.parentElement.querySelectorAll('.tcb').forEach(function(d){{ d.checked=cb.checked; }});
+  applyFilter();
+}};
+window.setAllTree = function(v) {{
+  document.querySelectorAll('.tcb').forEach(function(cb){{ cb.checked=v; }});
+  applyFilter();
 }};
 
 // ── tab switching ─────────────────────────────────────────────────────────────
@@ -622,15 +674,24 @@ function initPhylo() {{
   }},{{responsive:true}});
 }}
 
-// ── taxonomy filter (from sunburst click) ────────────────────────────────────
+// ── taxonomy filter (from sunburst click → drives tree checkboxes) ───────────
 window.filterByTaxon = function(id) {{
   var btn = document.getElementById('taxon-reset');
+  // Uncheck everything first
+  document.querySelectorAll('.tcb').forEach(function(cb){{ cb.checked=false; }});
   if (!id || id==='root') {{
-    taxonFilter = null;
     btn.style.display = 'none';
   }} else {{
-    var p = id.split('/');
-    taxonFilter = {{cls:p[0], ord:p[1]||null, fam:p[2]||null, gen:p[3]||null}};
+    // Check just this node + expand its ancestors
+    var cb = document.querySelector('.tcb[data-path="'+id+'"]');
+    if (cb) {{
+      cb.checked = true;
+      // Also cascade to descendants
+      cb.parentElement.querySelectorAll('.tcb').forEach(function(d){{ d.checked=true; }});
+      // Expand the panel section so the tree is visible
+      var sec = document.querySelector('#sr-panel .sec:last-child .sec-hdr');
+      if (sec && !sec.classList.contains('open')) toggleSec(sec);
+    }}
     btn.style.display = 'inline-block';
   }}
   applyFilter();
@@ -753,55 +814,6 @@ window.toggleAllItp = function() {{
   applyFilter();
 }};
 
-// ── Cascading taxon selector ─────────────────────────────────────────────────
-function populateSel(id, opts, show) {{
-  var sel = document.getElementById(id);
-  sel.style.display = show ? 'block' : 'none';
-  if (!show) {{ sel.value=''; return; }}
-  var cur = sel.value;
-  sel.innerHTML = opts.map(function(o){{
-    return '<option value="'+o+'"'+(o===cur?' selected':'')+'>'+o+'</option>';
-  }}).join('');
-}}
-window.updateTaxonMenu = function(level) {{
-  var cls = document.getElementById('tax-cls').value;
-  var ord = document.getElementById('tax-ord').value;
-  var fam = document.getElementById('tax-fam').value;
-  // populate orders
-  var ordOpts = ['— All orders —'];
-  if (cls && taxHier[cls]) ordOpts = ordOpts.concat(Object.keys(taxHier[cls]).sort());
-  populateSel('tax-ord', ordOpts, !!cls);
-  if (level==='cls') {{ ord=''; fam=''; }}
-  // populate families
-  var famOpts = ['— All families —'];
-  if (cls && ord && taxHier[cls]&&taxHier[cls][ord])
-    famOpts = famOpts.concat(Object.keys(taxHier[cls][ord]).sort());
-  populateSel('tax-fam', famOpts, !!(cls&&ord&&ord!=='— All orders —'));
-  if (level==='ord') {{ fam=''; }}
-  // populate genera
-  var genOpts = ['— All genera —'];
-  var famVal = document.getElementById('tax-fam').value;
-  if (cls && ord && famVal && taxHier[cls]&&taxHier[cls][ord]&&taxHier[cls][ord][famVal])
-    genOpts = genOpts.concat(taxHier[cls][ord][famVal].sort());
-  populateSel('tax-gen', genOpts, !!(cls&&ord&&famVal&&famVal!=='— All families —'));
-  // set taxonFilter
-  var ordVal = document.getElementById('tax-ord').value;
-  famVal = document.getElementById('tax-fam').value;
-  var genVal = document.getElementById('tax-gen').value;
-  var clsVal = cls||null;
-  ordVal = (ordVal && ordVal.indexOf('—')===-1) ? ordVal : null;
-  famVal = (famVal && famVal.indexOf('—')===-1) ? famVal : null;
-  genVal = (genVal && genVal.indexOf('—')===-1) ? genVal : null;
-  taxonFilter = clsVal ? {{cls:clsVal,ord:ordVal,fam:famVal,gen:genVal}} : null;
-  // auto-check the selected class
-  if (clsVal) {{
-    document.querySelectorAll('.cls-cb').forEach(function(cb){{
-      if (cb.value===clsVal) cb.checked=true;
-    }});
-  }}
-  applyFilter();
-}};
-
 // ── ITP + ZIMS filter ─────────────────────────────────────────────────────────
 function itpGroupsFor(val) {{
   if (val==='all') return null;
@@ -825,31 +837,45 @@ window.applyFilter = function() {{
   Plotly.restyle(DIVID, {{visible:itpVis}},
     itpTraces.map(function(_,i){{ return itpStart+i; }}));
 
-  // ZIMS
-  var showCls={{}};
-  document.querySelectorAll('.cls-cb').forEach(function(cb){{ showCls[cb.value]=cb.checked; }});
+  // ZIMS — tree-based taxon filter
+  var checkedSet = new Set();
+  document.querySelectorAll('.tcb:checked').forEach(function(cb){{
+    checkedSet.add(cb.dataset.path);
+  }});
+  var hasTreeFilter = checkedSet.size > 0;
+
   var zF  = document.getElementById('zims-f').checked;
   var zM  = document.getElementById('zims-m').checked;
   var zR  = document.getElementById('zims-rem').checked;
   var zP  = document.getElementById('zims-pro').checked;
   var rms = document.getElementById('rms-slider').value/1000;
   var rmsAll = rms >= 0.159;
-
   var dotSz = parseInt(document.getElementById('sz-slider').value)||4;
+
   var zVis=[], zSz=[], zIdx=[];
   zimsTraces.forEach(function(t,i){{
     var m=t.meta;
-    var clsOk = showCls[m.class] &&
-                (!taxonFilter || m.class===taxonFilter.cls);
-    zVis.push(clsOk &&
+    // trace-level visibility: show if class is checked OR any sub-path of this class is checked
+    var clsPrefix = m.class + '/';
+    var traceVisible = !hasTreeFilter;
+    if (!traceVisible) {{
+      checkedSet.forEach(function(p){{ if (p===m.class || p.indexOf(clsPrefix)===0) traceVisible=true; }});
+    }}
+    zVis.push(traceVisible &&
               ((m.sex==='f'&&zF)||(m.sex==='m'&&zM)) &&
               ((m.arm==='removal'&&zR)||(m.arm==='production'&&zP)));
     zSz.push(m.rms.map(function(r,j){{
-      var pass = (rmsAll||r<=rms);
-      if (taxonFilter) {{
-        if (taxonFilter.ord) pass = pass && m.order[j]===taxonFilter.ord;
-        if (taxonFilter.fam) pass = pass && m.family[j]===taxonFilter.fam;
-        if (taxonFilter.gen) pass = pass && m.genus[j]===taxonFilter.gen;
+      var pass = rmsAll||r<=rms;
+      if (hasTreeFilter && !checkedSet.has(m.class)) {{ pass=false; }}
+      else if (hasTreeFilter) {{
+        var ord=m.order[j], fam=m.family[j], gen=m.genus[j];
+        var cls=m.class;
+        pass = pass && (
+          checkedSet.has(cls) ||
+          checkedSet.has(cls+'/'+ord) ||
+          checkedSet.has(cls+'/'+ord+'/'+fam) ||
+          checkedSet.has(cls+'/'+ord+'/'+fam+'/'+gen)
+        );
       }}
       return pass ? dotSz : 0;
     }}));
@@ -859,7 +885,6 @@ window.applyFilter = function() {{
   Plotly.restyle(DIVID, {{'marker.size':zSz}}, zIdx);
 }};
 
-document.querySelectorAll('.cls-cb').forEach(function(cb){{ cb.addEventListener('change',applyFilter); }});
 document.getElementById('itp-grp').addEventListener('change', applyFilter);
 }})();
 </script>
