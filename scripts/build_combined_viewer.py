@@ -164,6 +164,7 @@ for cls in classes:
                 "legendgroup":f"zims_{cls}","showlegend":first,
                 "meta":{"class":cls,"sex":sex,"arm":arm,
                         "rms":sub["rms"].tolist(),"genus":sub["genus"].tolist(),
+                        "order":sub["order"].tolist(),"family":sub["family"].tolist(),
                         "kappa":sub["kappa"].tolist(),
                         "class_color":CLASS_COLOR[cls],"dataset":"zims"},
             })
@@ -220,6 +221,50 @@ for lv,label,color in [(0,"Same genus","#ff3366"),(1,"Same family","#ff8800"),
     phylo_traces.append({"type":"violin","name":label,"y":d[idx].tolist(),
                           "box":{"visible":True},"meanline":{"visible":True},
                           "fillcolor":color,"opacity":0.7,"line":{"color":color},"points":False})
+
+# ── Sunburst data ─────────────────────────────────────────────────────────────
+def hex_rgba(h, a):
+    r,g,b = int(h[1:3],16),int(h[3:5],16),int(h[5:7],16)
+    return f"rgba({r},{g},{b},{a})"
+
+sun_ids, sun_labels, sun_parents, sun_values, sun_colors = (
+    ["root"],["All species"],[""],
+    [int(zims["binSpecies"].nunique())],
+    ["#374151"],
+)
+for cls in sorted(zims["class"].unique()):
+    cc = CLASS_COLOR[cls]
+    sub_c = zims[zims["class"]==cls]
+    sun_ids.append(cls); sun_labels.append(cls); sun_parents.append("root")
+    sun_values.append(int(sub_c["binSpecies"].nunique())); sun_colors.append(hex_rgba(cc,0.90))
+    for ord_ in sorted(sub_c["order"].dropna().unique()):
+        if not ord_ or ord_ in ("Unknown",""):  continue
+        sub_o = sub_c[sub_c["order"]==ord_]
+        oid = f"{cls}/{ord_}"
+        sun_ids.append(oid); sun_labels.append(ord_); sun_parents.append(cls)
+        sun_values.append(int(sub_o["binSpecies"].nunique())); sun_colors.append(hex_rgba(cc,0.72))
+        for fam in sorted(sub_o["family"].dropna().unique()):
+            if not fam or fam in ("Unknown",""): continue
+            sub_f = sub_o[sub_o["family"]==fam]
+            fid = f"{cls}/{ord_}/{fam}"
+            sun_ids.append(fid); sun_labels.append(fam); sun_parents.append(oid)
+            sun_values.append(int(sub_f["binSpecies"].nunique())); sun_colors.append(hex_rgba(cc,0.55))
+            for gen in sorted(sub_f["genus"].dropna().unique()):
+                sub_g = sub_f[sub_f["genus"]==gen]
+                gid = f"{cls}/{ord_}/{fam}/{gen}"
+                sun_ids.append(gid); sun_labels.append(gen); sun_parents.append(fid)
+                sun_values.append(int(sub_g["binSpecies"].nunique())); sun_colors.append(hex_rgba(cc,0.40))
+
+sunburst_trace = {
+    "type":"sunburst",
+    "ids":sun_ids,"labels":sun_labels,"parents":sun_parents,"values":sun_values,
+    "branchvalues":"total","maxdepth":3,
+    "marker":{"colors":sun_colors,"line":{"color":"#1f2937","width":0.5}},
+    "hovertemplate":"<b>%{label}</b><br>%{value} species<extra></extra>",
+    "insidetextorientation":"radial",
+    "leaf":{"opacity":0.85},
+}
+sunburst_json = json.dumps(sunburst_trace)
 
 # ── Genus dropdown ────────────────────────────────────────────────────────────
 genus_opts = '<option value="">— All genera —</option>\n'
@@ -339,11 +384,26 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 </div>
 
 <!-- Phylo overlay -->
-<div id="sr-view-phylo" class="sr-view">
-  <div id="sr-plot-phylo"></div>
-  <div id="sr-phylo-cap">
-    Euclidean distance in log(ρ<sub>β</sub>,ρ<sub>η</sub>,ρ<sub>ε</sub>) vs taxonomic proximity (GBIF).
-    Violin = distribution · box = IQR · line = mean · ≤8 000 pairs sampled per level.
+<div id="sr-view-phylo" class="sr-view" style="flex-direction:row;">
+  <!-- sunburst panel -->
+  <div style="flex:3;display:flex;flex-direction:column;min-width:0;border-right:1px solid #374151;">
+    <div style="padding:5px 10px;background:#1f2937;display:flex;align-items:center;gap:8px;flex-shrink:0;">
+      <span style="color:#93c5fd;font-size:11px;font-family:Arial,sans-serif;">
+        Click node → filter 3D · click centre to go back</span>
+      <button id="taxon-reset" onclick="filterByTaxon('root')"
+              style="display:none;padding:2px 8px;background:#374151;border:1px solid #4b5563;
+                     border-radius:4px;color:#fbbf24;font-size:10px;cursor:pointer;flex-shrink:0;">
+        ✕ clear</button>
+    </div>
+    <div id="sr-plot-sunburst" style="flex:1;min-height:0;"></div>
+  </div>
+  <!-- violin panel -->
+  <div style="flex:2;display:flex;flex-direction:column;min-width:0;">
+    <div id="sr-plot-phylo" style="flex:1;min-height:0;"></div>
+    <div id="sr-phylo-cap">
+      Distance in log(ρ<sub>β</sub>,ρ<sub>η</sub>,ρ<sub>ε</sub>) vs taxonomic proximity.
+      Violin = distribution · box = IQR · line = mean · ≤8 000 pairs/level.
+    </div>
   </div>
 </div>
 
@@ -470,8 +530,10 @@ var phyloTr       = {phylo_traces_json};
 var catMap        = {itp_cat_map_json};
 var navehIdx      = {naveh_idx_json};
 var clsColor      = {class_color_json};
+var sunburstTrace = {sunburst_json};
 var itpStart, zimsStart;
 var tab2done=false, tabPhyloDone=false;
+var taxonFilter   = null;
 
 // ── section collapse ──────────────────────────────────────────────────────────
 window.toggleSec = function(hdr) {{
@@ -512,17 +574,42 @@ function init2D() {{
     {{responsive:true}});
 }}
 function initPhylo() {{
+  // Sunburst
+  Plotly.newPlot('sr-plot-sunburst', [sunburstTrace], {{
+    paper_bgcolor:'#111827',
+    font:{{color:'#e5e7eb',family:'Arial,sans-serif',size:11}},
+    margin:{{l:0,r:0,t:0,b:0}},
+  }}, {{responsive:true}});
+  document.getElementById('sr-plot-sunburst').on('plotly_click', function(d){{
+    if (!d.points || !d.points.length) return;
+    var id = d.points[0].id;
+    filterByTaxon(id);
+  }});
+  // Violin
   Plotly.newPlot('sr-plot-phylo', phyloTr, {{
     paper_bgcolor:'#111827',plot_bgcolor:'#1f2937',
     font:{{color:'#e5e7eb',family:'Arial,sans-serif'}},
-    yaxis:{{title:'Euclidean distance in log ρ-space',gridcolor:'#374151',color:'#9ca3af'}},
-    xaxis:{{color:'#9ca3af'}},
-    title:{{text:'Parameter-Space Distance vs Taxonomic Proximity',font:{{color:'#93c5fd',size:14}}}},
-    violinmode:'overlay',showlegend:true,
-    legend:{{bgcolor:'rgba(31,41,55,0.9)',bordercolor:'#4b5563',borderwidth:1,font:{{color:'#e5e7eb',size:11}}}},
-    margin:{{l:70,r:20,t:50,b:40}},
+    yaxis:{{title:'Distance in log ρ-space',gridcolor:'#374151',color:'#9ca3af'}},
+    xaxis:{{color:'#9ca3af',tickfont:{{size:9}}}},
+    title:{{text:'Distance vs Taxonomic Proximity',font:{{color:'#93c5fd',size:12}}}},
+    violinmode:'overlay',showlegend:false,
+    margin:{{l:55,r:10,t:40,b:60}},
   }},{{responsive:true}});
 }}
+
+// ── taxonomy filter (from sunburst click) ────────────────────────────────────
+window.filterByTaxon = function(id) {{
+  var btn = document.getElementById('taxon-reset');
+  if (!id || id==='root') {{
+    taxonFilter = null;
+    btn.style.display = 'none';
+  }} else {{
+    var p = id.split('/');
+    taxonFilter = {{cls:p[0], ord:p[1]||null, fam:p[2]||null, gen:p[3]||null}};
+    btn.style.display = 'inline-block';
+  }}
+  applyFilter();
+}};
 
 // ── inject ITP + ZIMS traces ──────────────────────────────────────────────────
 function tryAdd() {{
@@ -683,11 +770,19 @@ window.applyFilter = function() {{
   var zVis=[], zSz=[], zIdx=[];
   zimsTraces.forEach(function(t,i){{
     var m=t.meta;
-    zVis.push(showCls[m.class] &&
+    var clsOk = showCls[m.class] &&
+                (!taxonFilter || m.class===taxonFilter.cls);
+    zVis.push(clsOk &&
               ((m.sex==='f'&&zF)||(m.sex==='m'&&zM)) &&
               ((m.arm==='removal'&&zR)||(m.arm==='production'&&zP)));
     zSz.push(m.rms.map(function(r,j){{
-      return (rmsAll||r<=rms) && (!gen||m.genus[j]===gen) ? dotSz : 0;
+      var pass = (rmsAll||r<=rms) && (!gen||m.genus[j]===gen);
+      if (taxonFilter) {{
+        if (taxonFilter.ord) pass = pass && m.order[j]===taxonFilter.ord;
+        if (taxonFilter.fam) pass = pass && m.family[j]===taxonFilter.fam;
+        if (taxonFilter.gen) pass = pass && m.genus[j]===taxonFilter.gen;
+      }}
+      return pass ? dotSz : 0;
     }}));
     zIdx.push(zimsStart+i);
   }});
