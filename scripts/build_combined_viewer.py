@@ -375,27 +375,16 @@ inject = f"""
 }}
 #tip-bar .tsep{{color:#2d4a7a;margin:0 10px;}}
 
-/* ── notes bar (bottom of 3D view, covered by overlays) ── */
-#notes-bar{{
-  position:fixed;bottom:0;left:0;right:0;height:22px;z-index:8000;
-  background:#0d1a2e;border-top:1px solid #1e3a5f;
-  display:flex;align-items:center;padding:0 14px 0 284px;
-  font-size:10px;color:#4b6a96;font-family:Arial,sans-serif;
-  white-space:nowrap;overflow:hidden;gap:0;
-}}
-#notes-bar .tsep{{color:#1e3a5f;margin:0 10px;}}
-
 /* ── push main plot below tip bar; start invisible to hide load flash ── */
-#{DIV_ID}{{margin-top:74px !important;height:calc(100vh - 74px - 22px) !important;
+#{DIV_ID}{{margin-top:74px !important;height:calc(100vh - 74px) !important;
            opacity:0;transition:opacity .4s ease;}}
 
-/* ── overlay views (2D, Phylo) — start below tip bar, cover notes bar via z-index ── */
+/* ── overlay views (Phylo) — start below tip bar ── */
 .sr-view{{
   display:none;position:fixed;top:74px;left:270px;right:0;bottom:0;
   z-index:9000;background:#111827;
 }}
 .sr-view.active{{display:flex;}}
-#sr-plot-sL,#sr-plot-id{{flex:1;height:100%;}}
 #sr-plot-sunburst,#sr-plot-phylo{{flex:1;min-height:0;}}
 #sr-phylo-cap{{padding:7px 14px;font-size:10px;color:#6b7280;
                background:#1f2937;border-top:1px solid #374151;
@@ -481,7 +470,6 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 <!-- Tab bar -->
 <div id="sr-tabs">
   <button class="sr-tab active" onclick="srTab('3d')">3D Manifold</button>
-  <button class="sr-tab"        onclick="srTab('2d')">2D Analysis</button>
   <button class="sr-tab"        onclick="srTab('phylo')">Phylo Tree</button>
   <button class="help-btn"      onclick="openTutorial()">? Help</button>
 </div>
@@ -495,17 +483,6 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
   <span>🌳 <b style="color:#93c5fd;">Phylo Tree</b> tab: click a sunburst wedge to focus the manifold on any taxon</span>
   <span class="tsep">|</span>
   <span>Multi-taxon: check multiple branches in the panel tree</span>
-</div>
-
-<!-- Notes bar -->
-<div id="notes-bar">
-  <span>⚠ Manifold surface: κ=0</span>
-  <span class="tsep">·</span>
-  <span>Naveh species: κ=0.5</span>
-  <span class="tsep">·</span>
-  <span>ITP &amp; ZIMS fits: κ free, X<sub>c</sub>=1</span>
-  <span class="tsep">·</span>
-  <span>1,633 species×sex curves &nbsp;·&nbsp; 5 vertebrate classes &nbsp;·&nbsp; 830 species</span>
 </div>
 
 <!-- Tutorial modal -->
@@ -548,12 +525,6 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       <button id="tut-close" onclick="closeTutorial()">Got it!</button>
     </div>
   </div>
-</div>
-
-<!-- 2D overlay -->
-<div id="sr-view-2d" class="sr-view">
-  <div id="sr-plot-sL" style="flex:1;height:100%;border-right:1px solid #374151;"></div>
-  <div id="sr-plot-id" style="flex:1;height:100%;"></div>
 </div>
 
 <!-- Phylo overlay -->
@@ -616,6 +587,11 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       <label class="cb-row"><input type="checkbox" id="man-surface" checked onchange="applyManifold()"> Surface</label>
       <label class="cb-row"><input type="checkbox" id="man-ridge"   checked onchange="applyManifold()"> Ridge</label>
       <label class="cb-row"><input type="checkbox" id="man-omega"   checked onchange="applyManifold()"> ω labels</label>
+      <div class="note" style="margin-top:6px;padding-top:6px;border-top:1px solid #1e3a5f;">
+        <span style="color:#fbbf24;">⚠</span>
+        Surface: κ=0 &nbsp;·&nbsp; Naveh fits: κ=0.5<br>
+        ITP &amp; ZIMS: κ free, X<sub>c</sub>=1
+      </div>
     </div>
   </div>
 
@@ -702,8 +678,6 @@ var DIVID         = "{DIV_ID}";
 var gd            = document.getElementById(DIVID);
 var itpTraces     = {itp_traces_json};
 var zimsTraces    = {zims_traces_json};
-var tracesSL      = {traces_sL_json};
-var tracesId      = {traces_id_json};
 var phyloTr       = {phylo_traces_json};
 var catMap        = {itp_cat_map_json};
 var navehIdx      = {naveh_idx_json};
@@ -711,7 +685,7 @@ var clsColor      = {class_color_json};
 var sunburstTrace = {sunburst_json};
 var taxHier       = {tax_hier_json};
 var itpStart, zimsStart;
-var tab2done=false, tabPhyloDone=false;
+var tabPhyloDone=false;
 
 // ── tutorial modal ────────────────────────────────────────────────────────────
 window.openTutorial = function() {{
@@ -757,37 +731,14 @@ window.setAllTree = function(v) {{
 // ── tab switching ─────────────────────────────────────────────────────────────
 window.srTab = function(tab) {{
   document.querySelectorAll('.sr-tab').forEach(function(b,i){{
-    b.classList.toggle('active', ['3d','2d','phylo'][i]===tab);
+    b.classList.toggle('active', ['3d','phylo'][i]===tab);
   }});
-  ['2d','phylo'].forEach(function(t){{
-    document.getElementById('sr-view-'+t).classList.toggle('active', t===tab);
-  }});
-  if (tab==='2d'    && !tab2done)    {{ tab2done=true;
-    requestAnimationFrame(function(){{requestAnimationFrame(init2D);}}); }}
+  document.getElementById('sr-view-phylo').classList.toggle('active', tab==='phylo');
   if (tab==='phylo' && !tabPhyloDone){{ tabPhyloDone=true;
     requestAnimationFrame(function(){{requestAnimationFrame(initPhylo);}}); }}
   if (tab==='3d') Plotly.Plots.resize(DIVID);
 }};
 
-function darkLayout(title,xlab,ylab) {{
-  return {{
-    paper_bgcolor:'#111827',plot_bgcolor:'#1f2937',
-    font:{{color:'#e5e7eb',family:'Arial,sans-serif'}},
-    xaxis:{{title:xlab,gridcolor:'#374151',zerolinecolor:'#4b5563',color:'#9ca3af'}},
-    yaxis:{{title:ylab,gridcolor:'#374151',zerolinecolor:'#4b5563',color:'#9ca3af'}},
-    legend:{{bgcolor:'rgba(31,41,55,0.9)',bordercolor:'#4b5563',borderwidth:1,font:{{color:'#e5e7eb',size:11}}}},
-    title:{{text:title,font:{{color:'#93c5fd',size:14}}}},
-    margin:{{l:65,r:20,t:48,b:60}},
-  }};
-}}
-function init2D() {{
-  Plotly.newPlot('sr-plot-sL', tracesSL,
-    darkLayout('Sharpness s vs Mean Lifespan (ZIMS + ITP ★)','log₁₀ L (days)','log₁₀ s'),
-    {{responsive:true}});
-  Plotly.newPlot('sr-plot-id', tracesId,
-    darkLayout('Identifiable Parameter Space','log₁₀(β·Xc/ε)','log₁₀ s'),
-    {{responsive:true}});
-}}
 function initPhylo() {{
   // Set explicit heights so Plotly can measure the containers
   var avail = window.innerHeight - 74;
