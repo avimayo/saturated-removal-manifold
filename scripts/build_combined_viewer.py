@@ -866,10 +866,8 @@ window.applyFilter = function() {{
               ((m.arm==='removal'&&zR)||(m.arm==='production'&&zP)));
     zSz.push(m.rms.map(function(r,j){{
       var pass = rmsAll||r<=rms;
-      if (hasTreeFilter && !checkedSet.has(m.class)) {{ pass=false; }}
-      else if (hasTreeFilter) {{
-        var ord=m.order[j], fam=m.family[j], gen=m.genus[j];
-        var cls=m.class;
+      if (hasTreeFilter) {{
+        var cls=m.class, ord=m.order[j], fam=m.family[j], gen=m.genus[j];
         pass = pass && (
           checkedSet.has(cls) ||
           checkedSet.has(cls+'/'+ord) ||
