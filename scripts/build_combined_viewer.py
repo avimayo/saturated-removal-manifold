@@ -266,11 +266,20 @@ sunburst_trace = {
 }
 sunburst_json = json.dumps(sunburst_trace)
 
-# ── Genus dropdown ────────────────────────────────────────────────────────────
-genus_opts = '<option value="">— All genera —</option>\n'
-for g in sorted(zims.groupby("genus").size()[lambda x: x>=3].index):
-    sub = zims[zims["genus"]==g]
-    genus_opts += f'<option value="{g}">{CLASS_EMOJI.get(sub["class"].iloc[0],"")} {g} ({sub["binSpecies"].nunique()} spp.)</option>\n'
+# ── Taxonomy hierarchy for cascading dropdowns ───────────────────────────────
+tax_hier = {}
+for cls in sorted(zims["class"].unique()):
+    sub_c = zims[zims["class"]==cls]
+    orders = {}
+    for ord_ in sorted(sub_c.loc[~sub_c["order"].isin(["Unknown",""]), "order"].unique()):
+        sub_o = sub_c[sub_c["order"]==ord_]
+        families = {}
+        for fam in sorted(sub_o.loc[~sub_o["family"].isin(["Unknown",""]), "family"].unique()):
+            sub_f = sub_o[sub_o["family"]==fam]
+            families[fam] = sorted(sub_f["genus"].unique().tolist())
+        orders[ord_] = families
+    tax_hier[cls] = orders
+tax_hier_json = json.dumps(tax_hier)
 
 # ── Class checkboxes HTML ─────────────────────────────────────────────────────
 cls_cb_html = ""
@@ -499,8 +508,20 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       <h5 style="margin-top:5px;">Dot size <span class="rms-val" id="sz-disp">4</span></h5>
       <input type="range" id="sz-slider" min="1" max="12" value="4" step="1"
              oninput="document.getElementById('sz-disp').textContent=this.value;applyFilter()">
-      <h5 style="margin-top:5px;">Genus</h5>
-      <select id="genus-sel" onchange="applyFilter()">{genus_opts}</select>
+      <h5 style="margin-top:5px;">Taxon filter</h5>
+      <select id="tax-cls" onchange="updateTaxonMenu('cls')">
+        <option value="">— All classes —</option>
+        {''.join(f'<option value="{c}">{CLASS_EMOJI[c]} {c}</option>' for c in classes)}
+      </select>
+      <select id="tax-ord" style="display:none" onchange="updateTaxonMenu('ord')">
+        <option value="">— All orders —</option>
+      </select>
+      <select id="tax-fam" style="display:none" onchange="updateTaxonMenu('fam')">
+        <option value="">— All families —</option>
+      </select>
+      <select id="tax-gen" style="display:none" onchange="updateTaxonMenu('gen')">
+        <option value="">— All genera —</option>
+      </select>
       <div class="note">
         ● ♀ circle &nbsp; ■ ♂ square<br>
         Median RMS: <span class="good">{zims['rms'].median():.4f}</span><br>
@@ -526,6 +547,7 @@ var catMap        = {itp_cat_map_json};
 var navehIdx      = {naveh_idx_json};
 var clsColor      = {class_color_json};
 var sunburstTrace = {sunburst_json};
+var taxHier       = {tax_hier_json};
 var itpStart, zimsStart;
 var tab2done=false, tabPhyloDone=false;
 var taxonFilter   = null;
@@ -731,6 +753,55 @@ window.toggleAllItp = function() {{
   applyFilter();
 }};
 
+// ── Cascading taxon selector ─────────────────────────────────────────────────
+function populateSel(id, opts, show) {{
+  var sel = document.getElementById(id);
+  sel.style.display = show ? 'block' : 'none';
+  if (!show) {{ sel.value=''; return; }}
+  var cur = sel.value;
+  sel.innerHTML = opts.map(function(o){{
+    return '<option value="'+o+'"'+(o===cur?' selected':'')+'>'+o+'</option>';
+  }}).join('');
+}}
+window.updateTaxonMenu = function(level) {{
+  var cls = document.getElementById('tax-cls').value;
+  var ord = document.getElementById('tax-ord').value;
+  var fam = document.getElementById('tax-fam').value;
+  // populate orders
+  var ordOpts = ['— All orders —'];
+  if (cls && taxHier[cls]) ordOpts = ordOpts.concat(Object.keys(taxHier[cls]).sort());
+  populateSel('tax-ord', ordOpts, !!cls);
+  if (level==='cls') {{ ord=''; fam=''; }}
+  // populate families
+  var famOpts = ['— All families —'];
+  if (cls && ord && taxHier[cls]&&taxHier[cls][ord])
+    famOpts = famOpts.concat(Object.keys(taxHier[cls][ord]).sort());
+  populateSel('tax-fam', famOpts, !!(cls&&ord&&ord!=='— All orders —'));
+  if (level==='ord') {{ fam=''; }}
+  // populate genera
+  var genOpts = ['— All genera —'];
+  var famVal = document.getElementById('tax-fam').value;
+  if (cls && ord && famVal && taxHier[cls]&&taxHier[cls][ord]&&taxHier[cls][ord][famVal])
+    genOpts = genOpts.concat(taxHier[cls][ord][famVal].sort());
+  populateSel('tax-gen', genOpts, !!(cls&&ord&&famVal&&famVal!=='— All families —'));
+  // set taxonFilter
+  var ordVal = document.getElementById('tax-ord').value;
+  famVal = document.getElementById('tax-fam').value;
+  var genVal = document.getElementById('tax-gen').value;
+  var clsVal = cls||null;
+  ordVal = (ordVal && ordVal.indexOf('—')===-1) ? ordVal : null;
+  famVal = (famVal && famVal.indexOf('—')===-1) ? famVal : null;
+  genVal = (genVal && genVal.indexOf('—')===-1) ? genVal : null;
+  taxonFilter = clsVal ? {{cls:clsVal,ord:ordVal,fam:famVal,gen:genVal}} : null;
+  // auto-check the selected class
+  if (clsVal) {{
+    document.querySelectorAll('.cls-cb').forEach(function(cb){{
+      if (cb.value===clsVal) cb.checked=true;
+    }});
+  }}
+  applyFilter();
+}};
+
 // ── ITP + ZIMS filter ─────────────────────────────────────────────────────────
 function itpGroupsFor(val) {{
   if (val==='all') return null;
@@ -762,7 +833,6 @@ window.applyFilter = function() {{
   var zR  = document.getElementById('zims-rem').checked;
   var zP  = document.getElementById('zims-pro').checked;
   var rms = document.getElementById('rms-slider').value/1000;
-  var gen = document.getElementById('genus-sel').value;
   var rmsAll = rms >= 0.159;
 
   var dotSz = parseInt(document.getElementById('sz-slider').value)||4;
@@ -775,7 +845,7 @@ window.applyFilter = function() {{
               ((m.sex==='f'&&zF)||(m.sex==='m'&&zM)) &&
               ((m.arm==='removal'&&zR)||(m.arm==='production'&&zP)));
     zSz.push(m.rms.map(function(r,j){{
-      var pass = (rmsAll||r<=rms) && (!gen||m.genus[j]===gen);
+      var pass = (rmsAll||r<=rms);
       if (taxonFilter) {{
         if (taxonFilter.ord) pass = pass && m.order[j]===taxonFilter.ord;
         if (taxonFilter.fam) pass = pass && m.family[j]===taxonFilter.fam;
