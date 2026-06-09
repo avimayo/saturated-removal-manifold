@@ -89,7 +89,8 @@ for grp in sorted(itp["group"].unique()):
                         "width":1.5 if is_ctrl else 0},
             },
             "legendgroup":grp,"showlegend":True,
-            "meta":{"group":grp,"sex":sex,"dataset":"itp"},
+            "meta":{"group":grp,"sex":sex,"sex_color":color,
+                    "kappa":sub["kappa"].tolist(),"dataset":"itp"},
         })
 
 itp_opts  = '<option value="all">— All interventions —</option>\n'
@@ -158,7 +159,8 @@ for cls in classes:
                 "legendgroup":f"zims_{cls}","showlegend":first,
                 "meta":{"class":cls,"sex":sex,"arm":arm,
                         "rms":sub["rms"].tolist(),"genus":sub["genus"].tolist(),
-                        "dataset":"zims"},
+                        "kappa":sub["kappa"].tolist(),
+                        "class_color":CLASS_COLOR[cls],"dataset":"zims"},
             })
             first = False
 
@@ -251,10 +253,6 @@ class_color_json  = json.dumps(CLASS_COLOR)
 inject = f"""
 <style>
 *{{box-sizing:border-box;}}
-/* ── hide original index.html text content ── */
-body > h1, body > p, body > div.eq {{display:none !important;}}
-body {{max-width:100% !important;margin:0 !important;padding:0 !important;
-       background:#111827;overflow:hidden;}}
 /* ── tab bar ── */
 #sr-tabs{{
   position:fixed;top:0;left:0;right:0;height:42px;z-index:10000;
@@ -345,6 +343,23 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
 <!-- Unified filter panel -->
 <div id="sr-panel">
+
+  <!-- 0. Color mode -->
+  <div class="sec">
+    <div class="sec-hdr open" onclick="toggleSec(this)">
+      🎨 Color <span class="arrow">▶</span>
+    </div>
+    <div class="sec-body open">
+      <h5>Color points by</h5>
+      <select id="color-by" onchange="applyColorMode()">
+        <option value="class">Class / group</option>
+        <option value="kappa">κ (saturation)</option>
+      </select>
+      <div class="note" id="kappa-note" style="display:none;">
+        log<sub>10</sub> κ · applies to ITP &amp; ZIMS points
+      </div>
+    </div>
+  </div>
 
   <!-- 1. Manifold elements -->
   <div class="sec">
@@ -507,8 +522,17 @@ function tryAdd() {{
   Plotly.addTraces(DIVID, itpTraces).then(function() {{
     zimsStart = gd.data.length;
     Plotly.addTraces(DIVID, zimsTraces).then(function() {{
-      Plotly.relayout(DIVID, {{updatemenus: []}});
+      // extend show/hide buttons to cover all new traces
+      var allNew=[];
+      for (var i=itpStart; i<gd.data.length; i++) allNew.push(i);
+      var ext = navehIdx.concat(allNew);
+      Plotly.relayout(DIVID, {{
+        showlegend: false,
+        'updatemenus[0].buttons[0].args': [{{visible:true}},        ext],
+        'updatemenus[0].buttons[1].args': [{{visible:'legendonly'}}, ext],
+      }});
       applyFilter();
+      applyColorMode();
     }});
   }});
 }}
@@ -544,6 +568,64 @@ function applyNaveh() {{
 document.querySelectorAll('.naveh-cb').forEach(function(cb){{
   cb.addEventListener('change', applyNaveh);
 }});
+
+// ── κ color mode ─────────────────────────────────────────────────────────────
+var _kappaMin, _kappaMax;
+function kappaRange() {{
+  if (_kappaMin !== undefined) return;
+  var vals = [];
+  zimsTraces.forEach(function(t) {{
+    t.meta.kappa.forEach(function(k) {{ if (k>0) vals.push(Math.log10(k)); }});
+  }});
+  itpTraces.forEach(function(t) {{
+    (t.meta.kappa||[]).forEach(function(k) {{ if (k>0) vals.push(Math.log10(k)); }});
+  }});
+  _kappaMin = Math.min.apply(null,vals);
+  _kappaMax = Math.max.apply(null,vals);
+}}
+window.applyColorMode = function() {{
+  if (zimsStart===undefined) return;
+  var mode = document.getElementById('color-by').value;
+  document.getElementById('kappa-note').style.display = mode==='kappa' ? 'block':'none';
+  var nZ = zimsTraces.length, nI = itpTraces.length;
+  var zIdx = zimsTraces.map(function(_,i){{ return zimsStart+i; }});
+  var iIdx = itpTraces.map(function(_,i){{ return itpStart+i; }});
+  if (mode==='kappa') {{
+    kappaRange();
+    var zColors = zimsTraces.map(function(t){{ return t.meta.kappa.map(function(k){{ return k>0?Math.log10(k):_kappaMin; }}); }});
+    var iColors = itpTraces.map(function(t){{ return (t.meta.kappa||[]).map(function(k){{ return k>0?Math.log10(k):_kappaMin; }}); }});
+    var zShow = zimsTraces.map(function(_,i){{ return i===0; }});
+    var iShow = itpTraces.map(function(){{ return false; }});
+    Plotly.restyle(DIVID, {{
+      'marker.color': zColors,
+      'marker.colorscale': Array(nZ).fill('Plasma'),
+      'marker.cmin': Array(nZ).fill(_kappaMin),
+      'marker.cmax': Array(nZ).fill(_kappaMax),
+      'marker.showscale': zShow,
+      'marker.colorbar': [{{title:{{text:'log₁₀ κ'}},thickness:14,len:0.6,x:0.82,y:0.5,yanchor:'middle',bgcolor:'rgba(31,41,55,0.85)',outlinecolor:'#4b5563',tickfont:{{color:'#e5e7eb',size:10}},titlefont:{{color:'#93c5fd',size:11}}}}].concat(Array(nZ-1).fill(null)),
+    }}, zIdx);
+    Plotly.restyle(DIVID, {{
+      'marker.color': iColors,
+      'marker.colorscale': Array(nI).fill('Plasma'),
+      'marker.cmin': Array(nI).fill(_kappaMin),
+      'marker.cmax': Array(nI).fill(_kappaMax),
+      'marker.showscale': iShow,
+    }}, iIdx);
+  }} else {{
+    var zColors = zimsTraces.map(function(t){{ return t.meta.class_color; }});
+    var iColors = itpTraces.map(function(t){{ return t.meta.sex_color; }});
+    Plotly.restyle(DIVID, {{
+      'marker.color': zColors,
+      'marker.colorscale': Array(nZ).fill(null),
+      'marker.showscale': Array(nZ).fill(false),
+    }}, zIdx);
+    Plotly.restyle(DIVID, {{
+      'marker.color': iColors,
+      'marker.colorscale': Array(nI).fill(null),
+      'marker.showscale': Array(nI).fill(false),
+    }}, iIdx);
+  }}
+}};
 
 // ── ITP + ZIMS filter ─────────────────────────────────────────────────────────
 function itpGroupsFor(val) {{
