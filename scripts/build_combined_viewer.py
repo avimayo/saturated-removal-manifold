@@ -375,9 +375,18 @@ inject = f"""
 }}
 #tip-bar .tsep{{color:#2d4a7a;margin:0 10px;}}
 
-/* ── push main plot below tip bar; start invisible to hide load flash ── */
-#{DIV_ID}{{margin-top:74px !important;height:calc(100vh - 74px) !important;
+/* ── push main plot below tip bar; reserve bottom for κ note ── */
+#{DIV_ID}{{margin-top:74px !important;height:calc(100vh - 74px - 26px) !important;
            opacity:0;transition:opacity .4s ease;}}
+
+/* ── κ notes bar (below 3D manifold, right of panel) ── */
+#kappa-bar{{
+  position:fixed;bottom:0;left:270px;right:0;height:26px;z-index:8500;
+  background:#0f1e38;border-top:1px solid #1e3a5f;
+  display:flex;align-items:center;justify-content:center;gap:0;
+  font-size:10.5px;color:#4b6a96;font-family:Arial,sans-serif;
+}}
+#kappa-bar .tsep{{color:#1e3a5f;margin:0 10px;}}
 
 /* ── overlay views (Phylo) — start below tip bar ── */
 .sr-view{{
@@ -485,6 +494,17 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
   <span>Multi-taxon: check multiple branches in the panel tree</span>
 </div>
 
+<!-- κ notes bar — below the 3D manifold, above the bottom edge -->
+<div id="kappa-bar">
+  <span>⚠ Manifold surface: κ=0</span>
+  <span class="tsep">·</span>
+  <span>Naveh fits: κ=0.5</span>
+  <span class="tsep">·</span>
+  <span>ITP &amp; ZIMS: κ free, X<sub>c</sub>=1</span>
+  <span class="tsep">·</span>
+  <span>1,633 curves · 5 classes · 830 species</span>
+</div>
+
 <!-- Tutorial modal -->
 <div id="tut-overlay" onclick="if(event.target===this)closeTutorial()">
   <div id="tut-box">
@@ -587,11 +607,6 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       <label class="cb-row"><input type="checkbox" id="man-surface" checked onchange="applyManifold()"> Surface</label>
       <label class="cb-row"><input type="checkbox" id="man-ridge"   checked onchange="applyManifold()"> Ridge</label>
       <label class="cb-row"><input type="checkbox" id="man-omega"   checked onchange="applyManifold()"> ω labels</label>
-      <div class="note" style="margin-top:6px;padding-top:6px;border-top:1px solid #1e3a5f;">
-        <span style="color:#fbbf24;">⚠</span>
-        Surface: κ=0 &nbsp;·&nbsp; Naveh fits: κ=0.5<br>
-        ITP &amp; ZIMS: κ free, X<sub>c</sub>=1
-      </div>
     </div>
   </div>
 
@@ -811,6 +826,9 @@ function tryAdd() {{
       applyNaveh();
       applyFilter();
       applyColorMode();
+      // Push the Plotly title below the tip bar and force correct sizing
+      Plotly.relayout(DIVID, {{'margin.t': 80}});
+      Plotly.Plots.resize(DIVID);
       document.getElementById(DIVID).style.opacity = '1';
       // Hook into the original "show all / hide all data" Plotly updatemenu buttons
       gd.on('plotly_buttonclicked', function(e) {{
