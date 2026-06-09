@@ -365,13 +365,33 @@ inject = f"""
 .sr-tab:hover{{color:#e5e7eb;background:#374151;}}
 .sr-tab.active{{color:#60a5fa;background:#1f2937;}}
 
-/* ── push main plot below tab bar; start invisible to hide load flash ── */
-#{DIV_ID}{{margin-top:42px !important;height:calc(100vh - 42px) !important;
+/* ── tip bar (below tabs, always visible) ── */
+#tip-bar{{
+  position:fixed;top:42px;left:0;right:0;height:32px;z-index:9800;
+  background:#0f1e3a;border-bottom:1px solid #1e3a5f;
+  display:flex;align-items:center;padding:0 14px 0 284px;
+  font-size:10.5px;color:#7eb8f7;font-family:Arial,sans-serif;
+  white-space:nowrap;overflow:hidden;gap:0;
+}}
+#tip-bar .tsep{{color:#2d4a7a;margin:0 10px;}}
+
+/* ── notes bar (bottom of 3D view, covered by overlays) ── */
+#notes-bar{{
+  position:fixed;bottom:0;left:0;right:0;height:22px;z-index:8000;
+  background:#0d1a2e;border-top:1px solid #1e3a5f;
+  display:flex;align-items:center;padding:0 14px 0 284px;
+  font-size:10px;color:#4b6a96;font-family:Arial,sans-serif;
+  white-space:nowrap;overflow:hidden;gap:0;
+}}
+#notes-bar .tsep{{color:#1e3a5f;margin:0 10px;}}
+
+/* ── push main plot below tip bar; start invisible to hide load flash ── */
+#{DIV_ID}{{margin-top:74px !important;height:calc(100vh - 74px - 22px) !important;
            opacity:0;transition:opacity .4s ease;}}
 
-/* ── overlay views (2D, Phylo) ── */
+/* ── overlay views (2D, Phylo) — start below tip bar, cover notes bar via z-index ── */
 .sr-view{{
-  display:none;position:fixed;top:42px;left:270px;right:0;bottom:0;
+  display:none;position:fixed;top:74px;left:270px;right:0;bottom:0;
   z-index:9000;background:#111827;
 }}
 .sr-view.active{{display:flex;}}
@@ -383,11 +403,38 @@ inject = f"""
 
 /* ── filter panel (left) ── */
 #sr-panel{{
-  position:fixed;top:42px;left:0;bottom:0;width:270px;z-index:9500;
+  position:fixed;top:74px;left:0;bottom:22px;width:270px;z-index:9500;
   background:#1f2937;border-right:1px solid #374151;
   overflow-y:auto;padding:10px;font-size:12px;color:#e5e7eb;
   font-family:Arial,sans-serif;
 }}
+
+/* ── tutorial modal ── */
+#tut-overlay{{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);
+  z-index:99999;align-items:center;justify-content:center;
+}}
+#tut-box{{
+  background:#1f2937;border:1px solid #374151;border-radius:12px;
+  padding:26px 28px 20px;max-width:520px;width:92%;
+  font-family:Arial,sans-serif;
+}}
+#tut-box h3{{margin:0 0 14px;color:#93c5fd;font-size:16px;}}
+.tut-sec{{margin-bottom:14px;}}
+.tut-sec b{{color:#fbbf24;font-size:11px;display:block;margin-bottom:3px;}}
+.tut-sec p{{margin:0;font-size:11px;color:#d1d5db;line-height:1.7;}}
+#tut-footer{{display:flex;align-items:center;justify-content:space-between;
+             margin-top:18px;padding-top:14px;border-top:1px solid #374151;}}
+.tut-dismiss{{font-size:11px;color:#6b7280;cursor:pointer;display:flex;align-items:center;gap:5px;}}
+#tut-close{{padding:8px 22px;background:#2563eb;border:none;border-radius:6px;
+            color:white;font-size:13px;font-weight:600;cursor:pointer;}}
+#tut-close:hover{{background:#1d4ed8;}}
+.help-btn{{
+  margin-left:auto;padding:5px 10px;background:transparent;
+  border:1px solid #374151;border-radius:5px;color:#6b7280;
+  font-size:11px;cursor:pointer;font-family:Arial,sans-serif;
+}}
+.help-btn:hover{{color:#e5e7eb;border-color:#4b5563;background:#374151;}}
 
 /* ── collapsible taxonomy tree ── */
 ul.taxon-tree,ul.tch{{list-style:none;margin:0;padding:0;}}
@@ -436,6 +483,71 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
   <button class="sr-tab active" onclick="srTab('3d')">3D Manifold</button>
   <button class="sr-tab"        onclick="srTab('2d')">2D Analysis</button>
   <button class="sr-tab"        onclick="srTab('phylo')">Phylo Tree</button>
+  <button class="help-btn"      onclick="openTutorial()">? Help</button>
+</div>
+
+<!-- Tip bar -->
+<div id="tip-bar">
+  <span>🖱 Drag: rotate &nbsp;·&nbsp; scroll: zoom</span>
+  <span class="tsep">|</span>
+  <span>Left panel: check taxa, toggle data layers</span>
+  <span class="tsep">|</span>
+  <span>🌳 <b style="color:#93c5fd;">Phylo Tree</b> tab: click a sunburst wedge to focus the manifold on any taxon</span>
+  <span class="tsep">|</span>
+  <span>Multi-taxon: check multiple branches in the panel tree</span>
+</div>
+
+<!-- Notes bar -->
+<div id="notes-bar">
+  <span>⚠ Manifold surface: κ=0</span>
+  <span class="tsep">·</span>
+  <span>Naveh species: κ=0.5</span>
+  <span class="tsep">·</span>
+  <span>ITP &amp; ZIMS fits: κ free, X<sub>c</sub>=1</span>
+  <span class="tsep">·</span>
+  <span>1,633 species×sex curves &nbsp;·&nbsp; 5 vertebrate classes &nbsp;·&nbsp; 830 species</span>
+</div>
+
+<!-- Tutorial modal -->
+<div id="tut-overlay" onclick="if(event.target===this)closeTutorial()">
+  <div id="tut-box">
+    <h3>SR Manifold Viewer — Quick Start</h3>
+    <div class="tut-sec">
+      <b>Navigate the 3D scene</b>
+      <p>Drag to rotate &nbsp;·&nbsp; scroll to zoom &nbsp;·&nbsp; double-click to reset camera.<br>
+         Use <em>Show all / Hide all data</em> (top-right of plot) to toggle every data layer at once.</p>
+    </div>
+    <div class="tut-sec">
+      <b>Show / hide data layers</b>
+      <p>Left panel → <em>Manifold</em>: toggle the surface, ridge, and ω labels independently.<br>
+         <em>Other species</em> (Naveh fits) and <em>NIA ITP</em> (mouse interventions): use their section toggles.<br>
+         <em>ZIMS Zoo Animals</em>: check items in the taxon tree to show those species on the manifold.</p>
+    </div>
+    <div class="tut-sec">
+      <b>Filter zoo animals by taxonomy</b>
+      <p>Expand the tree in the ZIMS panel (▶ triangles open branches).<br>
+         Check a class, order, family, or genus to display only those species.<br>
+         Multiple checks = union — mix any taxa for a custom view.<br>
+         <em>Check all</em> shows every species; <em>Uncheck all</em> hides them all.</p>
+    </div>
+    <div class="tut-sec">
+      <b>Phylo Tree tab — one-click taxon focus</b>
+      <p>Switch to the <em>Phylo Tree</em> tab and click any wedge of the sunburst chart.<br>
+         That taxon is instantly checked in the left panel and the 3D manifold updates.<br>
+         Click the centre ring (or <em>✕ clear filter</em>) to go back to the full view.<br>
+         The violin chart (right) shows phylo-distance vs. proximity in SR parameter space.</p>
+    </div>
+    <div class="tut-sec">
+      <b>Color mode</b>
+      <p>Left panel → <em>Color</em>: switch between class/group coloring and κ (saturation) coloring for ITP &amp; ZIMS points.</p>
+    </div>
+    <div id="tut-footer">
+      <label class="tut-dismiss">
+        <input type="checkbox" id="tut-no-show"> Don't show again
+      </label>
+      <button id="tut-close" onclick="closeTutorial()">Got it!</button>
+    </div>
+  </div>
 </div>
 
 <!-- 2D overlay -->
@@ -575,10 +687,9 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
              oninput="document.getElementById('sz-disp').textContent=this.value;applyFilter()">
       <div class="note">
         ● ♀ circle &nbsp; ■ ♂ square<br>
-        Median RMS: <span class="good">{zims['rms'].median():.4f}</span><br>
+        Median RMS: <span class="good">{zims['rms'].median():.4f}</span> &nbsp;
         ndims=5: <span class="warn">{int((zims['ndims']==5).sum())}</span> &nbsp;
-        Poor fits: <span class="bad">{int((zims['rms']>0.10).sum())}</span><br>
-        <span style="color:#fbbf24;">⚠ Surface: κ=0 · Naveh fits: κ=0.5<br>ITP &amp; ZIMS: κ free, Xc=1</span>
+        Poor fits: <span class="bad">{int((zims['rms']>0.10).sum())}</span>
       </div>
     </div>
   </div>
@@ -601,6 +712,22 @@ var sunburstTrace = {sunburst_json};
 var taxHier       = {tax_hier_json};
 var itpStart, zimsStart;
 var tab2done=false, tabPhyloDone=false;
+
+// ── tutorial modal ────────────────────────────────────────────────────────────
+window.openTutorial = function() {{
+  document.getElementById('tut-overlay').style.display = 'flex';
+}};
+window.closeTutorial = function() {{
+  document.getElementById('tut-overlay').style.display = 'none';
+  if (document.getElementById('tut-no-show').checked) {{
+    try {{ localStorage.setItem('sr_tut_seen','1'); }} catch(e) {{}}
+  }}
+}};
+(function() {{
+  var seen = false;
+  try {{ seen = localStorage.getItem('sr_tut_seen')==='1'; }} catch(e) {{}}
+  if (!seen) openTutorial();
+}})();
 
 // ── section collapse ──────────────────────────────────────────────────────────
 window.toggleSec = function(hdr) {{
@@ -663,7 +790,7 @@ function init2D() {{
 }}
 function initPhylo() {{
   // Set explicit heights so Plotly can measure the containers
-  var avail = window.innerHeight - 42;
+  var avail = window.innerHeight - 74;
   var sbEl = document.getElementById('sr-plot-sunburst');
   var viEl = document.getElementById('sr-plot-phylo');
   sbEl.style.height = Math.round(avail * 0.97) + 'px';
