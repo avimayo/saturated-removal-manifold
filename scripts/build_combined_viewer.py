@@ -288,11 +288,11 @@ def _tcnt(zims, **kw):
         m = m[m[col]==val]
     return int(m["binSpecies"].nunique())
 
-def tree_li(path, label, count, color, children_html, leaf=False):
+def tree_li(path, label, count, color, children_html, weight="normal"):
     tog = (f'<span class="tt" onclick="ttTog(this)">&#9656;</span>'
            if children_html else '<span class="tt-sp"></span>')
     cb  = f'<input type="checkbox" class="tcb" data-path="{path}" onchange="tcbChange(this)">'
-    lbl = f'<span class="tlbl" style="color:{color};">{label}</span>'
+    lbl = (f'<span class="tlbl" style="color:{color};font-weight:{weight};">{label}</span>')
     cnt = f'<span class="tcnt">{count}</span>'
     inner = (f'<ul class="tch">{children_html}</ul>' if children_html else "")
     return f'<li>{tog}{cb}{lbl}{cnt}{inner}</li>'
@@ -308,13 +308,20 @@ for cls in sorted(tax_hier.keys()):
             gens_html = ""
             for gen in sorted(genera):
                 n = _tcnt(zims, **{"class":cls,"order":ord_,"family":fam,"genus":gen})
-                gens_html += tree_li(f"{cls}/{ord_}/{fam}/{gen}", gen, n, "#9ca3af", "")
+                gens_html += tree_li(
+                    f"{cls}/{ord_}/{fam}/{gen}",
+                    f"<i>{gen}</i>", n, "#d1d5db", "")
             n = _tcnt(zims, **{"class":cls,"order":ord_,"family":fam})
-            fams_html += tree_li(f"{cls}/{ord_}/{fam}", fam, n, "#d1d5db", gens_html)
+            fams_html += tree_li(
+                f"{cls}/{ord_}/{fam}",
+                f"{em}&thinsp;<i>{fam}</i>", n, "#e5e7eb", gens_html)
         n = _tcnt(zims, **{"class":cls,"order":ord_})
-        orders_html += tree_li(f"{cls}/{ord_}", ord_, n, "#e5e7eb", fams_html)
+        orders_html += tree_li(
+            f"{cls}/{ord_}",
+            f"{em} {ord_}", n, "#f3f4f6", fams_html, weight="600")
     n = _tcnt(zims, **{"class":cls})
-    tree_html += tree_li(cls, f"{em} {cls}", n, cc, orders_html)
+    tree_html += tree_li(
+        cls, f"{em} {cls}", n, cc, orders_html, weight="700")
 
 tree_html = f'<ul class="taxon-tree">{tree_html}</ul>'
 
@@ -389,7 +396,7 @@ ul.taxon-tree li{{line-height:1.6;}}
 .tt-sp{{display:inline-block;width:14px;}}
 .tcb{{margin:0 3px 0 0;cursor:pointer;flex-shrink:0;vertical-align:middle;}}
 .tlbl{{cursor:default;font-size:11px;vertical-align:middle;}}
-.tcnt{{font-size:9px;color:#4b5563;margin-left:3px;vertical-align:middle;}}
+.tcnt{{font-size:9px;color:#6b7280;margin-left:3px;vertical-align:middle;}}
 .sec{{margin-bottom:2px;border-radius:6px;overflow:hidden;background:#111827;}}
 .sec-hdr{{
   display:flex;justify-content:space-between;align-items:center;
