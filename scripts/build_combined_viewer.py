@@ -412,10 +412,10 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
   <!-- 0. Color mode -->
   <div class="sec">
-    <div class="sec-hdr open" onclick="toggleSec(this)">
+    <div class="sec-hdr" onclick="toggleSec(this)">
       🎨 Color <span class="arrow">▶</span>
     </div>
-    <div class="sec-body open">
+    <div class="sec-body">
       <h5>Color points by</h5>
       <select id="color-by" onchange="applyColorMode()">
         <option value="class">Class / group</option>
@@ -429,10 +429,10 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
   <!-- 1. Manifold elements -->
   <div class="sec">
-    <div class="sec-hdr open" onclick="toggleSec(this)">
+    <div class="sec-hdr" onclick="toggleSec(this)">
       🗺 Manifold <span class="arrow">▶</span>
     </div>
-    <div class="sec-body open">
+    <div class="sec-body">
       <label class="cb-row"><input type="checkbox" id="man-surface" checked onchange="applyManifold()"> Surface</label>
       <label class="cb-row"><input type="checkbox" id="man-ridge"   checked onchange="applyManifold()"> Ridge</label>
       <label class="cb-row"><input type="checkbox" id="man-omega"   checked onchange="applyManifold()"> ω labels</label>
@@ -441,10 +441,10 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
   <!-- 2. Naveh species -->
   <div class="sec">
-    <div class="sec-hdr open" onclick="toggleSec(this)">
+    <div class="sec-hdr" onclick="toggleSec(this)">
       🔬 Other species <span class="arrow">▶</span>
     </div>
-    <div class="sec-body open">
+    <div class="sec-body">
       <div class="btn-row">
         <button class="mini-btn" onclick="setNaveh(true)">Show all</button>
         <button class="mini-btn" onclick="setNaveh(false)">Hide all</button>
@@ -477,10 +477,10 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
   <!-- 4. ZIMS -->
   <div class="sec">
-    <div class="sec-hdr open" onclick="toggleSec(this)">
+    <div class="sec-hdr" onclick="toggleSec(this)">
       🌍 ZIMS Zoo Animals <span class="arrow">▶</span>
     </div>
-    <div class="sec-body open">
+    <div class="sec-body">
       <h5>Class</h5>
       {cls_cb_html}
       <h5 style="margin-top:5px;">Sex</h5>
