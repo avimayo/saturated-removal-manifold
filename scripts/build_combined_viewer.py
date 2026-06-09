@@ -326,7 +326,7 @@ inject = f"""
 }}
 .sr-view.active{{display:flex;}}
 #sr-plot-sL,#sr-plot-id{{flex:1;height:100%;}}
-#sr-plot-sunburst,#sr-plot-phylo{{flex:1;height:100%;}}
+#sr-plot-sunburst,#sr-plot-phylo{{flex:1;min-height:0;}}
 #sr-phylo-cap{{padding:7px 14px;font-size:10px;color:#6b7280;
                background:#1f2937;border-top:1px solid #374151;
                font-family:Arial,sans-serif;}}
@@ -505,7 +505,7 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
         Median RMS: <span class="good">{zims['rms'].median():.4f}</span><br>
         ndims=5: <span class="warn">{int((zims['ndims']==5).sum())}</span> &nbsp;
         Poor fits: <span class="bad">{int((zims['rms']>0.10).sum())}</span><br>
-        <span style="color:#fbbf24;">⚠ Surface: κ=0 · Naveh fits: κ=0<br>ITP &amp; ZIMS: κ free, Xc=1</span>
+        <span style="color:#fbbf24;">⚠ Surface: κ=0 · Naveh fits: κ=0.5<br>ITP &amp; ZIMS: κ free, Xc=1</span>
       </div>
     </div>
   </div>
@@ -543,8 +543,10 @@ window.srTab = function(tab) {{
   ['2d','phylo'].forEach(function(t){{
     document.getElementById('sr-view-'+t).classList.toggle('active', t===tab);
   }});
-  if (tab==='2d'    && !tab2done)    {{ tab2done=true;     setTimeout(init2D,    20); }}
-  if (tab==='phylo' && !tabPhyloDone){{ tabPhyloDone=true; setTimeout(initPhylo, 20); }}
+  if (tab==='2d'    && !tab2done)    {{ tab2done=true;
+    requestAnimationFrame(function(){{requestAnimationFrame(init2D);}}); }}
+  if (tab==='phylo' && !tabPhyloDone){{ tabPhyloDone=true;
+    requestAnimationFrame(function(){{requestAnimationFrame(initPhylo);}}); }}
   if (tab==='3d') Plotly.Plots.resize(DIVID);
 }};
 
@@ -568,6 +570,12 @@ function init2D() {{
     {{responsive:true}});
 }}
 function initPhylo() {{
+  // Set explicit heights so Plotly can measure the containers
+  var avail = window.innerHeight - 42;
+  var sbEl = document.getElementById('sr-plot-sunburst');
+  var viEl = document.getElementById('sr-plot-phylo');
+  sbEl.style.height = Math.round(avail * 0.97) + 'px';
+  viEl.style.height = Math.round(avail * 0.87) + 'px';
   // Sunburst
   Plotly.newPlot('sr-plot-sunburst', [sunburstTrace], {{
     paper_bgcolor:'#111827',
