@@ -277,13 +277,13 @@ cls_cb_html = ""
 for cls in classes:
     col = CLASS_COLOR[cls]; em = CLASS_EMOJI[cls]
     cls_cb_html += (f'<label class="cb-row" style="border-left:3px solid {col};padding-left:5px;">'
-                    f'<input type="checkbox" class="cls-cb" value="{cls}" checked> {em} {cls}</label>\n')
+                    f'<input type="checkbox" class="cls-cb" value="{cls}"> {em} {cls}</label>\n')
 
 # ── Naveh species checkboxes HTML ─────────────────────────────────────────────
 naveh_cb_html = ""
 for idx, name, em in NAVEH_SPECIES:
     naveh_cb_html += (f'<label class="cb-row">'
-                      f'<input type="checkbox" class="naveh-cb" value="{idx}" checked>'
+                      f'<input type="checkbox" class="naveh-cb" value="{idx}">'
                       f' {em} {name}</label>\n')
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -627,6 +627,7 @@ function tryAdd() {{
         'updatemenus[0].buttons[0].args': [{{visible:true}},        ext],
         'updatemenus[0].buttons[1].args': [{{visible:'legendonly'}}, ext],
       }});
+      applyNaveh();
       applyFilter();
       applyColorMode();
       document.getElementById(DIVID).style.opacity = '1';
