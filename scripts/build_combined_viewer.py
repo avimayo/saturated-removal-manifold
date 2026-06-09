@@ -325,9 +325,8 @@ inject = f"""
   z-index:9000;background:#111827;
 }}
 .sr-view.active{{display:flex;}}
-#sr-view-phylo{{flex-direction:column;}}
 #sr-plot-sL,#sr-plot-id{{flex:1;height:100%;}}
-#sr-plot-phylo{{flex:1;}}
+#sr-plot-sunburst,#sr-plot-phylo{{flex:1;height:100%;}}
 #sr-phylo-cap{{padding:7px 14px;font-size:10px;color:#6b7280;
                background:#1f2937;border-top:1px solid #374151;
                font-family:Arial,sans-serif;}}
@@ -544,8 +543,8 @@ window.srTab = function(tab) {{
   ['2d','phylo'].forEach(function(t){{
     document.getElementById('sr-view-'+t).classList.toggle('active', t===tab);
   }});
-  if (tab==='2d'    && !tab2done)    {{ init2D();     tab2done=true;     }}
-  if (tab==='phylo' && !tabPhyloDone){{ initPhylo();  tabPhyloDone=true; }}
+  if (tab==='2d'    && !tab2done)    {{ tab2done=true;     setTimeout(init2D,    20); }}
+  if (tab==='phylo' && !tabPhyloDone){{ tabPhyloDone=true; setTimeout(initPhylo, 20); }}
   if (tab==='3d') Plotly.Plots.resize(DIVID);
 }};
 
