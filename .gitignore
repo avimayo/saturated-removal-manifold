@@ -1,0 +1,15 @@
+# superseded overlay files
+itp_overlay.html
+all_overlay.html
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# large raw data
+*.zip
+drive-download-*/
