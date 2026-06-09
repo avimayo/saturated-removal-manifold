@@ -311,7 +311,8 @@ inject = f"""
 }}
 .sr-tab{{padding:8px 16px;cursor:pointer;background:transparent;border:none;
          color:#9ca3af;font-size:13px;font-weight:600;border-radius:6px;
-         transition:all .15s;font-family:Arial,sans-serif;}}
+         transition:all .15s;font-family:Arial,sans-serif;
+         flex-shrink:0;white-space:nowrap;}}
 .sr-tab:hover{{color:#e5e7eb;background:#374151;}}
 .sr-tab.active{{color:#60a5fa;background:#1f2937;}}
 
@@ -371,9 +372,9 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
 <!-- Tab bar -->
 <div id="sr-tabs">
-  <button class="sr-tab active" onclick="srTab('3d')">🌐 3D Manifold</button>
-  <button class="sr-tab"        onclick="srTab('2d')">📊 2D Analysis</button>
-  <button class="sr-tab"        onclick="srTab('phylo')">🌳 Phylo</button>
+  <button class="sr-tab active" onclick="srTab('3d')">3D Manifold</button>
+  <button class="sr-tab"        onclick="srTab('2d')">2D Analysis</button>
+  <button class="sr-tab"        onclick="srTab('phylo')">Phylo Tree</button>
 </div>
 
 <!-- 2D overlay -->
