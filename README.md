@@ -80,8 +80,9 @@ taxonomic proximity (same genus → family → order → class → cross-class).
 Same-genus species are closer in parameter space (median distance 0.94)
 than cross-class pairs (1.24), but the overlap between levels is large.
 
-> **Manifold caveat:** the surface was computed at κ = 0.5.
-> Both the ITP and ZIMS FP fits use κ free, so points need not lie exactly on the surface.
+> **Manifold caveat:** the surface was computed at κ = 0.
+> Naveh's original fits also use κ = 0. The ITP and ZIMS FP fits use κ free (X_c = 1),
+> so those points need not lie exactly on the surface.
 
 ## Reproducing the ZIMS fits
 

@@ -505,7 +505,7 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
         Median RMS: <span class="good">{zims['rms'].median():.4f}</span><br>
         ndims=5: <span class="warn">{int((zims['ndims']==5).sum())}</span> &nbsp;
         Poor fits: <span class="bad">{int((zims['rms']>0.10).sum())}</span><br>
-        <span style="color:#fbbf24;">⚠ Manifold surface = κ=0.5<br>ITP &amp; ZIMS fits: κ free</span>
+        <span style="color:#fbbf24;">⚠ Surface: κ=0 · Naveh fits: κ=0<br>ITP &amp; ZIMS: κ free, Xc=1</span>
       </div>
     </div>
   </div>
