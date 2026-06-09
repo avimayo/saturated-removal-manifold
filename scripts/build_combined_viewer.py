@@ -251,6 +251,10 @@ class_color_json  = json.dumps(CLASS_COLOR)
 inject = f"""
 <style>
 *{{box-sizing:border-box;}}
+/* ── hide original index.html text content ── */
+body > h1, body > p, body > div.eq {{display:none !important;}}
+body {{max-width:100% !important;margin:0 !important;padding:0 !important;
+       background:#111827;overflow:hidden;}}
 /* ── tab bar ── */
 #sr-tabs{{
   position:fixed;top:0;left:0;right:0;height:42px;z-index:10000;
@@ -503,14 +507,7 @@ function tryAdd() {{
   Plotly.addTraces(DIVID, itpTraces).then(function() {{
     zimsStart = gd.data.length;
     Plotly.addTraces(DIVID, zimsTraces).then(function() {{
-      // extend show/hide buttons to cover all new traces
-      var allNew=[];
-      for (var i=itpStart; i<gd.data.length; i++) allNew.push(i);
-      var ext = navehIdx.concat(allNew);
-      Plotly.relayout(DIVID, {{
-        'updatemenus[0].buttons[0].args': [{{visible:true}},        ext],
-        'updatemenus[0].buttons[1].args': [{{visible:'legendonly'}}, ext],
-      }});
+      Plotly.relayout(DIVID, {{updatemenus: []}});
       applyFilter();
     }});
   }});
