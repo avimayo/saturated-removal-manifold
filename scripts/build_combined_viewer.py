@@ -438,13 +438,20 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 <div id="sr-view-phylo" class="sr-view" style="flex-direction:row;">
   <!-- sunburst panel -->
   <div style="flex:3;display:flex;flex-direction:column;min-width:0;border-right:1px solid #374151;">
-    <div style="padding:5px 10px;background:#1f2937;display:flex;align-items:center;gap:8px;flex-shrink:0;">
-      <span style="color:#93c5fd;font-size:11px;font-family:Arial,sans-serif;">
-        Click node → filter 3D · click centre to go back</span>
-      <button id="taxon-reset" onclick="filterByTaxon('root')"
-              style="display:none;padding:2px 8px;background:#374151;border:1px solid #4b5563;
-                     border-radius:4px;color:#fbbf24;font-size:10px;cursor:pointer;flex-shrink:0;">
-        ✕ clear</button>
+    <div style="padding:6px 10px;background:#1f2937;flex-shrink:0;font-family:Arial,sans-serif;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="color:#93c5fd;font-size:11px;font-weight:600;">Phylogenetic sunburst</span>
+        <button id="taxon-reset" onclick="filterByTaxon('root')"
+                style="display:none;padding:2px 8px;background:#374151;border:1px solid #4b5563;
+                       border-radius:4px;color:#fbbf24;font-size:10px;cursor:pointer;flex-shrink:0;">
+          ✕ clear filter</button>
+      </div>
+      <div style="font-size:10px;color:#6b7280;line-height:1.7;margin-top:3px;">
+        <b style="color:#9ca3af;">How to use:</b>
+        Click a wedge to check that taxon in the left panel and filter the 3D manifold to those species.
+        Click the centre ring to clear. Scroll to zoom in/out. The filter also works independently
+        from the left panel tree — check multiple branches there for a custom multi-taxon view.
+      </div>
     </div>
     <div id="sr-plot-sunburst" style="flex:1;min-height:0;"></div>
   </div>
@@ -717,6 +724,22 @@ function tryAdd() {{
       applyFilter();
       applyColorMode();
       document.getElementById(DIVID).style.opacity = '1';
+      // Hook into the original "show all / hide all data" Plotly updatemenu buttons
+      gd.on('plotly_buttonclicked', function(e) {{
+        if (e.button && e.button.args && e.button.args[0] &&
+            e.button.args[0].visible === true) {{
+          // "Show all" button — reset our filters so everything is visible
+          requestAnimationFrame(function() {{
+            setAllTree(true);     // check all tree nodes → all ZIMS visible
+            setNaveh(true);       // show all Naveh species
+            if (!itpVisible) {{
+              itpVisible = true;
+              document.getElementById('itp-toggle').textContent = 'Hide all ITP';
+            }}
+            applyFilter();
+          }});
+        }}
+      }});
     }});
   }});
 }}
@@ -837,12 +860,11 @@ window.applyFilter = function() {{
   Plotly.restyle(DIVID, {{visible:itpVis}},
     itpTraces.map(function(_,i){{ return itpStart+i; }}));
 
-  // ZIMS — tree-based taxon filter
+  // ZIMS — tree-based filter.  Empty checkedSet = show nothing (empty default).
   var checkedSet = new Set();
   document.querySelectorAll('.tcb:checked').forEach(function(cb){{
     checkedSet.add(cb.dataset.path);
   }});
-  var hasTreeFilter = checkedSet.size > 0;
 
   var zF  = document.getElementById('zims-f').checked;
   var zM  = document.getElementById('zims-m').checked;
@@ -855,26 +877,20 @@ window.applyFilter = function() {{
   var zVis=[], zSz=[], zIdx=[];
   zimsTraces.forEach(function(t,i){{
     var m=t.meta;
-    // trace-level visibility: show if class is checked OR any sub-path of this class is checked
-    var clsPrefix = m.class + '/';
-    var traceVisible = !hasTreeFilter;
-    if (!traceVisible) {{
-      checkedSet.forEach(function(p){{ if (p===m.class || p.indexOf(clsPrefix)===0) traceVisible=true; }});
-    }}
-    zVis.push(traceVisible &&
+    var clsPrefix = m.class+'/';
+    var traceVis = false;
+    checkedSet.forEach(function(p){{ if (p===m.class || p.indexOf(clsPrefix)===0) traceVis=true; }});
+    zVis.push(traceVis &&
               ((m.sex==='f'&&zF)||(m.sex==='m'&&zM)) &&
               ((m.arm==='removal'&&zR)||(m.arm==='production'&&zP)));
     zSz.push(m.rms.map(function(r,j){{
-      var pass = rmsAll||r<=rms;
-      if (hasTreeFilter) {{
-        var cls=m.class, ord=m.order[j], fam=m.family[j], gen=m.genus[j];
-        pass = pass && (
-          checkedSet.has(cls) ||
-          checkedSet.has(cls+'/'+ord) ||
-          checkedSet.has(cls+'/'+ord+'/'+fam) ||
-          checkedSet.has(cls+'/'+ord+'/'+fam+'/'+gen)
-        );
-      }}
+      var cls=m.class, ord=m.order[j], fam=m.family[j], gen=m.genus[j];
+      var pass = (rmsAll||r<=rms) && (
+        checkedSet.has(cls) ||
+        checkedSet.has(cls+'/'+ord) ||
+        checkedSet.has(cls+'/'+ord+'/'+fam) ||
+        checkedSet.has(cls+'/'+ord+'/'+fam+'/'+gen)
+      );
       return pass ? dotSz : 0;
     }}));
     zIdx.push(zimsStart+i);
