@@ -71,7 +71,7 @@ for grp in sorted(itp["group"].unique()):
         color   = SEX_COLOR[sex]
         hover = [
             f"<b>{r['group']}</b> | {r['cohort']} | {'♀' if r['sex']=='f' else '♂'}<br>"
-            f"L={r['L']:.0f} d  s={r['s']:.2f}  rms={r['rms']:.3f}<br>"
+            f"L={r['L']:.0f} d  s={r['s']:.2f}  rms={r['rms']:.3f}  κ={r['kappa']:.4f}<br>"
             f"arm={r['arm']}<br>"
             f"ρ<sub>β</sub>={r['rho_beta']:.3f}  ρ<sub>η</sub>={r['rho_eta']:.3f}  ρ<sub>ε</sub>={r['rho_eps']:.3f}"
             for _,r in sub.iterrows()
@@ -108,13 +108,16 @@ itp_cat_map_json = json.dumps({cat: members for cat, members in ITP_CATEGORIES.i
 zims = pd.read_csv(ZIMS_CSV)
 try:
     tax = pd.read_csv(TAX_CSV)
-    zims = zims.merge(tax[["binSpecies","genus","family","order"]], on="binSpecies", how="left")
+    merge_cols = ["binSpecies","genus","family","order"] + (["common_name"] if "common_name" in tax.columns else [])
+    zims = zims.merge(tax[merge_cols], on="binSpecies", how="left")
     zims["genus"]  = zims["genus"].fillna(zims["binSpecies"].str.split().str[0])
     zims["family"] = zims["family"].fillna("Unknown")
     zims["order"]  = zims["order"].fillna("Unknown")
+    if "common_name" not in zims.columns: zims["common_name"] = ""
+    zims["common_name"] = zims["common_name"].fillna("")
 except:
     zims["genus"] = zims["binSpecies"].str.split().str[0]
-    zims["family"] = zims["order"] = "Unknown"
+    zims["family"] = zims["order"] = zims["common_name"] = "Unknown"
 
 zims["lx"] = np.log10(zims["rho_beta"].clip(lower=1e-6))
 zims["ly"] = np.log10(zims["rho_eta"].clip(lower=1e-6))
@@ -138,10 +141,12 @@ for cls in classes:
             sub = zims[(zims["class"]==cls)&(zims["sex"]==sex)&(zims["arm"]==arm)]
             if sub.empty: continue
             hover = [
-                f"<b>{r['binSpecies']}</b> ({'♀' if sex=='f' else '♂'})<br>"
+                f"<b>{r['binSpecies']}</b>"
+                + (f" ({r['common_name']})" if r.get('common_name') else "")
+                + f" ({'♀' if sex=='f' else '♂'})<br>"
                 f"{r['class']} · {r.get('order','?')} · {r.get('family','?')}<br>"
                 f"L={r['L']:.0f} d  rms={r['rms']:.4f}  arm={r['arm']}  ndims={int(r['ndims'])}<br>"
-                f"s={r['s']:.3f}  β·Xc/ε={r['beta_xc_eps']:.3f}<br>"
+                f"s={r['s']:.3f}  β·Xc/ε={r['beta_xc_eps']:.3f}  κ={r['kappa']:.4f}<br>"
                 f"n={int(r['n']):,}  n_dead={int(r['n_dead']):,}"
                 for _,r in sub.iterrows()
             ]
@@ -265,8 +270,9 @@ inject = f"""
 .sr-tab:hover{{color:#e5e7eb;background:#374151;}}
 .sr-tab.active{{color:#60a5fa;background:#1f2937;}}
 
-/* ── push main plot below tab bar ── */
-#{DIV_ID}{{margin-top:42px !important;height:calc(100vh - 42px) !important;}}
+/* ── push main plot below tab bar; start invisible to hide load flash ── */
+#{DIV_ID}{{margin-top:42px !important;height:calc(100vh - 42px) !important;
+           opacity:0;transition:opacity .4s ease;}}
 
 /* ── overlay views (2D, Phylo) ── */
 .sr-view{{
@@ -396,10 +402,13 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
 
   <!-- 3. ITP -->
   <div class="sec">
-    <div class="sec-hdr open" onclick="toggleSec(this)">
+    <div class="sec-hdr" onclick="toggleSec(this)">
       🐭 NIA ITP <span class="arrow">▶</span>
     </div>
-    <div class="sec-body open">
+    <div class="sec-body">
+      <button class="mini-btn" id="itp-toggle" onclick="toggleAllItp()"
+              style="width:100%;margin-bottom:6px;background:#1e3a5f;border-color:#2563eb;color:#93c5fd;">
+        Show all ITP</button>
       <h5>Intervention</h5>
       <select id="itp-grp" onchange="applyFilter()">{itp_opts}</select>
       <h5>Sex</h5>
@@ -533,6 +542,7 @@ function tryAdd() {{
       }});
       applyFilter();
       applyColorMode();
+      document.getElementById(DIVID).style.opacity = '1';
     }});
   }});
 }}
@@ -627,6 +637,14 @@ window.applyColorMode = function() {{
   }}
 }};
 
+// ── ITP show/hide toggle ─────────────────────────────────────────────────────
+var itpVisible = false;
+window.toggleAllItp = function() {{
+  itpVisible = !itpVisible;
+  document.getElementById('itp-toggle').textContent = itpVisible ? 'Hide all ITP' : 'Show all ITP';
+  applyFilter();
+}};
+
 // ── ITP + ZIMS filter ─────────────────────────────────────────────────────────
 function itpGroupsFor(val) {{
   if (val==='all') return null;
@@ -642,6 +660,7 @@ window.applyFilter = function() {{
   var itpF = document.getElementById('itp-f').checked;
   var itpM = document.getElementById('itp-m').checked;
   var itpVis = itpTraces.map(function(t) {{
+    if (!itpVisible) return false;
     var m=t.meta;
     return ((m.sex==='f'&&itpF)||(m.sex==='m'&&itpM)) &&
            (itpAllowed===null || itpAllowed.indexOf(m.group)!==-1);

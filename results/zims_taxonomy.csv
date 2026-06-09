@@ -1,831 +1,831 @@
-binSpecies,genus,family,order,confidence
-Vulpes zerda,Vulpes,Canidae,Carnivora,99
-Felis margarita,Felis,Felidae,Carnivora,99
-Radjah radjah,Radjah,Anatidae,Anseriformes,99
-Pseudois nayaur,Pseudois,Bovidae,Artiodactyla,99
-Dasyprocta azarae,Dasyprocta,Dasyproctidae,Rodentia,99
-Tragelaphus spekii,Tragelaphus,Bovidae,Artiodactyla,99
-Vulpes lagopus,Vulpes,Canidae,Carnivora,99
-Dyscophus antongilii,Dyscophus,Microhylidae,Anura,99
-Capra nubiana,Capra,Bovidae,Artiodactyla,99
-Anas erythrorhyncha,Anas,Anatidae,Anseriformes,99
-Acryllium vulturinum,Acryllium,Numididae,Galliformes,99
-Dendrolagus matschiei,Dendrolagus,Macropodidae,Diprotodontia,99
-Echinops telfairi,Echinops,Tenrecidae,Afrosoricida,99
-Catreus wallichii,Catreus,Phasianidae,Galliformes,99
-Crossoptilon crossoptilon,Crossoptilon,Phasianidae,Galliformes,99
-Osphranter robustus,Macropus,Macropodidae,Diprotodontia,98
-Galago senegalensis,Galago,Galagidae,Primates,99
-Egretta garzetta,Egretta,Ardeidae,Pelecaniformes,99
-Lemur catta,Lemur,Lemuridae,Primates,99
-Padda oryzivora,Lonchura,Estrildidae,Passeriformes,98
-Nestor notabilis,Nestor,Psittacidae,Psittaciformes,99
-Bambusicola thoracicus,Bambusicola,Phasianidae,Galliformes,99
-Anaxyrus baxteri,Anaxyrus,Bufonidae,Anura,99
-Himantopus himantopus,Himantopus,Recurvirostridae,Charadriiformes,99
-Guaruba guarouba,Guaruba,Psittacidae,Psittaciformes,99
-Elaphe taeniura,Elaphe,Colubridae,,99
-Canis rufus,Canis,Canidae,Carnivora,98
-Panthera leo,Panthera,Felidae,Carnivora,99
-Corallus caninus,Corallus,Boidae,,99
-Mergus squamatus,Mergus,Anatidae,Anseriformes,99
-Macaca nigra,Macaca,Cercopithecidae,Primates,99
-Streptopelia risoria,Streptopelia,Columbidae,Columbiformes,97
-Coracias cyanogaster,Coracias,Coraciidae,Coraciiformes,99
-Acrobates pygmaeus,Acrobates,Acrobatidae,Diprotodontia,99
-Rangifer tarandus,Rangifer,Cervidae,Artiodactyla,99
-Naemorhedus griseus,Naemorhedus,Bovidae,Artiodactyla,99
-Geokichla dohertyi,Geokichla,Turdidae,Passeriformes,99
-Chloebia gouldiae,Erythrura,Estrildidae,Passeriformes,98
-Spatula platalea,Spatula,Anatidae,Anseriformes,99
-Sapajus xanthosternos,Sapajus,Cebidae,Primates,99
-Ducula bicolor,Ducula,Columbidae,Columbiformes,99
-Ovis dalli,Ovis,Bovidae,Artiodactyla,99
-Ateles fusciceps,Ateles,Atelidae,Primates,99
-Suricata suricatta,Suricata,Herpestidae,Carnivora,98
-Capra caucasica,Capra,Bovidae,Artiodactyla,99
-Sapajus apella,Sapajus,Cebidae,Primates,99
-Grus antigone,Grus,Gruidae,Gruiformes,99
-Callosciurus prevostii,Callosciurus,Sciuridae,Rodentia,99
-Upupa epops,Upupa,Upupidae,Bucerotiformes,99
-Argusianus argus,Argusianus,Phasianidae,Galliformes,99
-Agapornis nigrigenis,Agapornis,Psittacidae,Psittaciformes,99
-Dolichotis salinicola,Dolichotis,Caviidae,Rodentia,99
-Gallus varius,Gallus,Phasianidae,Galliformes,99
-Morelia spilota,Morelia,Pythonidae,,99
-Coracias garrulus,Coracias,Coraciidae,Coraciiformes,99
-Lamprotornis superbus,Lamprotornis,Sturnidae,Passeriformes,99
-Pecari tajacu,Pecari,Tayassuidae,Artiodactyla,99
-Okapia johnstoni,Okapia,Giraffidae,Artiodactyla,99
-Sus cebifrons,Sus,Suidae,Artiodactyla,98
-Hydropotes inermis,Hydropotes,Cervidae,Artiodactyla,99
-Myiopsitta monachus,Myiopsitta,Psittacidae,Psittaciformes,99
-Petaurus norfolcensis,Petaurus,Petauridae,Diprotodontia,99
-Papio hamadryas,Papio,Cercopithecidae,Primates,99
-Equus kiang,Equus,Equidae,Perissodactyla,99
-Alces alces,Alces,Cervidae,Artiodactyla,99
-Crossoptilon auritum,Crossoptilon,Phasianidae,Galliformes,99
-Nycticorax nycticorax,Nycticorax,Ardeidae,Pelecaniformes,99
-Polytelis alexandrae,Polytelis,Psittacidae,Psittaciformes,99
-Cricetus cricetus,Cricetus,Cricetidae,Rodentia,99
-Notamacropus parma,Macropus,Macropodidae,Diprotodontia,98
-Phoeniculus purpureus,Phoeniculus,Phoeniculidae,Bucerotiformes,99
-Macaca silenus,Macaca,Cercopithecidae,Primates,99
-Tragelaphus scriptus,Tragelaphus,Bovidae,Artiodactyla,99
-Ovis vignei,Ovis,Bovidae,Artiodactyla,98
-Speothos venaticus,Speothos,Canidae,Carnivora,99
-Psittacula derbiana,Psittacula,Psittacidae,Psittaciformes,99
-Cebuella pygmaea,Cebuella,Callitrichidae,Primates,99
-Pteropus giganteus,Pteropus,Pteropodidae,Chiroptera,98
-Geococcyx californianus,Geococcyx,Cuculidae,Cuculiformes,99
-Furcifer pardalis,Furcifer,Chamaeleonidae,,99
-Equus grevyi,Equus,Equidae,Perissodactyla,99
-Aythya collaris,Aythya,Anatidae,Anseriformes,99
-Gazella cuvieri,Gazella,Bovidae,Artiodactyla,99
-Hippotragus equinus,Hippotragus,Bovidae,Artiodactyla,97
-Phalacrocorax carbo,Phalacrocorax,Phalacrocoracidae,Suliformes,99
-Theropithecus gelada,Theropithecus,Cercopithecidae,Primates,99
-Bison bison,Bison,Bovidae,Artiodactyla,99
-Bos frontalis,Bos,Bovidae,Artiodactyla,99
-Macaca fascicularis,Macaca,Cercopithecidae,Primates,99
-Odocoileus hemionus,Odocoileus,Cervidae,Artiodactyla,99
-Cynomys ludovicianus,Cynomys,Sciuridae,Rodentia,99
-Tragulus javanicus,Tragulus,Tragulidae,Artiodactyla,97
-Amazona leucocephala,Amazona,Psittacidae,Psittaciformes,99
-Callipepla gambelii,Callipepla,Odontophoridae,Galliformes,99
-Tursiops truncatus,Tursiops,Delphinidae,Cetacea,97
-Guttera pucherani,Guttera,Numididae,Galliformes,99
-Mareca strepera,Mareca,Anatidae,Anseriformes,99
-Aepyceros melampus,Aepyceros,Bovidae,Artiodactyla,99
-Anser anser,Anser,Anatidae,Anseriformes,99
-Plegadis falcinellus,Plegadis,Threskiornithidae,Pelecaniformes,99
-Hippotragus niger,Hippotragus,Bovidae,Artiodactyla,99
-Malayopython reticulatus,Malayopython,Pythonidae,,99
-Lophura leucomelanos,Lophura,Phasianidae,Galliformes,99
-Oryx leucoryx,Oryx,Bovidae,Artiodactyla,99
-Taeniopygia guttata,Taeniopygia,Estrildidae,Passeriformes,99
-Vanellus armatus,Vanellus,Charadriidae,Charadriiformes,99
-Rhinoptera bonasus,Rhinoptera,Myliobatidae,Myliobatiformes,99
-Nanger soemmerringii,Nanger,Bovidae,Artiodactyla,99
-Ciconia ciconia,Ciconia,Ciconiidae,Ciconiiformes,99
-Dacelo leachii,Dacelo,Alcedinidae,Coraciiformes,99
-Mungos mungo,Mungos,Herpestidae,Carnivora,99
-Ramphastos toco,Ramphastos,Ramphastidae,Piciformes,99
-Platycercus eximius,Platycercus,Psittacidae,Psittaciformes,99
-Pantherophis guttatus,Pantherophis,Colubridae,,99
-Anas luzonica,Anas,Anatidae,Anseriformes,99
-Vicugna vicugna,Vicugna,Camelidae,Artiodactyla,99
-Hystrix africaeaustralis,Hystrix,Hystricidae,Rodentia,99
-Branta leucopsis,Branta,Anatidae,Anseriformes,99
-Mustela putorius,Mustela,Mustelidae,Carnivora,99
-Cossypha niveicapilla,Cossypha,Muscicapidae,Passeriformes,99
-Corucia zebrata,Corucia,Scincidae,,99
-Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,99
-Perameles gunnii,Perameles,Peramelidae,Peramelemorphia,99
-Eulemur rufus,Eulemur,Lemuridae,Primates,99
-Tockus deckeni,Tockus,Bucerotidae,Bucerotiformes,99
-Vicugna pacos,Vicugna,Camelidae,Artiodactyla,99
-Gallus sonneratii,Gallus,Phasianidae,Galliformes,99
-Dolichotis patagonum,Dolichotis,Caviidae,Rodentia,99
-Neotragus moschatus,Neotragus,Bovidae,Artiodactyla,99
-Manouria emys,Manouria,Testudinidae,,99
-Amazonetta brasiliensis,Amazonetta,Anatidae,Anseriformes,99
-Pelecanus rufescens,Pelecanus,Pelecanidae,Pelecaniformes,99
-Oryx beisa,Oryx,Bovidae,Artiodactyla,99
-Crocuta crocuta,Crocuta,Hyaenidae,Carnivora,99
-Aythya valisineria,Aythya,Anatidae,Anseriformes,99
-Pan troglodytes,Pan,Hominidae,Primates,98
-Python regius,Python,Pythonidae,,99
-Tragopan temminckii,Tragopan,Phasianidae,Galliformes,99
-Lemniscomys barbarus,Lemniscomys,Muridae,Rodentia,99
-Deroptyus accipitrinus,Deroptyus,Psittacidae,Psittaciformes,99
-Cervus hanglu,Cervus,Cervidae,Artiodactyla,99
-Symphalangus syndactylus,Symphalangus,Hylobatidae,Primates,99
-Hemitragus jemlahicus,Hemitragus,Bovidae,Artiodactyla,99
-Lontra canadensis,Lontra,Mustelidae,Carnivora,99
-Hypotaenidia owstoni,Gallirallus,Rallidae,Gruiformes,98
-Spatula puna,Spatula,Anatidae,Anseriformes,99
-Dendrocygna bicolor,Dendrocygna,Anatidae,Anseriformes,99
-Mycteria ibis,Mycteria,Ciconiidae,Ciconiiformes,99
-Tragelaphus strepsiceros,Tragelaphus,Bovidae,Artiodactyla,99
-Afropavo congensis,Afropavo,Phasianidae,Galliformes,99
-Entomyzon cyanotis,Entomyzon,Meliphagidae,Passeriformes,99
-Crax rubra,Crax,Cracidae,Galliformes,99
-Erythrocebus patas,Erythrocebus,Cercopithecidae,Primates,99
-Wallabia bicolor,Wallabia,Macropodidae,Diprotodontia,99
-Callithrix jacchus,Callithrix,Callitrichidae,Primates,99
-Iguana iguana,Iguana,Iguanidae,,99
-Kobus leche,Kobus,Bovidae,Artiodactyla,99
-Guira guira,Guira,Cuculidae,Cuculiformes,99
-Pogonornis dubius,Lybius,Lybiidae,Piciformes,98
-Aythya marila,Aythya,Anatidae,Anseriformes,99
-Lamprotornis regius,Lamprotornis,Sturnidae,Passeriformes,99
-Tetrao urogallus,Tetrao,Phasianidae,Galliformes,99
-Muntiacus reevesi,Muntiacus,Cervidae,Artiodactyla,99
-Lycaon pictus,Lycaon,Canidae,Carnivora,99
-Chlamydosaurus kingii,Chlamydosaurus,Agamidae,,99
-Neophema splendida,Neophema,Psittacidae,Psittaciformes,99
-Boa constrictor,Boa,Boidae,,99
-Acrantophis madagascariensis,Acrantophis,Boidae,,99
-Elaphodus cephalophus,Elaphodus,Cervidae,Artiodactyla,99
-Ptilinopus superbus,Ptilinopus,Columbidae,Columbiformes,99
-Phloeomys pallidus,Phloeomys,Muridae,Rodentia,99
-Chaetophractus villosus,Chaetophractus,Dasypodidae,Cingulata,99
-Sicalis flaveola,Sicalis,Thraupidae,Passeriformes,99
-Tringa totanus,Tringa,Scolopacidae,Charadriiformes,99
-Trichoglossus moluccanus,Trichoglossus,Psittacidae,Psittaciformes,98
-Nymphicus hollandicus,Nymphicus,Psittacidae,Psittaciformes,99
-Otaria byronia,Otaria,Otariidae,Carnivora,99
-Artamus superciliosus,Artamus,Artamidae,Passeriformes,99
-Saguinus oedipus,Saguinus,Callitrichidae,Primates,99
-Ducula aenea,Ducula,Columbidae,Columbiformes,99
-Ara macao,Ara,Psittacidae,Psittaciformes,99
-Rucervus eldii,Rucervus,Cervidae,Artiodactyla,99
-Petrogale xanthopus,Petrogale,Macropodidae,Diprotodontia,99
-Anseranas semipalmata,Anseranas,Anseranatidae,Anseriformes,99
-Otolemur garnettii,Otolemur,Galagidae,Primates,99
-Sanzinia madagascariensis,Sanzinia,Boidae,,99
-Felis silvestris,Felis,Felidae,Carnivora,99
-Potos flavus,Potos,Procyonidae,Carnivora,99
-Fratercula cirrhata,Fratercula,Alcidae,Charadriiformes,99
-Cyanopica cyanus,Cyanopica,Corvidae,Passeriformes,99
-Budorcas taxicolor,Budorcas,Bovidae,Artiodactyla,99
-Notamacropus rufogriseus,Notamacropus,Macropodidae,Diprotodontia,99
-Ciconia nigra,Ciconia,Ciconiidae,Ciconiiformes,99
-Coracias caudatus,Coracias,Coraciidae,Coraciiformes,99
-Chrysolophus pictus,Chrysolophus,Phasianidae,Galliformes,99
-Dasyurus viverrinus,Dasyurus,Dasyuridae,Dasyuromorphia,99
-Elephantulus rufescens,Elephantulus,Macroscelididae,Macroscelidea,99
-Coturnix delegorguei,Coturnix,Phasianidae,Galliformes,99
-Procavia capensis,Procavia,Procaviidae,Hyracoidea,99
-Gazella dorcas,Gazella,Bovidae,Artiodactyla,99
-Diopsittaca nobilis,Diopsittaca,Psittacidae,Psittaciformes,99
-Bubalus bubalis,Bubalus,Bovidae,Artiodactyla,99
-Anas bernieri,Anas,Anatidae,Anseriformes,99
-Loriculus galgulus,Loriculus,Psittacidae,Psittaciformes,99
-Lampropeltis polyzona,Lampropeltis,Colubridae,,99
-Felis nigripes,Felis,Felidae,Carnivora,99
-Zapornia flavirostra,Amaurornis,Rallidae,Gruiformes,98
-Spheniscus magellanicus,Spheniscus,Spheniscidae,Sphenisciformes,99
-Trichoglossus haematodus,Trichoglossus,Psittacidae,Psittaciformes,99
-Bubo scandiacus,Bubo,Strigidae,Strigiformes,99
-Nasua narica,Nasua,Procyonidae,Carnivora,99
-Dromaius novaehollandiae,Dromaius,Dromaiidae,Casuariiformes,99
-Dama mesopotamica,Dama,Cervidae,Artiodactyla,98
-Notamacropus agilis,Macropus,Macropodidae,Diprotodontia,98
-Dinemellia dinemelli,Dinemellia,Ploceidae,Passeriformes,99
-Coscoroba coscoroba,Coscoroba,Anatidae,Anseriformes,99
-Tangara mexicana,Tangara,Thraupidae,Passeriformes,99
-Lepus timidus,Lepus,Leporidae,Lagomorpha,99
-Saguinus imperator,Saguinus,Callitrichidae,Primates,99
-Acinonyx jubatus,Acinonyx,Felidae,Carnivora,99
-Ailurus fulgens,Ailurus,Ailuridae,Carnivora,99
-Saguinus midas,Saguinus,Callitrichidae,Primates,99
-Polyplectron inopinatum,Polyplectron,Phasianidae,Galliformes,99
-Pseudomys australis,Pseudomys,Muridae,Rodentia,99
-Anas laysanensis,Anas,Anatidae,Anseriformes,99
-Cochlearius cochlearius,Cochlearius,Ardeidae,Pelecaniformes,99
-Sibirionetta formosa,Sibirionetta,Anatidae,Anseriformes,99
-Hypotaenidia philippensis,Gallirallus,Rallidae,Gruiformes,98
-Alopochen aegyptiaca,Alopochen,Anatidae,Anseriformes,99
-Callithrix geoffroyi,Callithrix,Callitrichidae,Primates,98
-Dendrobates tinctorius,Dendrobates,Dendrobatidae,Anura,97
-Axis axis,Axis,Cervidae,Artiodactyla,99
-Fratercula arctica,Fratercula,Alcidae,Charadriiformes,99
-Cariama cristata,Cariama,Cariamidae,Cariamiformes,99
-Camelus dromedarius,Camelus,Camelidae,Artiodactyla,99
-Bubulcus ibis,Bubulcus,Ardeidae,Pelecaniformes,99
-Eudromia elegans,Eudromia,Tinamidae,Tinamiformes,99
-Chelodina mccordi,Chelodina,Chelidae,,99
-Mandrillus sphinx,Mandrillus,Cercopithecidae,Primates,99
-Goura cristata,Goura,Columbidae,Columbiformes,99
-Gazella spekei,Gazella,Bovidae,Artiodactyla,99
-Anser caerulescens,Anser,Anatidae,Anseriformes,99
-Ptilinopus porphyreus,Ptilinopus,Columbidae,Columbiformes,99
-Python bivittatus,Python,Pythonidae,,99
-Netta rufina,Netta,Anatidae,Anseriformes,99
-Cephalophus silvicultor,Cephalophus,Bovidae,Artiodactyla,99
-Branta hutchinsii,Branta,Anatidae,Anseriformes,99
-Agapornis fischeri,Agapornis,Psittacidae,Psittaciformes,99
-Cygnus olor,Cygnus,Anatidae,Anseriformes,99
-Aythya ferina,Aythya,Anatidae,Anseriformes,99
-Galago moholi,Galago,Galagidae,Primates,99
-Branta sandvicensis,Branta,Anatidae,Anseriformes,99
-Otocolobus manul,Felis,Felidae,Carnivora,98
-Dasyuroides byrnei,Dasyuroides,Dasyuridae,Dasyuromorphia,99
-Pygoscelis adeliae,Pygoscelis,Spheniscidae,Sphenisciformes,99
-Antidorcas marsupialis,Antidorcas,Bovidae,Artiodactyla,99
-Ramphocelus carbo,Ramphocelus,Thraupidae,Passeriformes,99
-Phonipara canora,Phonipara,Thraupidae,Passeriformes,99
-Macroscelides proboscideus,Macroscelides,Macroscelididae,Macroscelidea,99
-Capreolus capreolus,Capreolus,Cervidae,Artiodactyla,99
-Tadorna tadornoides,Tadorna,Anatidae,Anseriformes,99
-Phoenicopterus ruber,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99
-Saimiri boliviensis,Saimiri,Cebidae,Primates,99
-Cereopsis novaehollandiae,Cereopsis,Anatidae,Anseriformes,99
-Ursus arctos,Ursus,Ursidae,Carnivora,99
-Cygnus melancoryphus,Cygnus,Anatidae,Anseriformes,99
-Pteropus rodricensis,Pteropus,Pteropodidae,Chiroptera,99
-Melopsittacus undulatus,Melopsittacus,Psittacidae,Psittaciformes,99
-Kobus ellipsiprymnus,Kobus,Bovidae,Artiodactyla,99
-Arctictis binturong,Arctictis,Viverridae,Carnivora,99
-Equus zebra,Equus,Equidae,Perissodactyla,99
-Pauxi pauxi,Pauxi,Cracidae,Galliformes,98
-Macropus fuliginosus,Macropus,Macropodidae,Diprotodontia,99
-Calidris pugnax,Calidris,Scolopacidae,Charadriiformes,99
-Ptilopsis leucotis,Ptilopsis,Strigidae,Strigiformes,99
-Bucorvus leadbeateri,Bucorvus,Bucorvidae,Bucerotiformes,99
-Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,99
-Leptailurus serval,Leptailurus,Felidae,Carnivora,99
-Dendrocygna guttata,Dendrocygna,Anatidae,Anseriformes,99
-Cercopithecus neglectus,Cercopithecus,Cercopithecidae,Primates,99
-Euplectes orix,Euplectes,Ploceidae,Passeriformes,99
-Otolemur crassicaudatus,Otolemur,Galagidae,Primates,99
-Boselaphus tragocamelus,Boselaphus,Bovidae,Artiodactyla,99
-Tupaia belangeri,Tupaia,Tupaiidae,Scandentia,99
-Papio anubis,Papio,Cercopithecidae,Primates,97
-Coendou prehensilis,Coendou,Erethizontidae,Rodentia,99
-Potorous tridactylus,Potorous,Potoroidae,Diprotodontia,99
-Equus africanus,Equus,Equidae,Perissodactyla,99
-Psephotellus dissimilis,Psephotellus,Psittaculidae,Psittaciformes,99
-Casuarius casuarius,Casuarius,Casuariidae,Casuariiformes,99
-Varecia rubra,Varecia,Lemuridae,Primates,99
-Scopus umbretta,Scopus,Scopidae,Pelecaniformes,99
-Pterorhinus courtoisi,Garrulax,Leiothrichidae,Passeriformes,98
-Podargus strigoides,Podargus,Podargidae,Caprimulgiformes,99
-Elephas maximus,Elephas,Elephantidae,Proboscidea,99
-Sminthopsis crassicaudata,Sminthopsis,Dasyuridae,Dasyuromorphia,99
-Anas crecca,Anas,Anatidae,Anseriformes,99
-Chrysocyon brachyurus,Chrysocyon,Canidae,Carnivora,99
-Leontopithecus chrysomelas,Leontopithecus,Callitrichidae,Primates,99
-Rhynchopsitta pachyrhyncha,Rhynchopsitta,Psittacidae,Psittaciformes,99
-Lama glama,Lama,Camelidae,Artiodactyla,99
-Grus canadensis,Grus,Gruidae,Gruiformes,99
-Bubo bubo,Bubo,Strigidae,Strigiformes,99
-Ocyphaps lophotes,Ocyphaps,Columbidae,Columbiformes,99
-Mareca penelope,Mareca,Anatidae,Anseriformes,99
-Mareca sibilatrix,Mareca,Anatidae,Anseriformes,99
-Panthera pardus,Panthera,Felidae,Carnivora,99
-Atelerix albiventris,Atelerix,Erinaceidae,Erinaceomorpha,99
-Phaps chalcoptera,Phaps,Columbidae,Columbiformes,99
-Tragopan satyra,Tragopan,Phasianidae,Galliformes,99
-Potamotrygon motoro,Potamotrygon,Potamotrygonidae,Myliobatiformes,99
-Anas castanea,Anas,Anatidae,Anseriformes,99
-Ara militaris,Ara,Psittacidae,Psittaciformes,99
-Dasyprocta leporina,Dasyprocta,Dasyproctidae,Rodentia,99
-Cyanoramphus novaezelandiae,Cyanoramphus,Psittacidae,Psittaciformes,99
-Branta canadensis,Branta,Anatidae,Anseriformes,99
-Bucorvus abyssinicus,Bucorvus,Bucorvidae,Bucerotiformes,99
-Chlorocebus aethiops,Chlorocebus,Cercopithecidae,Primates,99
-Grus japonensis,Grus,Gruidae,Gruiformes,99
-Procyon lotor,Procyon,Procyonidae,Carnivora,99
-Cebuella niveiventris,Cebuella,Callitrichidae,Primates,99
-Pituophis melanoleucus,Pituophis,Colubridae,,99
-Cynictis penicillata,Cynictis,Herpestidae,Carnivora,97
-Otocyon megalotis,Otocyon,Canidae,Carnivora,99
-Syrmaticus mikado,Syrmaticus,Phasianidae,Galliformes,99
-Tolypeutes matacus,Tolypeutes,Dasypodidae,Cingulata,99
-Numida meleagris,Numida,Numididae,Galliformes,99
-Falco peregrinus,Falco,Falconidae,Falconiformes,99
-Leopardus geoffroyi,Leopardus,Felidae,Carnivora,99
-Bothriechis schlegelii,Bothriechis,Viperidae,,99
-Asarcornis scutulata,Asarcornis,Anatidae,Anseriformes,99
-Psittacus erithacus,Psittacus,Psittacidae,Psittaciformes,99
-Halichoerus grypus,Halichoerus,Phocidae,Carnivora,99
-Callonetta leucophrys,Callonetta,Anatidae,Anseriformes,99
-Macrotis lagotis,Macrotis,Thylacomyidae,Peramelemorphia,99
-Gazella leptoceros,Gazella,Bovidae,Artiodactyla,99
-Otidiphaps nobilis,Otidiphaps,Columbidae,Columbiformes,99
-Acrantophis dumerili,Acrantophis,Boidae,,99
-Phelsuma standingi,Phelsuma,Gekkonidae,,99
-Anser erythropus,Anser,Anatidae,Anseriformes,99
-Bison bonasus,Bison,Bovidae,Artiodactyla,99
-Anas flavirostris,Anas,Anatidae,Anseriformes,97
-Antilocapra americana,Antilocapra,Antilocapridae,Artiodactyla,99
-Eudocimus ruber,Eudocimus,Threskiornithidae,Pelecaniformes,99
-Muntiacus muntjak,Muntiacus,Cervidae,Artiodactyla,99
-Herpailurus yagouaroundi,Puma,Felidae,Carnivora,98
-Paleosuchus palpebrosus,Paleosuchus,Alligatoridae,,99
-Spatula clypeata,Spatula,Anatidae,Anseriformes,99
-Chenonetta jubata,Chenonetta,Anatidae,Anseriformes,99
-Malacochersus tornieri,Malacochersus,Testudinidae,,99
-Pituophis ruthveni,Pituophis,Colubridae,,99
-Merops apiaster,Merops,Meropidae,Coraciiformes,99
-Canis lupus,Canis,Canidae,Carnivora,99
-Chalcophaps longirostris,Chalcophaps,Columbidae,Columbiformes,99
-Nanger granti,Nanger,Bovidae,Artiodactyla,99
-Ovis aries,Ovis,Bovidae,Artiodactyla,98
-Bucephala islandica,Bucephala,Anatidae,Anseriformes,99
-Hippopotamus amphibius,Hippopotamus,Hippopotamidae,Artiodactyla,99
-Artibeus jamaicensis,Artibeus,Phyllostomidae,Chiroptera,99
-Geotrygon versicolor,Geotrygon,Columbidae,Columbiformes,99
-Leontocebus fuscicollis,Leontocebus,Callitrichidae,Primates,99
-Dasyprocta punctata,Dasyprocta,Dasyproctidae,Rodentia,99
-Tyto alba,Tyto,Tytonidae,Strigiformes,99
-Anas sparsa,Anas,Anatidae,Anseriformes,99
-Panthera uncia,Uncia,Felidae,Carnivora,98
-Anas poecilorhyncha,Anas,Anatidae,Anseriformes,97
-Anas platyrhynchos,Anas,Anatidae,Anseriformes,99
-Uroplatus phantasticus,Uroplatus,Gekkonidae,,99
-Aspidoscelis uniparens,Aspidoscelis,Teiidae,,99
-Choloepus didactylus,Choloepus,Megalonychidae,Pilosa,99
-Anas undulata,Anas,Anatidae,Anseriformes,99
-Geronticus calvus,Geronticus,Threskiornithidae,Pelecaniformes,99
-Burhinus grallarius,Burhinus,Burhinidae,Charadriiformes,99
-Chelonoidis carbonarius,Chelonoidis,Testudinidae,,99
-Surnia ulula,Surnia,Strigidae,Strigiformes,99
-Crotalus adamanteus,Crotalus,Viperidae,,97
-Falco cherrug,Falco,Falconidae,Falconiformes,99
-Gulo gulo,Gulo,Mustelidae,Carnivora,99
-Cervus elaphus,Cervus,Cervidae,Artiodactyla,99
-Syncerus caffer,Syncerus,Bovidae,Artiodactyla,99
-Ursus thibetanus,Ursus,Ursidae,Carnivora,97
-Neophema pulchella,Neophema,Psittacidae,Psittaciformes,99
-Musophaga rossae,Musophaga,Musophagidae,Musophagiformes,99
-Gallicolumba crinigera,Gallicolumba,Columbidae,Columbiformes,97
-Cavia magna,Cavia,Caviidae,Rodentia,99
-Colinus virginianus,Colinus,Odontophoridae,Galliformes,99
-Thraupis episcopus,Thraupis,Thraupidae,Passeriformes,99
-Mustela nigripes,Mustela,Mustelidae,Carnivora,99
-Spatula cyanoptera,Spatula,Anatidae,Anseriformes,99
-Struthio camelus,Struthio,Struthionidae,Struthioniformes,99
-Capra aegagrus,Capra,Bovidae,Artiodactyla,98
-Phelsuma klemmeri,Phelsuma,Gekkonidae,,99
-Agapornis roseicollis,Agapornis,Psittacidae,Psittaciformes,98
-Erethizon dorsatum,Erethizon,Erethizontidae,Rodentia,96
-Eudyptes chrysolophus,Eudyptes,Spheniscidae,Sphenisciformes,99
-Speculanas specularis,Speculanas,Anatidae,Anseriformes,99
-Pudu puda,Pudu,Cervidae,Artiodactyla,99
-Meleagris gallopavo,Meleagris,Phasianidae,Galliformes,99
-Cervus albirostris,Przewalskium,Cervidae,Artiodactyla,98
-Chloephaga picta,Chloephaga,Anatidae,Anseriformes,99
-Litocranius walleri,Litocranius,Bovidae,Artiodactyla,99
-Ptilinopus pulchellus,Ptilinopus,Columbidae,Columbiformes,99
-Parabuteo unicinctus,Parabuteo,Accipitridae,Accipitriformes,99
-Lynx canadensis,Lynx,Felidae,Carnivora,99
-Anas acuta,Anas,Anatidae,Anseriformes,99
-Tauraco leucotis,Tauraco,Musophagidae,Musophagiformes,99
-Redunca fulvorufula,Redunca,Bovidae,Artiodactyla,99
-Elaphurus davidianus,Elaphurus,Cervidae,Artiodactyla,99
-Lynx rufus,Lynx,Felidae,Carnivora,99
-Eudyptes chrysocome,Eudyptes,Spheniscidae,Sphenisciformes,99
-Spinus cucullatus,Spinus,Fringillidae,Passeriformes,99
-Platalea ajaja,Platalea,Threskiornithidae,Pelecaniformes,99
-Ursus maritimus,Ursus,Ursidae,Carnivora,98
-Heloderma suspectum,Heloderma,Helodermatidae,,99
-Phoenicopterus roseus,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99
-Cavia porcellus,Cavia,Caviidae,Rodentia,99
-Spheniscus demersus,Spheniscus,Spheniscidae,Sphenisciformes,99
-Anser indicus,Anser,Anatidae,Anseriformes,99
-Sus scrofa,Sus,Suidae,Artiodactyla,99
-Somateria mollissima,Somateria,Anatidae,Anseriformes,99
-Macaca mulatta,Macaca,Cercopithecidae,Primates,99
-Rusa timorensis,Rusa,Cervidae,Artiodactyla,99
-Dama dama,Dama,Cervidae,Artiodactyla,99
-Prionailurus bengalensis,Prionailurus,Felidae,Carnivora,99
-Eclectus roratus,Eclectus,Psittacidae,Psittaciformes,99
-Equus hemionus,Equus,Equidae,Perissodactyla,99
-Colobus guereza,Colobus,Cercopithecidae,Primates,99
-Helogale parvula,Helogale,Herpestidae,Carnivora,99
-Macaca fuscata,Macaca,Cercopithecidae,Primates,99
-Chilabothrus subflavus,Chilabothrus,Boidae,,99
-Hypogeomys antimena,Hypogeomys,Nesomyidae,Rodentia,99
-Leucosarcia melanoleuca,Leucosarcia,Columbidae,Columbiformes,99
-Tragopan caboti,Tragopan,Phasianidae,Galliformes,99
-Tupaia glis,Tupaia,Tupaiidae,Scandentia,99
-Pavo cristatus,Pavo,Phasianidae,Galliformes,99
-Threskiornis aethiopicus,Threskiornis,Threskiornithidae,Pelecaniformes,99
-Strix nebulosa,Strix,Strigidae,Strigiformes,99
-Polytelis swainsonii,Polytelis,Psittacidae,Psittaciformes,99
-Leptodactylus fallax,Leptodactylus,Leptodactylidae,Anura,99
-Sauromalus ater,Sauromalus,Iguanidae,,99
-Notomys alexis,Notomys,Muridae,Rodentia,99
-Leopardus pardalis,Leopardus,Felidae,Carnivora,99
-Tragelaphus angasii,Tragelaphus,Bovidae,Artiodactyla,98
-Lama guanicoe,Lama,Camelidae,Artiodactyla,98
-Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,99
-Dendrobates auratus,Dendrobates,Dendrobatidae,Anura,99
-Mustela sibirica,Mustela,Mustelidae,Carnivora,99
-Lagonosticta senegala,Lagonosticta,Estrildidae,Passeriformes,99
-Cebus capucinus,Cebus,Cebidae,Primates,99
-Dendrocygna eytoni,Dendrocygna,Anatidae,Anseriformes,99
-Dendrocygna arborea,Dendrocygna,Anatidae,Anseriformes,99
-Hypanus americanus,Hypanus,Dasyatidae,Myliobatiformes,99
-Euphonia violacea,Euphonia,Fringillidae,Passeriformes,99
-Neochmia ruficauda,Neochmia,Estrildidae,Passeriformes,99
-Rucervus duvaucelii,Rucervus,Cervidae,Artiodactyla,99
-Aptenodytes patagonicus,Aptenodytes,Spheniscidae,Sphenisciformes,99
-Cervus nippon,Cervus,Cervidae,Artiodactyla,99
-Nasua nasua,Nasua,Procyonidae,Carnivora,99
-Eudyptula minor,Eudyptula,Spheniscidae,Sphenisciformes,99
-Anas bahamensis,Anas,Anatidae,Anseriformes,99
-Damaliscus pygargus,Damaliscus,Bovidae,Artiodactyla,99
-Cyanoliseus patagonus,Cyanoliseus,Psittacidae,Psittaciformes,99
-Colobus angolensis,Colobus,Cercopithecidae,Primates,99
-Tauraco erythrolophus,Tauraco,Musophagidae,Musophagiformes,99
-Tockus erythrorhynchus,Tockus,Bucerotidae,Bucerotiformes,99
-Pongo pygmaeus,Pongo,Hominidae,Primates,99
-Syrmaticus reevesii,Syrmaticus,Phasianidae,Galliformes,99
-Lathamus discolor,Lathamus,Psittacidae,Psittaciformes,98
-Equus quagga,Equus,Equidae,Perissodactyla,98
-Larosterna inca,Larosterna,Laridae,Charadriiformes,99
-Eulemur macaco,Eulemur,Lemuridae,Primates,99
-Polyplectron napoleonis,Polyplectron,Phasianidae,Galliformes,99
-Mephitis mephitis,Mephitis,Mephitidae,Carnivora,99
-Cardinalis cardinalis,Cardinalis,Cardinalidae,Passeriformes,99
-Eulemur coronatus,Eulemur,Lemuridae,Primates,99
-Mergellus albellus,Mergellus,Anatidae,Anseriformes,99
-Polyplectron bicalcaratum,Polyplectron,Phasianidae,Galliformes,99
-Osteolaemus tetraspis,Osteolaemus,Crocodylidae,,99
-Tremarctos ornatus,Tremarctos,Ursidae,Carnivora,99
-Streptopelia turtur,Streptopelia,Columbidae,Columbiformes,99
-Puma concolor,Puma,Felidae,Carnivora,99
-Capra falconeri,Capra,Bovidae,Artiodactyla,99
-Eulemur fulvus,Eulemur,Lemuridae,Primates,99
-Merops nubicus,Merops,Meropidae,Coraciiformes,99
-Balearica pavonina,Balearica,Gruidae,Gruiformes,99
-Desmodus rotundus,Desmodus,Phyllostomidae,Chiroptera,99
-Aythya affinis,Aythya,Anatidae,Anseriformes,99
-Tapirus indicus,Acrocodia,Tapiridae,Perissodactyla,98
-Ara ararauna,Ara,Psittacidae,Psittaciformes,99
-Eulemur albifrons,Eulemur,Lemuridae,Primates,99
-Saguinus geoffroyi,Saguinus,Callitrichidae,Primates,99
-Mico melanurus,Mico,Callitrichidae,Primates,99
-Netta peposaca,Netta,Anatidae,Anseriformes,99
-Macropus giganteus,Macropus,Macropodidae,Diprotodontia,99
-Leptoptilos crumenifer,Leptoptilos,Ciconiidae,Ciconiiformes,98
-Lophura diardi,Lophura,Phasianidae,Galliformes,99
-Cavia aperea,Cavia,Caviidae,Rodentia,99
-Cyclura cornuta,Cyclura,Iguanidae,,99
-Ramphocelus bresilius,Ramphocelus,Thraupidae,Passeriformes,96
-Tadorna ferruginea,Tadorna,Anatidae,Anseriformes,99
-Bos gaurus,Bos,Bovidae,Artiodactyla,98
-Phelsuma grandis,Phelsuma,Gekkonidae,,99
-Dendrocygna viduata,Dendrocygna,Anatidae,Anseriformes,99
-Lorius lory,Lorius,Psittacidae,Psittaciformes,99
-Hylobates lar,Hylobates,Hylobatidae,Primates,99
-Microcebus murinus,Microcebus,Cheirogaleidae,Primates,99
-Ploceus cucullatus,Ploceus,Ploceidae,Passeriformes,99
-Lophotibis cristata,Lophotibis,Threskiornithidae,Pelecaniformes,99
-Petrosaurus thalassinus,Petrosaurus,Phrynosomatidae,,99
-Anas georgica,Anas,Anatidae,Anseriformes,99
-Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,99
-Lophonetta specularioides,Lophonetta,Anatidae,Anseriformes,99
-Epicrates cenchria,Epicrates,Boidae,,99
-Rhea pennata,Rhea,Rheidae,Rheiformes,99
-Athene cunicularia,Athene,Strigidae,Strigiformes,99
-Hydrochoerus hydrochaeris,Hydrochoerus,Caviidae,Rodentia,99
-Addax nasomaculatus,Addax,Bovidae,Artiodactyla,99
-Oxyura vittata,Oxyura,Anatidae,Anseriformes,99
-Canis aureus,Canis,Canidae,Carnivora,99
-Oena capensis,Oena,Columbidae,Columbiformes,99
-Cuniculus paca,Cuniculus,Cuniculidae,Rodentia,99
-Lampropeltis abnorma,Lampropeltis,Colubridae,,99
-Tragelaphus imberbis,Tragelaphus,Bovidae,Artiodactyla,99
-Tamandua tetradactyla,Tamandua,Myrmecophagidae,Pilosa,99
-Chauna torquata,Chauna,Anhimidae,Anseriformes,99
-Ambystoma mexicanum,Ambystoma,Ambystomatidae,Caudata,99
-Neochen jubata,Neochen,Anatidae,Anseriformes,99
-Aix galericulata,Aix,Anatidae,Anseriformes,99
-Grus vipio,Grus,Gruidae,Gruiformes,99
-Callipepla californica,Callipepla,Odontophoridae,Galliformes,99
-Psephotus haematonotus,Psephotus,Psittacidae,Psittaciformes,99
-Varecia variegata,Varecia,Lemuridae,Primates,99
-Polihierax semitorquatus,Polihierax,Falconidae,Falconiformes,99
-Giraffa camelopardalis,Giraffa,Giraffidae,Artiodactyla,99
-Clemmys guttata,Clemmys,Emydidae,,99
-Eunectes murinus,Eunectes,Boidae,,99
-Geronticus eremita,Geronticus,Threskiornithidae,Pelecaniformes,99
-Melursus ursinus,Melursus,Ursidae,Carnivora,99
-Gonyosoma oxycephalum,Gonyosoma,Colubridae,,99
-Cygnus atratus,Cygnus,Anatidae,Anseriformes,99
-Nettapus auritus,Nettapus,Anatidae,Anseriformes,99
-Aythya americana,Aythya,Anatidae,Anseriformes,99
-Burhinus oedicnemus,Burhinus,Burhinidae,Charadriiformes,99
-Pavo muticus,Pavo,Phasianidae,Galliformes,99
-Ateles geoffroyi,Ateles,Atelidae,Primates,99
-Mus musculus,Mus,Muridae,Rodentia,99
-Philantomba monticola,Philantomba,Bovidae,Artiodactyla,99
-Connochaetes taurinus,Connochaetes,Bovidae,Artiodactyla,99
-Trioceros jacksonii,Trioceros,Chamaeleonidae,,99
-Rousettus aegyptiacus,Rousettus,Pteropodidae,Chiroptera,99
-Colius striatus,Colius,Coliidae,Coliiformes,99
-Callithrix penicillata,Callithrix,Callitrichidae,Primates,99
-Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,99
-Tadorna tadorna,Tadorna,Anatidae,Anseriformes,99
-Semnopithecus entellus,Semnopithecus,Cercopithecidae,Primates,99
-Coturnix chinensis,Synoicus,Phasianidae,Galliformes,98
-Bucephala clangula,Bucephala,Anatidae,Anseriformes,99
-Gyps fulvus,Gyps,Accipitridae,Accipitriformes,99
-Arvicola amphibius,Arvicola,Cricetidae,Rodentia,99
-Madoqua kirkii,Madoqua,Bovidae,Artiodactyla,99
-Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,99
-Anas melleri,Anas,Anatidae,Anseriformes,99
-Stigmochelys pardalis,Stigmochelys,Testudinidae,,99
-Saguinus labiatus,Saguinus,Callitrichidae,Primates,99
-Aix sponsa,Aix,Anatidae,Anseriformes,99
-Macaca nemestrina,Macaca,Cercopithecidae,Primates,99
-Bos grunniens,Bos,Bovidae,Artiodactyla,99
-Anser rossii,Anser,Anatidae,Anseriformes,99
-Cervus canadensis,Cervus,Cervidae,Artiodactyla,98
-Rattus norvegicus,Rattus,Muridae,Rodentia,99
-Otus scops,Otus,Strigidae,Strigiformes,99
-Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,97
-Vulpes corsac,Vulpes,Canidae,Carnivora,99
-Pongo abelii,Pongo,Hominidae,Primates,99
-Phacochoerus africanus,Phacochoerus,Suidae,Artiodactyla,99
-Aythya novaeseelandiae,Aythya,Anatidae,Anseriformes,99
-Ploceus castaneiceps,Ploceus,Ploceidae,Passeriformes,99
-Cygnus buccinator,Cygnus,Anatidae,Anseriformes,99
-Falco biarmicus,Falco,Falconidae,Falconiformes,99
-Pulsatrix perspicillata,Pulsatrix,Strigidae,Strigiformes,99
-Mandrillus leucophaeus,Mandrillus,Cercopithecidae,Primates,99
-Rollulus rouloul,Rollulus,Phasianidae,Galliformes,99
-Threskiornis spinicollis,Threskiornis,Threskiornithidae,Pelecaniformes,99
-Myocastor coypus,Myocastor,Myocastoridae,Rodentia,99
-Pitta sordida,Pitta,Pittidae,Passeriformes,99
-Oxyura leucocephala,Oxyura,Anatidae,Anseriformes,99
-Pteroglossus viridis,Pteroglossus,Ramphastidae,Piciformes,99
-Chalcophaps indica,Chalcophaps,Columbidae,Columbiformes,99
-Liocichla omeiensis,Liocichla,Leiothrichidae,Passeriformes,99
-Basiliscus plumifrons,Basiliscus,Corytophanidae,,99
-Leontopithecus rosalia,Leontopithecus,Callitrichidae,Primates,99
-Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,99
-Ursus americanus,Ursus,Ursidae,Carnivora,99
-Kerodon rupestris,Kerodon,Caviidae,Rodentia,99
-Cacatua moluccensis,Cacatua,Psittacidae,Psittaciformes,99
-Vulpes velox,Vulpes,Canidae,Carnivora,99
-Micromys minutus,Micromys,Muridae,Rodentia,99
-Potamochoerus porcus,Potamochoerus,Suidae,Artiodactyla,99
-Lamprotornis iris,Lamprotornis,Sturnidae,Passeriformes,99
-Zalophus californianus,Zalophus,Otariidae,Carnivora,99
-Agapornis canus,Agapornis,Psittacidae,Psittaciformes,99
-Sarkidiornis melanotos,Sarkidiornis,Anatidae,Anseriformes,99
-Testudo kleinmanni,Testudo,Testudinidae,,99
-Tadorna cana,Tadorna,Anatidae,Anseriformes,99
-Meriones unguiculatus,Meriones,Muridae,Rodentia,99
-Garrulax leucolophus,Garrulax,Leiothrichidae,Passeriformes,99
-Trichoglossus forsteni,Trichoglossus,Psittacidae,Psittaciformes,99
-Dendrocygna arcuata,Dendrocygna,Anatidae,Anseriformes,99
-Strix uralensis,Strix,Strigidae,Strigiformes,99
-Pycnonotus jocosus,Pycnonotus,Pycnonotidae,Passeriformes,99
-Gazella subgutturosa,Gazella,Bovidae,Artiodactyla,99
-Geopelia cuneata,Geopelia,Columbidae,Columbiformes,99
-Cuon alpinus,Cuon,Canidae,Carnivora,99
-Goura victoria,Goura,Columbidae,Columbiformes,99
-Copsychus saularis,Copsychus,Muscicapidae,Passeriformes,99
-Lyrurus tetrix,Lyrurus,Phasianidae,Galliformes,99
-Rhinoceros unicornis,Rhinoceros,Rhinocerotidae,Perissodactyla,99
-Trachyphonus erythrocephalus,Trachyphonus,Lybiidae,Piciformes,99
-Lutra lutra,Lutra,Mustelidae,Carnivora,99
-Equus asinus,Equus,Equidae,Perissodactyla,99
-Alcelaphus buselaphus,Alcelaphus,Bovidae,Artiodactyla,99
-Saiga tatarica,Saiga,Bovidae,Artiodactyla,99
-Eudocimus albus,Eudocimus,Threskiornithidae,Pelecaniformes,99
-Anser canagicus,Anser,Anatidae,Anseriformes,99
-Eurypyga helias,Eurypyga,Eurypygidae,Eurypygiformes,99
-Dendrocygna autumnalis,Dendrocygna,Anatidae,Anseriformes,99
-Zenaida graysoni,Zenaida,Columbidae,Columbiformes,99
-Peltophryne lemur,Peltophryne,Bufonidae,Anura,99
-Shinisaurus crocodilurus,Shinisaurus,Shinisauridae,,99
-Thamnophis sirtalis,Thamnophis,Colubridae,,99
-Alouatta caraya,Alouatta,Atelidae,Primates,99
-Sceloporus serrifer,Sceloporus,Phrynosomatidae,,99
-Diceros bicornis,Diceros,Rhinocerotidae,Perissodactyla,99
-Athene noctua,Athene,Strigidae,Strigiformes,99
-Ammotragus lervia,Ammotragus,Bovidae,Artiodactyla,99
-Oxyura jamaicensis,Oxyura,Anatidae,Anseriformes,99
-Columba livia,Columba,Columbidae,Columbiformes,99
-Eunectes notaeus,Eunectes,Boidae,,99
-Ptilinopus regina,Ptilinopus,Columbidae,Columbiformes,99
-Anthropoides paradiseus,Anthropoides,Gruidae,Gruiformes,99
-Ptilinopus melanospilus,Ptilinopus,Columbidae,Columbiformes,99
-Balearica regulorum,Balearica,Gruidae,Gruiformes,99
-Leporillus conditor,Leporillus,Muridae,Rodentia,98
-Stictonetta naevosa,Stictonetta,Anatidae,Anseriformes,99
-Crotalus durissus,Crotalus,Viperidae,,97
-Equus caballus,Equus,Equidae,Perissodactyla,99
-Burhinus capensis,Burhinus,Burhinidae,Charadriiformes,99
-Python molurus,Python,Pythonidae,,99
-Rhea americana,Rhea,Rheidae,Rheiformes,99
-Varanus komodoensis,Varanus,Varanidae,,99
-Panurus biarmicus,Panurus,Panuridae,Passeriformes,99
-Eublepharis macularius,Eublepharis,Eublepharidae,,99
-Caloenas nicobarica,Caloenas,Columbidae,Columbiformes,99
-Ara rubrogenys,Ara,Psittacidae,Psittaciformes,99
-Carollia perspicillata,Carollia,Phyllostomidae,Chiroptera,99
-Psitteuteles goldiei,Psitteuteles,Psittacidae,Psittaciformes,99
-Dacelo novaeguineae,Dacelo,Alcedinidae,Coraciiformes,99
-Pantherophis obsoletus,Pantherophis,Colubridae,,99
-Rusa unicolor,Rusa,Cervidae,Artiodactyla,99
-Mesocricetus auratus,Mesocricetus,Cricetidae,Rodentia,99
-Hystrix indica,Hystrix,Hystricidae,Rodentia,99
-Capra hircus,Capra,Bovidae,Artiodactyla,99
-Oryx gazella,Oryx,Bovidae,Artiodactyla,99
-Serinus canaria,Serinus,Fringillidae,Passeriformes,99
-Acomys cahirinus,Acomys,Muridae,Rodentia,97
-Lygodactylus williamsi,Lygodactylus,Gekkonidae,,99
-Syrmaticus ellioti,Syrmaticus,Phasianidae,Galliformes,99
-Camelus bactrianus,Camelus,Camelidae,Artiodactyla,99
-Tamiops swinhoei,Tamiops,Sciuridae,Rodentia,99
-Alligator mississippiensis,Alligator,Alligatoridae,,99
-Hystrix cristata,Hystrix,Hystricidae,Rodentia,99
-Mergus merganser,Mergus,Anatidae,Anseriformes,99
-Leiothrix lutea,Leiothrix,Leiothrichidae,Passeriformes,99
-Momotus momota,Momotus,Momotidae,Coraciiformes,99
-Callimico goeldii,Callimico,Callitrichidae,Primates,99
-Tauraco persa,Tauraco,Musophagidae,Musophagiformes,99
-Petrogale penicillata,Petrogale,Macropodidae,Diprotodontia,99
-Sciurus vulgaris,Sciurus,Sciuridae,Rodentia,99
-Pygoscelis antarcticus,Pygoscelis,Spheniscidae,Sphenisciformes,99
-Ara chloropterus,Ara,Psittacidae,Psittaciformes,99
-Mareca falcata,Mareca,Anatidae,Anseriformes,99
-Mareca americana,Mareca,Anatidae,Anseriformes,99
-Pelecanus crispus,Pelecanus,Pelecanidae,Pelecaniformes,99
-Plegadis ridgwayi,Plegadis,Threskiornithidae,Pelecaniformes,99
-Pelecanus onocrotalus,Pelecanus,Pelecanidae,Pelecaniformes,99
-Petaurus breviceps,Petaurus,Petauridae,Diprotodontia,99
-Neofelis nebulosa,Neofelis,Felidae,Carnivora,99
-Panthera tigris,Panthera,Felidae,Carnivora,99
-Potamotrygon leopoldi,Potamotrygon,Potamotrygonidae,Myliobatiformes,99
-Aythya nyroca,Aythya,Anatidae,Anseriformes,99
-Urocolius macrourus,Urocolius,Coliidae,Coliiformes,99
-Scissirostrum dubium,Scissirostrum,Sturnidae,Passeriformes,99
-Felis chaus,Felis,Felidae,Carnivora,98
-Castor canadensis,Castor,Castoridae,Rodentia,99
-Ciconia abdimii,Ciconia,Ciconiidae,Ciconiiformes,99
-Spheniscus humboldti,Spheniscus,Spheniscidae,Sphenisciformes,99
-Osphranter rufus,Macropus,Macropodidae,Diprotodontia,98
-Nomascus leucogenys,Nomascus,Hylobatidae,Primates,99
-Spatula querquedula,Spatula,Anatidae,Anseriformes,99
-Phoeniconaias minor,Phoeniconaias,Phoenicopteridae,Phoenicopteriformes,99
-Ovibos moschatus,Ovibos,Bovidae,Artiodactyla,99
-Mico argentatus,Mico,Callitrichidae,Primates,99
-Lophodytes cucullatus,Lophodytes,Anatidae,Anseriformes,99
-Amazona aestiva,Amazona,Psittacidae,Psittaciformes,99
-Ceratotherium simum,Ceratotherium,Rhinocerotidae,Perissodactyla,99
-Gallus gallus,Gallus,Phasianidae,Galliformes,99
-Centrochelys sulcata,Centrochelys,Testudinidae,,98
-Saguinus bicolor,Saguinus,Callitrichidae,Primates,99
-Trachypithecus auratus,Trachypithecus,Cercopithecidae,Primates,99
-Saimiri sciureus,Saimiri,Cebidae,Primates,99
-Platalea alba,Platalea,Threskiornithidae,Pelecaniformes,99
-Spatula hottentota,Spatula,Anatidae,Anseriformes,99
-Catagonus wagneri,Catagonus,Tayassuidae,Artiodactyla,98
-Spatula versicolor,Spatula,Anatidae,Anseriformes,99
-Spilopelia senegalensis,Spilopelia,Columbidae,Columbiformes,99
-Lophura swinhoii,Lophura,Phasianidae,Galliformes,99
-Macaca sylvanus,Macaca,Cercopithecidae,Primates,99
-Anthropoides virgo,Anthropoides,Gruidae,Gruiformes,99
-Cairina moschata,Cairina,Anatidae,Anseriformes,98
-Leucopsar rothschildi,Leucopsar,Sturnidae,Passeriformes,99
-Podocnemis unifilis,Podocnemis,Podocnemididae,,99
-Apteryx mantelli,Apteryx,Apterygidae,Apterygiformes,99
-Anser cygnoid,Anser,Anatidae,Anseriformes,98
-Pteronura brasiliensis,Pteronura,Mustelidae,Carnivora,97
-Tapirus terrestris,Tapirus,Tapiridae,Perissodactyla,99
-Chilabothrus angulifer,Chilabothrus,Boidae,,99
-Spatula discors,Spatula,Anatidae,Anseriformes,99
-Cacatua leadbeateri,Cacatua,Psittacidae,Psittaciformes,99
-Nesoenas mayeri,Nesoenas,Columbidae,Columbiformes,99
-Vanellus spinosus,Vanellus,Charadriidae,Charadriiformes,99
-Chamaeleo calyptratus,Chamaeleo,Chamaeleonidae,,99
-Axis porcinus,Axis,Cervidae,Artiodactyla,99
-Lophophorus impejanus,Lophophorus,Phasianidae,Galliformes,99
-Capra ibex,Capra,Bovidae,Artiodactyla,99
-Lynx lynx,Lynx,Felidae,Carnivora,99
-Caracal caracal,Caracal,Felidae,Carnivora,99
-Pygathrix nemaeus,Pygathrix,Cercopithecidae,Primates,99
-Prionailurus viverrinus,Prionailurus,Felidae,Carnivora,99
-Aonyx cinereus,Amblonyx,Mustelidae,Carnivora,98
-Ctenodactylus gundi,Ctenodactylus,Ctenodactylidae,Rodentia,99
-Sarcoramphus papa,Sarcoramphus,Cathartidae,Accipitriformes,99
-Pogona vitticeps,Pogona,Agamidae,,99
-Eos bornea,Eos,Psittacidae,Psittaciformes,99
-Tiliqua scincoides,Tiliqua,Scincidae,,99
-Musophaga violacea,Musophaga,Musophagidae,Musophagiformes,99
-Heloderma horridum,Heloderma,Helodermatidae,,99
-Connochaetes gnou,Connochaetes,Bovidae,Artiodactyla,99
-Lophura nycthemera,Lophura,Phasianidae,Galliformes,99
-Pithecia pithecia,Pithecia,Pitheciidae,Primates,99
-Columba guinea,Columba,Columbidae,Columbiformes,99
-Capra sibirica,Capra,Bovidae,Artiodactyla,99
-Irena puella,Irena,Irenidae,Passeriformes,99
-Phoenicopterus chilensis,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99
-Gorilla gorilla,Gorilla,Hominidae,Primates,99
-Nanger dama,Nanger,Bovidae,Artiodactyla,99
-Bettongia penicillata,Bettongia,Potoroidae,Diprotodontia,99
-Panthera onca,Panthera,Felidae,Carnivora,99
-Papio papio,Papio,Cercopithecidae,Primates,99
-Psophia crepitans,Psophia,Psophiidae,Gruiformes,99
-Lophura edwardsi,Lophura,Phasianidae,Galliformes,99
-Anodorhynchus hyacinthinus,Anodorhynchus,Psittacidae,Psittaciformes,99
-Oryx dammah,Oryx,Bovidae,Artiodactyla,99
-Myrmecophaga tridactyla,Myrmecophaga,Myrmecophagidae,Pilosa,99
-Eulemur rubriventer,Eulemur,Lemuridae,Primates,99
-Eudorcas thomsonii,Eudorcas,Bovidae,Artiodactyla,99
-Urocissa erythrorhyncha,Urocissa,Corvidae,Passeriformes,96
-Pteropus lylei,Pteropus,Pteropodidae,Chiroptera,99
-Choeropsis liberiensis,Hexaprotodon,Hippopotamidae,Artiodactyla,98
-Milvus migrans,Milvus,Accipitridae,Accipitriformes,99
-Recurvirostra avosetta,Recurvirostra,Recurvirostridae,Charadriiformes,99
-Marmaronetta angustirostris,Marmaronetta,Anatidae,Anseriformes,99
-Cercopithecus diana,Cercopithecus,Cercopithecidae,Primates,99
-Phasianus colchicus,Phasianus,Phasianidae,Galliformes,99
-Rattus rattus,Rattus,Muridae,Rodentia,99
-Eolophus roseicapilla,Eolophus,Psittacidae,Psittaciformes,99
-Margaroperdix madagarensis,Margaroperdix,Phasianidae,Galliformes,99
-Phoca vitulina,Phoca,Phocidae,Carnivora,99
-Nycticebus pygmaeus,Nycticebus,Lorisidae,Primates,99
-Hyaena hyaena,Hyaena,Hyaenidae,Carnivora,99
-Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,99
-Arctocephalus pusillus,Arctocephalus,Otariidae,Carnivora,99
-Chrysolophus amherstiae,Chrysolophus,Phasianidae,Galliformes,99
-Aratinga solstitialis,Aratinga,Psittacidae,Psittaciformes,99
-Dasyurus maculatus,Dasyurus,Dasyuridae,Dasyuromorphia,99
-Branta ruficollis,Branta,Anatidae,Anseriformes,99
-Platalea leucorodia,Platalea,Threskiornithidae,Pelecaniformes,99
-Eidolon helvum,Eidolon,Pteropodidae,Chiroptera,99
-Aythya baeri,Aythya,Anatidae,Anseriformes,99
-Neophema chrysogaster,Neophema,Psittacidae,Psittaciformes,99
-Aotus griseimembra,Aotus,Aotidae,Primates,99
-Antilope cervicapra,Antilope,Bovidae,Artiodactyla,99
-Aythya fuligula,Aythya,Anatidae,Anseriformes,99
-Ramphiculus jambu,Ptilinopus,Columbidae,Columbiformes,98
-Pachyuromys duprasi,Pachyuromys,Muridae,Rodentia,99
-Anas capensis,Anas,Anatidae,Anseriformes,99
-Todiramphus cinnamominus,Todiramphus,Alcedinidae,Coraciiformes,99
-Pygoscelis papua,Pygoscelis,Spheniscidae,Sphenisciformes,99
-Vanellus miles,Vanellus,Charadriidae,Charadriiformes,99
-Tragelaphus eurycerus,Tragelaphus,Bovidae,Artiodactyla,99
-Oreamnos americanus,Oreamnos,Bovidae,Artiodactyla,99
-Tayassu pecari,Tayassu,Tayassuidae,Artiodactyla,99
-Vulpes vulpes,Vulpes,Canidae,Carnivora,99
-Copsychus malabaricus,Copsychus,Muscicapidae,Passeriformes,99
-Erpeton tentaculatum,Erpeton,Homalopsidae,,99
-Hemiscyllium ocellatum,Hemiscyllium,Hemiscylliidae,Orectolobiformes,99
-Bitis rhinoceros,Bitis,Viperidae,,99
-Bucephala albeola,Bucephala,Anatidae,Anseriformes,99
-Myoprocta pratti,Myoprocta,Dasyproctidae,Rodentia,99
-Rupicapra rupicapra,Rupicapra,Bovidae,Artiodactyla,99
-Bos taurus,Bos,Bovidae,Artiodactyla,99
-Meleagris ocellata,Meleagris,Phasianidae,Galliformes,99
-Gallicolumba luzonica,Gallicolumba,Columbidae,Columbiformes,99
-Trachypithecus francoisi,Trachypithecus,Cercopithecidae,Primates,99
-Testudo hermanni,Testudo,Testudinidae,,99
-Tragelaphus oryx,Taurotragus,Bovidae,Artiodactyla,98
-Bostrychia hagedash,Bostrychia,Threskiornithidae,Pelecaniformes,99
-Bos javanicus,Bos,Bovidae,Artiodactyla,99
-Kobus megaceros,Kobus,Bovidae,Artiodactyla,99
-Octodon degus,Octodon,Octodontidae,Rodentia,99
-Physignathus cocincinus,Physignathus,Agamidae,,99
-Cricetomys gambianus,Cricetomys,Nesomyidae,Rodentia,99
-Morelia viridis,Morelia,Pythonidae,,99
-Dendrocygna javanica,Dendrocygna,Anatidae,Anseriformes,99
-Gracula religiosa,Gracula,Sturnidae,Passeriformes,99
-Notamacropus eugenii,Macropus,Macropodidae,Diprotodontia,98
-Rusa alfredi,Rusa,Cervidae,Artiodactyla,99
-Trichosurus vulpecula,Trichosurus,Phalangeridae,Diprotodontia,99
-Capromys pilorides,Capromys,Capromyidae,Rodentia,99
-Ovis canadensis,Ovis,Bovidae,Artiodactyla,99
-Nyctereutes procyonoides,Nyctereutes,Canidae,Carnivora,99
+binSpecies,genus,family,order,confidence,common_name
+Dasyprocta azarae,Dasyprocta,Dasyproctidae,Rodentia,99,Azara s Agouti
+Vulpes zerda,Vulpes,Canidae,Carnivora,99,Fennec
+Galago senegalensis,Galago,Galagidae,Primates,99,Ethiopia Lesser Galago
+Crossoptilon crossoptilon,Crossoptilon,Phasianidae,Galliformes,99,White Eared Pheasant
+Acryllium vulturinum,Acryllium,Numididae,Galliformes,99,VUGU
+Felis margarita,Felis,Felidae,Carnivora,99,Sand Cat
+Tragelaphus spekii,Tragelaphus,Bovidae,Artiodactyla,99,East African Sitatunga
+Radjah radjah,Radjah,Anatidae,Anseriformes,99,Burdekin Duck
+Padda oryzivora,Lonchura,Estrildidae,Passeriformes,98,Java Sparrow
+Dendrolagus matschiei,Dendrolagus,Macropodidae,Diprotodontia,99,Huon Tree Kangaroo
+Echinops telfairi,Echinops,Tenrecidae,Afrosoricida,99,Kleiner Igeltenrek
+Anas erythrorhyncha,Anas,Anatidae,Anseriformes,99,RBTE
+Vulpes lagopus,Vulpes,Canidae,Carnivora,99,Arctic Fox
+Pseudois nayaur,Pseudois,Bovidae,Artiodactyla,99,Bharal
+Capra nubiana,Capra,Bovidae,Artiodactyla,99,Middle Eastern Ibex
+Dyscophus antongilii,Dyscophus,Microhylidae,Anura,99,Tomato Frog
+Anaxyrus baxteri,Anaxyrus,Bufonidae,Anura,99,Baxter's Toad
+Lemur catta,Lemur,Lemuridae,Primates,99,
+Himantopus himantopus,Himantopus,Recurvirostridae,Charadriiformes,99,African/Eurasian Black-winged Stilt
+Egretta garzetta,Egretta,Ardeidae,Pelecaniformes,99,Chota bok
+Rangifer tarandus,Rangifer,Cervidae,Artiodactyla,99,Caribou
+Catreus wallichii,Catreus,Phasianidae,Galliformes,99,Cheer Pheasant
+Naemorhedus griseus,Naemorhedus,Bovidae,Artiodactyla,99,Chinese Goral
+Corallus caninus,Corallus,Boidae,,99,
+Elaphe taeniura,Elaphe,Colubridae,,99,Beauty Rat Snake
+Streptopelia risoria,Streptopelia,Columbidae,Columbiformes,97,Barbary Dove
+Canis rufus,Canis,Canidae,Carnivora,98,Florida Wolf
+Osphranter robustus,Macropus,Macropodidae,Diprotodontia,98,Barrow Island Euro
+Panthera leo,Panthera,Felidae,Carnivora,99,African Lion
+Bambusicola thoracicus,Bambusicola,Phasianidae,Galliformes,99,Chinese Bamboo Partridge
+Guaruba guarouba,Guaruba,Psittacidae,Psittaciformes,99,Golden Conure
+Nestor notabilis,Nestor,Psittacidae,Psittaciformes,99,Kea
+Geokichla dohertyi,,,,0,
+Coracias cyanogaster,Coracias,Coraciidae,Coraciiformes,99,BBRO
+Macaca nigra,Macaca,Cercopithecidae,Primates,99,Black Crested Macaque
+Acrobates pygmaeus,Acrobates,Acrobatidae,Diprotodontia,99,Dusky Feathertail Glider
+Mergus squamatus,Mergus,Anatidae,Anseriformes,99,Chinese Merganser
+Chloebia gouldiae,Erythrura,Estrildidae,Passeriformes,98,Gouldian Finch
+Suricata suricatta,Suricata,Herpestidae,Carnivora,98,Gray Meerkat
+Ateles fusciceps,Ateles,Atelidae,Primates,99,Black-headed Spider Monkey
+Sapajus apella,Sapajus,Cebidae,Primates,99,Black-capped Capuchin
+Spatula platalea,Spatula,Anatidae,Anseriformes,99,Red Shoveler
+Sapajus xanthosternos,Sapajus,Cebidae,Primates,99,Buff-headed Capuchin
+Grus antigone,Grus,Gruidae,Gruiformes,99,Sarus Crane
+Capra caucasica,Capra,Bovidae,Artiodactyla,99,Caucasian Ibex
+Ovis dalli,Ovis,Bovidae,Artiodactyla,99,Alaskan White Sheep (dall)
+Ducula bicolor,Ducula,Columbidae,Columbiformes,99,Pied Imperial Pigeon
+Callosciurus prevostii,Callosciurus,Sciuridae,Rodentia,99,Ardilla de Prevost
+Upupa epops,Upupa,Upupidae,Bucerotiformes,99,COHO
+Argusianus argus,Argusianus,Phasianidae,Galliformes,99,Argus Pheasant
+Gallus varius,Gallus,Phasianidae,Galliformes,99,Green Junglefowl
+Dolichotis salinicola,Dolichotis,Caviidae,Rodentia,99,Chacoan Mara
+Morelia spilota,Morelia,Pythonidae,,99,Carpet Python
+Agapornis nigrigenis,Agapornis,Psittacidae,Psittaciformes,99,BCLO
+Coracias garrulus,Coracias,Coraciidae,Coraciiformes,99,EURO
+Okapia johnstoni,Okapia,Giraffidae,Artiodactyla,99,African unicorn
+Myiopsitta monachus,Myiopsitta,Psittacidae,Psittaciformes,99,Monk Parakeet
+Hydropotes inermis,Hydropotes,Cervidae,Artiodactyla,99,Chinese Water Deer
+Petaurus norfolcensis,Petaurus,Petauridae,Diprotodontia,99,Squirrel Glider
+Pecari tajacu,Pecari,Tayassuidae,Artiodactyla,99,Collared Peccary
+Lamprotornis superbus,Lamprotornis,Sturnidae,Passeriformes,99,SUST
+Sus cebifrons,Sus,Suidae,Artiodactyla,98,Visayan Warty Pig
+Papio hamadryas,Papio,Cercopithecidae,Primates,99,Hamadryas Baboon
+Crossoptilon auritum,Crossoptilon,Phasianidae,Galliformes,99,Blue Eared Pheasant
+Equus kiang,Equus,Equidae,Perissodactyla,99,Kiang
+Alces alces,Alces,Cervidae,Artiodactyla,99,Alce
+Macaca silenus,Macaca,Cercopithecidae,Primates,99,Lion-tailed Macaque
+Phoeniculus purpureus,Phoeniculus,Phoeniculidae,Bucerotiformes,99,GRWO
+Polytelis alexandrae,Polytelis,Psittacidae,Psittaciformes,99,Alexandra's Parrot
+Aythya collaris,Aythya,Anatidae,Anseriformes,99,
+Equus grevyi,Equus,Equidae,Perissodactyla,99,Grevy's Zebra
+Gazella cuvieri,Gazella,Bovidae,Artiodactyla,99,Cuvier's Gazelle
+Hippotragus equinus,Hippotragus,Bovidae,Artiodactyla,97,Bastergemsbok
+Phalacrocorax carbo,Phalacrocorax,Phalacrocoracidae,Suliformes,99,Black Shag
+Theropithecus gelada,Theropithecus,Cercopithecidae,Primates,99,Bleeding-heart Monkey
+Odocoileus hemionus,Odocoileus,Cervidae,Artiodactyla,99,Black-tailed Deer
+Bos frontalis,Bos,Bovidae,Artiodactyla,99,Gaur
+Bison bison,Bison,Bovidae,Artiodactyla,99,American Bison
+Macaca fascicularis,Macaca,Cercopithecidae,Primates,99,Con Song Long-tailed Macaque (condorensis)
+Tragulus javanicus,Tragulus,Tragulidae,Artiodactyla,97,Java Mouse-deer
+Cynomys ludovicianus,Cynomys,Sciuridae,Rodentia,99,Arizona Black-tailed Prairie Dog
+Amazona leucocephala,Amazona,Psittacidae,Psittaciformes,99,Bahaman Parrot
+Callipepla gambelii,Callipepla,Odontophoridae,Galliformes,99,Gambel's Partridge
+Tursiops truncatus,Tursiops,Delphinidae,Cetacea,97,Black Porpoise
+Mareca strepera,Mareca,Anatidae,Anseriformes,99,Gadwall
+Guttera pucherani,Guttera,Numididae,Galliformes,99,Crested Guineafowl
+Aepyceros melampus,Aepyceros,Bovidae,Artiodactyla,99,Black-faced Impala
+Plegadis falcinellus,Plegadis,Threskiornithidae,Pelecaniformes,99,
+Anser anser,Anser,Anatidae,Anseriformes,99,Domesticated Geese
+Lophura leucomelanos,Lophura,Phasianidae,Galliformes,99,Kalij Pheasant
+Hippotragus niger,Hippotragus,Bovidae,Artiodactyla,99,Giant Sable
+Taeniopygia guttata,Taeniopygia,Estrildidae,Passeriformes,99,Spotted-sided Finch
+Oryx leucoryx,Oryx,Bovidae,Artiodactyla,99,Arabian Oryx
+Malayopython reticulatus,Malayopython,Pythonidae,,99,Asian Reticulated Python
+Vanellus armatus,Vanellus,Charadriidae,Charadriiformes,99,BLLA
+Rhinoptera bonasus,Rhinoptera,Myliobatidae,Myliobatiformes,99,American Cownose Ray
+Ciconia ciconia,Ciconia,Ciconiidae,Ciconiiformes,99,
+Nanger soemmerringii,Nanger,Bovidae,Artiodactyla,99,Gazelle de Soemmerring
+Dacelo leachii,Dacelo,Alcedinidae,Coraciiformes,99,Blue-winged Kookaburra
+Platycercus eximius,Platycercus,Psittacidae,Psittaciformes,99,Eastern Rosella
+Mungos mungo,Mungos,Herpestidae,Carnivora,99,Banded Ichneumon
+Anas luzonica,Anas,Anatidae,Anseriformes,99,Philippine Duck
+Ramphastos toco,Ramphastos,Ramphastidae,Piciformes,99,Common Toucan
+Pantherophis guttatus,Pantherophis,Colubridae,,99,Cobra do milho
+Hystrix africaeaustralis,Hystrix,Hystricidae,Rodentia,99,African Crested Porcupine
+Vicugna vicugna,Vicugna,Camelidae,Artiodactyla,99,Argentine Vicuna (vicugna)
+Cossypha niveicapilla,Cossypha,Muscicapidae,Passeriformes,99,SCRC
+Branta leucopsis,Branta,Anatidae,Anseriformes,99,Barnacle Goose
+Mustela putorius,Mustela,Mustelidae,Carnivora,99,Black Polecat
+Eulemur rufus,Eulemur,Lemuridae,Primates,99,Audebert's Brown Lemur
+Perameles gunnii,Perameles,Peramelidae,Peramelemorphia,99,Eastern Barred Bandicoot
+Corucia zebrata,Corucia,Scincidae,,99,Lagarto-das-ilhas-salomão
+Phascolarctos cinereus,Phascolarctos,Phascolarctidae,Diprotodontia,99,Australian Koala
+Vicugna pacos,Vicugna,Camelidae,Artiodactyla,99,Alpaca
+Gallus sonneratii,Gallus,Phasianidae,Galliformes,99,Gray Junglefowl
+Neotragus moschatus,Neotragus,Bovidae,Artiodactyla,99,Coastal Suni
+Tockus deckeni,Tockus,Bucerotidae,Bucerotiformes,99,VDDH
+Dolichotis patagonum,Dolichotis,Caviidae,Rodentia,99,Grof 3 er Pampashase
+Manouria emys,Manouria,Testudinidae,,99,Asian Brown Tortoise
+Pelecanus rufescens,Pelecanus,Pelecanidae,Pelecaniformes,99,PBPE
+Crocuta crocuta,Crocuta,Hyaenidae,Carnivora,99,
+Aythya valisineria,Aythya,Anatidae,Anseriformes,99,Cans
+Amazonetta brasiliensis,Amazonetta,Anatidae,Anseriformes,99,Brazilian Teal
+Pan troglodytes,Pan,Hominidae,Primates,98,Chimp
+Oryx beisa,Oryx,Bovidae,Artiodactyla,99,Beisa
+Tragopan temminckii,Tragopan,Phasianidae,Galliformes,99,Temminck's Tragopan
+Python regius,Python,Pythonidae,,99,Ball Python
+Deroptyus accipitrinus,Deroptyus,Psittacidae,Psittaciformes,99,Hawk-headed Parrot
+Lemniscomys barbarus,Lemniscomys,Muridae,Rodentia,99,Barbary
+Cervus hanglu,Cervus,Cervidae,Artiodactyla,99,Asian Red Deer
+Hemitragus jemlahicus,Hemitragus,Bovidae,Artiodactyla,99,Himalayan Tahr
+Afropavo congensis,Afropavo,Phasianidae,Galliformes,99,Congo Peacock
+Lontra canadensis,Lontra,Mustelidae,Carnivora,99,American River Otter
+Symphalangus syndactylus,Symphalangus,Hylobatidae,Primates,99,Siamang
+Tragelaphus strepsiceros,Tragelaphus,Bovidae,Artiodactyla,99,Greater Kudu
+Spatula puna,Spatula,Anatidae,Anseriformes,99,Puna Teal
+Mycteria ibis,Mycteria,Ciconiidae,Ciconiiformes,99,
+Dendrocygna bicolor,Dendrocygna,Anatidae,Anseriformes,99,FWDU
+Hypotaenidia owstoni,Gallirallus,Rallidae,Gruiformes,98,Guam Rail
+Entomyzon cyanotis,Entomyzon,Meliphagidae,Passeriformes,99,Blue-faced Honeyeater
+Erythrocebus patas,Erythrocebus,Cercopithecidae,Primates,99,Blue Nile Hussar / Dancing Red / Eastern Patas Monkey (pyrrhonotus)
+Crax rubra,Crax,Cracidae,Galliformes,99,Great Curassow
+Iguana iguana,Iguana,Iguanidae,,99,American Iguana
+Callithrix jacchus,Callithrix,Callitrichidae,Primates,99,Common Marmoset
+Wallabia bicolor,Wallabia,Macropodidae,Diprotodontia,99,Black Wallaby
+Pogonornis dubius,Lybius,Lybiidae,Piciformes,98,BEBA
+Kobus leche,Kobus,Bovidae,Artiodactyla,99,Lechwe
+Muntiacus reevesi,Muntiacus,Cervidae,Artiodactyla,99,Chinese Barking Deer
+Aythya marila,Aythya,Anatidae,Anseriformes,99,Big Black-head
+Cricetus cricetus,,,,0,
+Notamacropus parma,,,,0,
+Speothos venaticus,,,,0,
+Tragelaphus scriptus,,,,0,
+Psittacula derbiana,,,,0,
+Nycticorax nycticorax,,,,0,
+Geococcyx californianus,,,,0,
+Ovis vignei,,,,0,
+Pteropus giganteus,,,,0,
+Furcifer pardalis,,,,0,
+Cebuella pygmaea,,,,0,
+Guira guira,Guira,Cuculidae,Cuculiformes,99,Guira Cuckoo
+Lycaon pictus,Lycaon,Canidae,Carnivora,99,African Painted Dog
+Chlamydosaurus kingii,Chlamydosaurus,Agamidae,,99,Frill-necked Lizard
+Tetrao urogallus,Tetrao,Phasianidae,Galliformes,99,Capercaillie
+Lamprotornis regius,Lamprotornis,Sturnidae,Passeriformes,99,GBST
+Neophema splendida,Neophema,Psittacidae,Psittaciformes,99,Scarlet-chested Parakeet
+Boa constrictor,Boa,Boidae,,99,Argentine Boa Constrictor [occidentalis]
+Elaphodus cephalophus,Elaphodus,Cervidae,Artiodactyla,99,Tufted Deer
+Acrantophis madagascariensis,Acrantophis,Boidae,,99,Madagascar Boa
+Ptilinopus superbus,Ptilinopus,Columbidae,Columbiformes,99,Eastern Superb Fruit-dove
+Phloeomys pallidus,Phloeomys,Muridae,Rodentia,99,Northern Luzon Giant Cloud Rat
+Sicalis flaveola,Sicalis,Thraupidae,Passeriformes,99,
+Nymphicus hollandicus,Nymphicus,Psittacidae,Psittaciformes,99,Cockatiel
+Tringa totanus,Tringa,Scolopacidae,Charadriiformes,99,CORE
+Chaetophractus villosus,Chaetophractus,Dasypodidae,Cingulata,99,Big Hairy Armadillo
+Trichoglossus moluccanus,Trichoglossus,Psittacidae,Psittaciformes,98,Rainbow Lorikeet
+Otaria byronia,Otaria,Otariidae,Carnivora,99,Le 6 n marino de Sudamérica
+Saguinus oedipus,Saguinus,Callitrichidae,Primates,99,Cotton-headed Tamarin
+Ducula aenea,Ducula,Columbidae,Columbiformes,99,Green Imperial Pigeon
+Artamus superciliosus,Artamus,Artamidae,Passeriformes,99,White Browed Woodswallow
+Rucervus eldii,Rucervus,Cervidae,Artiodactyla,99,Brow-antlered Deer
+Ara macao,Ara,Psittacidae,Psittaciformes,99,
+Petrogale xanthopus,Petrogale,Macropodidae,Diprotodontia,99,Gelbful 3 - Felskanguru
+Sanzinia madagascariensis,Sanzinia,Boidae,,99,Madagascar Tree Boa
+Potos flavus,Potos,Procyonidae,Carnivora,99,Kinkajou
+Anseranas semipalmata,Anseranas,Anseranatidae,Anseriformes,99,Magpie Goose
+Cyanopica cyanus,Cyanopica,Corvidae,Passeriformes,99,Asian Azure-winged Magpie
+Otolemur garnettii,Otolemur,Galagidae,Primates,99,Garnett's Greater Galago
+Fratercula cirrhata,Fratercula,Alcidae,Charadriiformes,99,Tufted Auk
+Felis silvestris,Felis,Felidae,Carnivora,99,Asian races
+Notamacropus rufogriseus,Notamacropus,Macropodidae,Diprotodontia,99,Bennett's Wallaby
+Budorcas taxicolor,Budorcas,Bovidae,Artiodactyla,99,Cattle Chamois
+Coracias caudatus,Coracias,Coraciidae,Coraciiformes,99,Lilac-breasted Roller
+Ciconia nigra,Ciconia,Ciconiidae,Ciconiiformes,99,BLST
+Chrysolophus pictus,Chrysolophus,Phasianidae,Galliformes,99,Chinese pheasant
+Dasyurus viverrinus,Dasyurus,Dasyuridae,Dasyuromorphia,99,Eastern Native Cat
+Elephantulus rufescens,Elephantulus,Macroscelididae,Macroscelidea,99,East African Long-eared Elephant-shrew
+Anas bernieri,Anas,Anatidae,Anseriformes,99,Bernier's Teal
+Coturnix delegorguei,Coturnix,Phasianidae,Galliformes,99,HAQU
+Gazella dorcas,Gazella,Bovidae,Artiodactyla,99,Dorcas Gazelle
+Diopsittaca nobilis,Diopsittaca,Psittacidae,Psittaciformes,99,Northern Red-shouldered Macaw
+Bubalus bubalis,Bubalus,Bovidae,Artiodactyla,99,Asian Water Buffalo
+Procavia capensis,Procavia,Procaviidae,Hyracoidea,99,Cape Hyrax (capensis)
+Loriculus galgulus,Loriculus,Psittacidae,Psittaciformes,99,Blue-crowned Hanging Parrot
+Lampropeltis polyzona,Lampropeltis,Colubridae,,99,Atlantic Central American Milksnake
+Felis nigripes,Felis,Felidae,Carnivora,99,African black-footed cat
+Spheniscus magellanicus,Spheniscus,Spheniscidae,Sphenisciformes,99,Magellanic Penguin
+Zapornia flavirostra,Amaurornis,Rallidae,Gruiformes,98,African Black Crake
+Trichoglossus haematodus,Trichoglossus,Psittacidae,Psittaciformes,99,Coconut Lorikeet
+Bubo scandiacus,Bubo,Strigidae,Strigiformes,99,Snowy Owl
+Dinemellia dinemelli,Dinemellia,Ploceidae,Passeriformes,99,WHBW
+Notamacropus agilis,Macropus,Macropodidae,Diprotodontia,98,Agile Wallaby
+Dromaius novaehollandiae,Dromaius,Dromaiidae,Casuariiformes,99,Common Emu
+Coscoroba coscoroba,Coscoroba,Anatidae,Anseriformes,99,Coscoroba Goose
+Dama mesopotamica,Dama,Cervidae,Artiodactyla,98,Mesopotamian Fallow Deer
+Nasua narica,Nasua,Procyonidae,Carnivora,99,Coatimundi
+Saguinus imperator,Saguinus,Callitrichidae,Primates,99,Bearded Emperor Tamarin (subgrisescens)
+Tangara mexicana,Tangara,Thraupidae,Passeriformes,99,Turquoise Tanager
+Acinonyx jubatus,Acinonyx,Felidae,Carnivora,99,Cheetah
+Lepus timidus,Lepus,Leporidae,Lagomorpha,99,Alpine Mountain Hare
+Ailurus fulgens,Ailurus,Ailuridae,Carnivora,99,Bear Cat
+Pseudomys australis,Pseudomys,Muridae,Rodentia,99,Eastern Mouse
+Saguinus midas,Saguinus,Callitrichidae,Primates,99,Golden-handed Tamarin
+Polyplectron inopinatum,Polyplectron,Phasianidae,Galliformes,99,Mountain Peacock Pheasant
+Cochlearius cochlearius,Cochlearius,Ardeidae,Pelecaniformes,99,Boat-billed Heron
+Anas laysanensis,Anas,Anatidae,Anseriformes,99,Laysan Duck
+Sibirionetta formosa,Sibirionetta,Anatidae,Anseriformes,99,Baikal Teal
+Hypotaenidia philippensis,Gallirallus,Rallidae,Gruiformes,98,Banded Land-Rail
+Callithrix geoffroyi,Callithrix,Callitrichidae,Primates,98,Geoffroy's Marmoset
+Alopochen aegyptiaca,Alopochen,Anatidae,Anseriformes,99,Egyptian Goose
+Dendrobates tinctorius,Dendrobates,Dendrobatidae,Anura,97,Dyeing Poison Frog
+Axis axis,Axis,Cervidae,Artiodactyla,99,Axis Deer
+Fratercula arctica,Fratercula,Alcidae,Charadriiformes,99,Atlantic Puffin
+Cariama cristata,Cariama,Cariamidae,Cariamiformes,99,Crested Cariama
+Chelodina mccordi,Chelodina,Chelidae,,99,McCord's Snake-necked Turtle
+Camelus dromedarius,Camelus,Camelidae,Artiodactyla,99,Arabian Camel
+Goura cristata,Goura,Columbidae,Columbiformes,99,Blue Crowned-pigeon
+Eudromia elegans,Eudromia,Tinamidae,Tinamiformes,99,Elegant Crested Tinamou
+Bubulcus ibis,Bubulcus,Ardeidae,Pelecaniformes,99,Cattle Egret
+Mandrillus sphinx,Mandrillus,Cercopithecidae,Primates,99,Mandril
+Gazella spekei,Gazella,Bovidae,Artiodactyla,99,Speke's Gazelle
+Ptilinopus porphyreus,Ptilinopus,Columbidae,Columbiformes,99,Pink-headed Fruit Dove
+Anser caerulescens,Anser,Anatidae,Anseriformes,99,Blue Goose
+Netta rufina,Netta,Anatidae,Anseriformes,99,
+Python bivittatus,Python,Pythonidae,,99,Banana Snake
+Cephalophus silvicultor,Cephalophus,Bovidae,Artiodactyla,99,Light-backed Duiker
+Branta hutchinsii,Branta,Anatidae,Anseriformes,99,Cackling Goose
+Agapornis fischeri,Agapornis,Psittacidae,Psittaciformes,99,FILO
+Galago moholi,Galago,Galagidae,Primates,99,Lesser Bushbaby
+Cygnus olor,Cygnus,Anatidae,Anseriformes,99,
+Branta sandvicensis,Branta,Anatidae,Anseriformes,99,Hawaiian Goose
+Aythya ferina,Aythya,Anatidae,Anseriformes,99,COPO
+Otocolobus manul,Felis,Felidae,Carnivora,98,Pallas Cat
+Pygoscelis adeliae,Pygoscelis,Spheniscidae,Sphenisciformes,99,Adelie Penguin
+Dasyuroides byrnei,Dasyuroides,Dasyuridae,Dasyuromorphia,99,Brush-tailed Marsupial Rat
+Antidorcas marsupialis,Antidorcas,Bovidae,Artiodactyla,99,Cape Springbok
+Ramphocelus carbo,Ramphocelus,Thraupidae,Passeriformes,99,Silver-Beaked Tanager
+Phonipara canora,Phonipara,Thraupidae,Passeriformes,99,Cuban Grassquit
+Macroscelides proboscideus,Macroscelides,Macroscelididae,Macroscelidea,99,Karoo Round-eared Elephant-shrew
+Capreolus capreolus,Capreolus,Cervidae,Artiodactyla,99,Corzo
+Tadorna tadornoides,Tadorna,Anatidae,Anseriformes,99,Australian Shelduck
+Cereopsis novaehollandiae,Cereopsis,Anatidae,Anseriformes,99,Cape Barren Goose
+Phoenicopterus ruber,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99,American Flamingo
+Saimiri boliviensis,Saimiri,Cebidae,Primates,99,Black-capped Squirrel Monkey
+Ursus arctos,Ursus,Ursidae,Carnivora,99,Brown Bear
+Pteropus rodricensis,Pteropus,Pteropodidae,Chiroptera,99,Golden Bat of Rodrigues
+Melopsittacus undulatus,Melopsittacus,Psittacidae,Psittaciformes,99,Betcherrygah
+Cygnus melancoryphus,Cygnus,Anatidae,Anseriformes,99,Black-necked Swan
+Kobus ellipsiprymnus,Kobus,Bovidae,Artiodactyla,99,Common Waterbuck
+Equus zebra,Equus,Equidae,Perissodactyla,99,Cape Mountain Zebra (zebra)
+Arctictis binturong,Arctictis,Viverridae,Carnivora,99,Asian Bearcat
+Macropus fuliginosus,Macropus,Macropodidae,Diprotodontia,99,Black-faced Kangaroo
+Pauxi pauxi,Pauxi,Cracidae,Galliformes,98,Helmeted Curassow
+Calidris pugnax,Calidris,Scolopacidae,Charadriiformes,99,
+Bucorvus leadbeateri,Bucorvus,Bucorvidae,Bucerotiformes,99,Ground Hornbill
+Ptilopsis leucotis,Ptilopsis,Strigidae,Strigiformes,99,African Great-horned Owl
+Leptailurus serval,Leptailurus,Felidae,Carnivora,99,Serval
+Heterocephalus glaber,Heterocephalus,Bathyergidae,Rodentia,99,Desert Mole Rat
+Dendrocygna guttata,Dendrocygna,Anatidae,Anseriformes,99,Spotted Whistling Duck
+Otolemur crassicaudatus,Otolemur,Galagidae,Primates,99,Brown Greater Galago
+Papio anubis,Papio,Cercopithecidae,Primates,97,Anubis Baboon
+Euplectes orix,Euplectes,Ploceidae,Passeriformes,99,Red Bishop
+Cercopithecus neglectus,Cercopithecus,Cercopithecidae,Primates,99,De Brazza s Monkey
+Boselaphus tragocamelus,Boselaphus,Bovidae,Artiodactyla,99,Blue Bull
+Tupaia belangeri,Tupaia,Tupaiidae,Scandentia,99,Chinese Treeshrew
+Coendou prehensilis,Coendou,Erethizontidae,Rodentia,99,Brazilian Porcupine
+Potorous tridactylus,Potorous,Potoroidae,Diprotodontia,99,Long-nosed Potoroo
+Equus africanus,Equus,Equidae,Perissodactyla,99,African Ass
+Psephotellus dissimilis,Psephotellus,Psittaculidae,Psittaciformes,99,Hooded Parrot
+Scopus umbretta,Scopus,Scopidae,Pelecaniformes,99,Hamerkop
+Casuarius casuarius,Casuarius,Casuariidae,Casuariiformes,99,Australian Cassowary
+Varecia rubra,Varecia,Lemuridae,Primates,99,Red Ruffed Lemur
+Pterorhinus courtoisi,Garrulax,Leiothrichidae,Passeriformes,98,Blue-crowned Laughingthrush
+Podargus strigoides,Podargus,Podargidae,Caprimulgiformes,99,Tawny Frogmouth
+Sminthopsis crassicaudata,Sminthopsis,Dasyuridae,Dasyuromorphia,99,Fat-tailed Dunnart
+Elephas maximus,Elephas,Elephantidae,Proboscidea,99,Asian Elephant
+Anas crecca,Anas,Anatidae,Anseriformes,99,COTE
+Chrysocyon brachyurus,Chrysocyon,Canidae,Carnivora,99,
+Lama glama,Lama,Camelidae,Artiodactyla,99,Guanaco
+Leontopithecus chrysomelas,Leontopithecus,Callitrichidae,Primates,99,Golden-headed Lion Tamarin
+Rhynchopsitta pachyrhyncha,Rhynchopsitta,Psittacidae,Psittaciformes,99,
+Grus canadensis,Grus,Gruidae,Gruiformes,99,Sandhill Crane
+Bubo bubo,Bubo,Strigidae,Strigiformes,99,
+Panthera pardus,Panthera,Felidae,Carnivora,99,Black Leopard
+Ocyphaps lophotes,Ocyphaps,Columbidae,Columbiformes,99,Crested Pigeon
+Mareca sibilatrix,Mareca,Anatidae,Anseriformes,99,Chiloe Wigeon
+Atelerix albiventris,Atelerix,Erinaceidae,Erinaceomorpha,99,African Pygmy Hedgehog
+Mareca penelope,Mareca,Anatidae,Anseriformes,99,Eurasian Wigeon
+Phaps chalcoptera,Phaps,Columbidae,Columbiformes,99,Common Bronzewing
+Tragopan satyra,Tragopan,Phasianidae,Galliformes,99,Crimson Horned-pheasant
+Potamotrygon motoro,Potamotrygon,Potamotrygonidae,Myliobatiformes,99,Black river stingray
+Anas castanea,Anas,Anatidae,Anseriformes,99,Chestnut Teal
+Dasyprocta leporina,Dasyprocta,Dasyproctidae,Rodentia,99,Brazilian Agouti
+Ara militaris,Ara,Psittacidae,Psittaciformes,99,Military Macaw
+Branta canadensis,Branta,Anatidae,Anseriformes,99,Canada Goose
+Bucorvus abyssinicus,Bucorvus,Bucorvidae,Bucerotiformes,99,AGHO
+Chlorocebus aethiops,Chlorocebus,Cercopithecidae,Primates,99,Grivet
+Cyanoramphus novaezelandiae,Cyanoramphus,Psittacidae,Psittaciformes,99,Red-crowned Parakeet
+Grus japonensis,Grus,Gruidae,Gruiformes,99,Japanese Crane
+Procyon lotor,Procyon,Procyonidae,Carnivora,99,American Raccoon
+Pituophis melanoleucus,Pituophis,Colubridae,,99,Bullsnake
+Cebuella niveiventris,Cebuella,Callitrichidae,Primates,99,Eastern Pygmy Marmoset
+Cynictis penicillata,Cynictis,Herpestidae,Carnivora,97,Yellow Mongoose
+Syrmaticus mikado,Syrmaticus,Phasianidae,Galliformes,99,Mikado Pheasant
+Otocyon megalotis,Otocyon,Canidae,Carnivora,99,Bat-ear Fox
+Tolypeutes matacus,Tolypeutes,Dasypodidae,Cingulata,99,Azara's Domed Armadillo
+Falco peregrinus,Falco,Falconidae,Falconiformes,99,Duck Hawk
+Numida meleagris,Numida,Numididae,Galliformes,99,Crowned Guinea-fowl
+Leopardus geoffroyi,Leopardus,Felidae,Carnivora,99,Geoffroy's Cat
+Bothriechis schlegelii,Bothriechis,Viperidae,,99,Eyelash Lancehead
+Asarcornis scutulata,Asarcornis,Anatidae,Anseriformes,99,White-winged Duck
+Psittacus erithacus,Psittacus,Psittacidae,Psittaciformes,99,AGPA
+Halichoerus grypus,Halichoerus,Phocidae,Carnivora,99,Atlantic Gray Seal
+Macrotis lagotis,Macrotis,Thylacomyidae,Peramelemorphia,99,Bilby
+Gazella leptoceros,Gazella,Bovidae,Artiodactyla,99,
+Callonetta leucophrys,Callonetta,Anatidae,Anseriformes,99,Ringed Teal
+Otidiphaps nobilis,Otidiphaps,Columbidae,Columbiformes,99,Green-naped Pheasant-pigeon
+Phelsuma standingi,Phelsuma,Gekkonidae,,99,Banded Day Gecko
+Acrantophis dumerili,Acrantophis,Boidae,,99,Dumeril's boa
+Antilocapra americana,Antilocapra,Antilocapridae,Artiodactyla,99,American Antelope
+Anser erythropus,Anser,Anatidae,Anseriformes,99,
+Anas flavirostris,Anas,Anatidae,Anseriformes,97,Chilean teal
+Eudocimus ruber,Eudocimus,Threskiornithidae,Pelecaniformes,99,
+Muntiacus muntjak,Muntiacus,Cervidae,Artiodactyla,99,Barking Deer
+Bison bonasus,Bison,Bovidae,Artiodactyla,99,European Bison
+Paleosuchus palpebrosus,Paleosuchus,Alligatoridae,,99,
+Herpailurus yagouaroundi,Puma,Felidae,Carnivora,98,Eyra Cat
+Spatula clypeata,Spatula,Anatidae,Anseriformes,99,
+Chenonetta jubata,Chenonetta,Anatidae,Anseriformes,99,Australian Wood Duck
+Malacochersus tornieri,Malacochersus,Testudinidae,,99,African Pancake Tortoise
+Pituophis ruthveni,Pituophis,Colubridae,,99,Louisiana Pine Snake
+Canis lupus,Canis,Canidae,Carnivora,99,American Wolf
+Ovis aries,Ovis,Bovidae,Artiodactyla,98,
+Chalcophaps longirostris,Chalcophaps,Columbidae,Columbiformes,99,Brown-capped Emerald Dove
+Nanger granti,Nanger,Bovidae,Artiodactyla,99,Grant's Gazelle
+Bucephala islandica,Bucephala,Anatidae,Anseriformes,99,Barrow's Goldeneye
+Merops apiaster,Merops,Meropidae,Coraciiformes,99,Bee-eater
+Geotrygon versicolor,Geotrygon,Columbidae,Columbiformes,99,Crested Quail-Dove
+Artibeus jamaicensis,Artibeus,Phyllostomidae,Chiroptera,99,Common Fruit Bat
+Dasyprocta punctata,Dasyprocta,Dasyproctidae,Rodentia,99,Central American Agouti
+Hippopotamus amphibius,Hippopotamus,Hippopotamidae,Artiodactyla,99,Cape Hippopotamus
+Tyto alba,Tyto,Tytonidae,Strigiformes,99,Barn Owl
+Anas sparsa,Anas,Anatidae,Anseriformes,99,ABDU
+Leontocebus fuscicollis,Leontocebus,Callitrichidae,Primates,99,Andean Saddle-back Tamarin
+Anas poecilorhyncha,Anas,Anatidae,Anseriformes,97,Indian Spot-billed Duck
+Choloepus didactylus,Choloepus,Megalonychidae,Pilosa,99,Lesser Ante Eater | Two Toed Ant-eater
+Panthera uncia,Uncia,Felidae,Carnivora,98,
+Anas platyrhynchos,Anas,Anatidae,Anseriformes,99,Common Mallard
+Anas undulata,Anas,Anatidae,Anseriformes,99,African Yellowbill
+Geronticus calvus,Geronticus,Threskiornithidae,Pelecaniformes,99,Bald Ibis
+Uroplatus phantasticus,Uroplatus,Gekkonidae,,99,Fantastic Leaf-tailed Gecko
+Aspidoscelis uniparens,Aspidoscelis,Teiidae,,99,Desert Grassland Whiptail
+Burhinus grallarius,Burhinus,Burhinidae,Charadriiformes,99,Bush Stone-Curlew
+Chelonoidis carbonarius,Chelonoidis,Testudinidae,,99,Land Turtle
+Crotalus adamanteus,Crotalus,Viperidae,,97,Eastern Diamond-back Rattlesnake
+Falco cherrug,Falco,Falconidae,Falconiformes,99,Altai Falcon
+Surnia ulula,Surnia,Strigidae,Strigiformes,99,Hawk Owl
+Gulo gulo,Gulo,Mustelidae,Carnivora,99,Glutton
+Gallicolumba crinigera,Gallicolumba,Columbidae,Columbiformes,97,Mindanao Bleeding-heart
+Ursus thibetanus,Ursus,Ursidae,Carnivora,97,Asian Black Bear
+Cervus elaphus,Cervus,Cervidae,Artiodactyla,99,Barbary Red Deer (barbarus)
+Neophema pulchella,Neophema,Psittacidae,Psittaciformes,99,Turquoise Grass-parakeet
+Syncerus caffer,Syncerus,Bovidae,Artiodactyla,99,African Buffalo
+Musophaga rossae,Musophaga,Musophagidae,Musophagiformes,99,Lady Ross's turaco
+Spatula cyanoptera,Spatula,Anatidae,Anseriformes,99,Cinnamon Teal
+Thraupis episcopus,Thraupis,Thraupidae,Passeriformes,99,Blue Saki
+Mustela nigripes,Mustela,Mustelidae,Carnivora,99,American Polecat
+Cavia magna,Cavia,Caviidae,Rodentia,99,Greater Guinea Pig
+Colinus virginianus,Colinus,Odontophoridae,Galliformes,99,Bobwhite Quail
+Struthio camelus,Struthio,Struthionidae,Struthioniformes,99,African Ostrich
+Capra aegagrus,Capra,Bovidae,Artiodactyla,98,Bezoar
+Erethizon dorsatum,Erethizon,Erethizontidae,Rodentia,96,Common Porcupine
+Eudyptes chrysolophus,Eudyptes,Spheniscidae,Sphenisciformes,99,Macaroni Penguin
+Phelsuma klemmeri,Phelsuma,Gekkonidae,,99,Klemmer's Day Gecko
+Speculanas specularis,Speculanas,Anatidae,Anseriformes,99,Bronze-winged Duck
+Agapornis roseicollis,Agapornis,Psittacidae,Psittaciformes,98,Peach-faced Lovebird
+Meleagris gallopavo,Meleagris,Phasianidae,Galliformes,99,American turkey
+Chloephaga picta,Chloephaga,Anatidae,Anseriformes,99,Magellan Goose
+Pudu puda,Pudu,Cervidae,Artiodactyla,99,Chilean Pudu
+Cervus albirostris,Przewalskium,Cervidae,Artiodactyla,98,French cerf à museau blanc German Weißlippenhirsch Spanish Ciervo hociblanco Other common names Thoıold s Deer
+Parabuteo unicinctus,Parabuteo,Accipitridae,Accipitriformes,99,Bay-winged Hawk
+Ptilinopus pulchellus,Ptilinopus,Columbidae,Columbiformes,99,Beautiful Fruit Dove
+Tauraco leucotis,Tauraco,Musophagidae,Musophagiformes,99,White-cheeked Turaco
+Litocranius walleri,Litocranius,Bovidae,Artiodactyla,99,Gerenuk
+Anas acuta,Anas,Anatidae,Anseriformes,99,Common Pintail
+Lynx canadensis,Lynx,Felidae,Carnivora,99,Alaskan Lynx
+Elaphurus davidianus,Elaphurus,Cervidae,Artiodactyla,99,Elaphure
+Redunca fulvorufula,Redunca,Bovidae,Artiodactyla,99,Mountain Reedbuck
+Spinus cucullatus,Spinus,Fringillidae,Passeriformes,99,Red Siskin
+Lynx rufus,Lynx,Felidae,Carnivora,99,Bay Lynx
+Eudyptes chrysocome,Eudyptes,Spheniscidae,Sphenisciformes,99,Rockhopper Penguin / Southern Rockhopper Penguin
+Phoenicopterus roseus,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99,European Flamingo
+Ursus maritimus,Ursus,Ursidae,Carnivora,98,
+Platalea ajaja,Platalea,Threskiornithidae,Pelecaniformes,99,
+Heloderma suspectum,Heloderma,Helodermatidae,,99,Banded Gila Monster [cinctum]
+Cavia porcellus,Cavia,Caviidae,Rodentia,99,Cavy
+Anser indicus,Anser,Anatidae,Anseriformes,99,Bar-Headed Goose
+Spheniscus demersus,Spheniscus,Spheniscidae,Sphenisciformes,99,AFPE
+Sus scrofa,Sus,Suidae,Artiodactyla,99,Boar
+Somateria mollissima,Somateria,Anatidae,Anseriformes,99,American Eider
+Equus hemionus,Equus,Equidae,Perissodactyla,99,Asian wild ass
+Macaca mulatta,Macaca,Cercopithecidae,Primates,99,Macaco Rhesus
+Rusa timorensis,Rusa,Cervidae,Artiodactyla,99,Javan Deer
+Dama dama,Dama,Cervidae,Artiodactyla,99,Common Fallow Deer
+Colobus guereza,Colobus,Cercopithecidae,Primates,99,Black-and-white Colobus
+Prionailurus bengalensis,Prionailurus,Felidae,Carnivora,99,Common Leopard Cat
+Eclectus roratus,Eclectus,Psittacidae,Psittaciformes,99,Eclectus Parrot
+Helogale parvula,Helogale,Herpestidae,Carnivora,99,Common Dwarf Mongoose
+Chilabothrus subflavus,Chilabothrus,Boidae,,99,Jamaican (Yellow) Boa
+Macaca fuscata,Macaca,Cercopithecidae,Primates,99,Japanese Macaque
+Hypogeomys antimena,Hypogeomys,Nesomyidae,Rodentia,99,Giant Jumping Rat
+Leucosarcia melanoleuca,Leucosarcia,Columbidae,Columbiformes,99,Wonga Pigeon
+Tragopan caboti,Tragopan,Phasianidae,Galliformes,99,Cabot's Tragopan
+Tupaia glis,Tupaia,Tupaiidae,Scandentia,99,Common Scandentian
+Sauromalus ater,Sauromalus,Iguanidae,,99,Common Chuckwalla
+Pavo cristatus,Pavo,Phasianidae,Galliformes,99,Asiatic peafowl
+Strix nebulosa,Strix,Strigidae,Strigiformes,99,Great Gray Owl
+Threskiornis aethiopicus,Threskiornis,Threskiornithidae,Pelecaniformes,99,ASIB
+Leptodactylus fallax,Leptodactylus,Leptodactylidae,Anura,99,Crapaud
+Polytelis swainsonii,Polytelis,Psittacidae,Psittaciformes,99,Barraband Parakeet
+Notomys alexis,Notomys,Muridae,Rodentia,99,Spinefex Hopping Mouse
+Tragelaphus angasii,Tragelaphus,Bovidae,Artiodactyla,98,Nyala
+Leopardus pardalis,Leopardus,Felidae,Carnivora,99,Jaguarete'i
+Lama guanicoe,Lama,Camelidae,Artiodactyla,98,Guanaco
+Lagonosticta senegala,Lagonosticta,Estrildidae,Passeriformes,99,RBFI
+Monodelphis domestica,Monodelphis,Didelphidae,Didelphimorphia,99,Brazilian Bare-tailed Opossum
+Dendrobates auratus,Dendrobates,Dendrobatidae,Anura,99,Dart Poison Frog
+Mustela sibirica,Mustela,Mustelidae,Carnivora,99,Siberian Mink
+Cebus capucinus,Cebus,Cebidae,Primates,99,Colombian White-faced Capuchin
+Hypanus americanus,Hypanus,Dasyatidae,Myliobatiformes,99,
+Dendrocygna eytoni,Dendrocygna,Anatidae,Anseriformes,99,Grass Whistling Duck
+Rucervus duvaucelii,Rucervus,Cervidae,Artiodactyla,99,Barasingha
+Neochmia ruficauda,Neochmia,Estrildidae,Passeriformes,99,Star Finch
+Euphonia violacea,Euphonia,Fringillidae,Passeriformes,99,Violaceous Euphonia
+Dendrocygna arborea,Dendrocygna,Anatidae,Anseriformes,99,Black-billed Wood-duck
+Cervus nippon,Cervus,Cervidae,Artiodactyla,99,Japanese Deer
+Anas bahamensis,Anas,Anatidae,Anseriformes,99,Bahama Pintail
+Aptenodytes patagonicus,Aptenodytes,Spheniscidae,Sphenisciformes,99,King Penguin
+Eudyptula minor,Eudyptula,Spheniscidae,Sphenisciformes,99,Blue Penguin
+Nasua nasua,Nasua,Procyonidae,Carnivora,99,Brown-nosed Coati
+Damaliscus pygargus,Damaliscus,Bovidae,Artiodactyla,99,Blesbok/Bontebok
+Cyanoliseus patagonus,Cyanoliseus,Psittacidae,Psittaciformes,99,Burrowing Parakeet
+Colobus angolensis,Colobus,Cercopithecidae,Primates,99,Angola Colobus
+Tauraco erythrolophus,Tauraco,Musophagidae,Musophagiformes,99,RCTU
+Tockus erythrorhynchus,Tockus,Bucerotidae,Bucerotiformes,99,NRBH
+Pongo pygmaeus,Pongo,Hominidae,Primates,99,Bornean Orangutan
+Syrmaticus reevesii,Syrmaticus,Phasianidae,Galliformes,99,Reeves' pheasant
+Polyplectron napoleonis,Polyplectron,Phasianidae,Galliformes,99,Napoleon's Peacock-pheasant
+Larosterna inca,Larosterna,Laridae,Charadriiformes,99,Inca Tern
+Lathamus discolor,Lathamus,Psittacidae,Psittaciformes,98,Swift Parrot
+Equus quagga,Equus,Equidae,Perissodactyla,98,Burchell's Zebra
+Eulemur macaco,Eulemur,Lemuridae,Primates,99,Black Lemur
+Cardinalis cardinalis,Cardinalis,Cardinalidae,Passeriformes,99,Cardinal
+Mephitis mephitis,Mephitis,Mephitidae,Carnivora,99,Alaska Sable
+Polyplectron bicalcaratum,Polyplectron,Phasianidae,Galliformes,99,Burmese Peacock-pheasant
+Mergellus albellus,Mergellus,Anatidae,Anseriformes,99,
+Eulemur coronatus,Eulemur,Lemuridae,Primates,99,Crowned Lemur
+Osteolaemus tetraspis,Osteolaemus,Crocodylidae,,99,African Dwarf Crocodile
+Tremarctos ornatus,Tremarctos,Ursidae,Carnivora,99,Andean Bear
+Streptopelia turtur,Streptopelia,Columbidae,Columbiformes,99,Eurasian Turtle Dove
+Puma concolor,Puma,Felidae,Carnivora,99,American Lion
+Eulemur fulvus,Eulemur,Lemuridae,Primates,99,Brown Lemur
+Capra falconeri,Capra,Bovidae,Artiodactyla,99,Astor Markhor
+Desmodus rotundus,Desmodus,Phyllostomidae,Chiroptera,99,Common Vampire Bat
+Aythya affinis,Aythya,Anatidae,Anseriformes,99,Lesser Scaup
+Ara ararauna,Ara,Psittacidae,Psittaciformes,99,Blue-And-Yellow Macaw
+Merops nubicus,Merops,Meropidae,Coraciiformes,99,NCBE
+Tapirus indicus,Acrocodia,Tapiridae,Perissodactyla,98,Asian Tapir
+Eulemur albifrons,Eulemur,Lemuridae,Primates,99,Lêmure marrom de testa branca
+Balearica pavonina,Balearica,Gruidae,Gruiformes,99,BCCR
+Mico melanurus,Mico,Callitrichidae,Primates,99,Black-tailed Marmoset
+Saguinus geoffroyi,Saguinus,Callitrichidae,Primates,99,Geoffroy s Tamarin
+Netta peposaca,Netta,Anatidae,Anseriformes,99,
+Macropus giganteus,Macropus,Macropodidae,Diprotodontia,99,Eastern Gray Kangaroo
+Lophura diardi,Lophura,Phasianidae,Galliformes,99,Diard's Fireback
+Dendrocygna viduata,Dendrocygna,Anatidae,Anseriformes,99,
+Leptoptilos crumenifer,Leptoptilos,Ciconiidae,Ciconiiformes,98,Marabou Stork
+Bos gaurus,Bos,Bovidae,Artiodactyla,98,Gaur
+Phelsuma grandis,Phelsuma,Gekkonidae,,99,Giant Madagascar Day Gecko
+Ramphocelus bresilius,Ramphocelus,Thraupidae,Passeriformes,96,Brazilian Tanager
+Microcebus murinus,Microcebus,Cheirogaleidae,Primates,99,Gray Mouse Lemur
+Cyclura cornuta,Cyclura,Iguanidae,,99,Hispaniolan Rhinoceros Iguana
+Cavia aperea,Cavia,Caviidae,Rodentia,99,Brazilian Cavy
+Lophotibis cristata,Lophotibis,Threskiornithidae,Pelecaniformes,99,Crested Wood Ibis
+Tadorna ferruginea,Tadorna,Anatidae,Anseriformes,99,
+Ploceus cucullatus,Ploceus,Ploceidae,Passeriformes,99,Black-headed Weaver
+Lorius lory,Lorius,Psittacidae,Psittaciformes,99,Black-capped Lory
+Lophonetta specularioides,Lophonetta,Anatidae,Anseriformes,99,Crested Duck
+Hylobates lar,Hylobates,Hylobatidae,Primates,99,Central Lar Gibbon (entelloides)
+Petrosaurus thalassinus,Petrosaurus,Phrynosomatidae,,99,Baja Blue Rock Lizard
+Rhea pennata,Rhea,Rheidae,Rheiformes,99,Darwin's Rhea
+Epicrates cenchria,Epicrates,Boidae,,99,Brazilian Rainbow Boa
+Anas georgica,Anas,Anatidae,Anseriformes,99,Georgian teal
+Psittacula krameri,Psittacula,Psittacidae,Psittaciformes,99,Indian Ringneck
+Athene cunicularia,Athene,Strigidae,Strigiformes,99,Burrowing Owl
+Hydrochoerus hydrochaeris,Hydrochoerus,Caviidae,Rodentia,99,Capybara
+Oxyura vittata,Oxyura,Anatidae,Anseriformes,99,Argentine Blue-bill
+Cuniculus paca,Cuniculus,Cuniculidae,Rodentia,99,
+Addax nasomaculatus,Addax,Bovidae,Artiodactyla,99,Adaxe
+Canis aureus,Canis,Canidae,Carnivora,99,Asian Jackal
+Tamandua tetradactyla,Tamandua,Myrmecophagidae,Pilosa,99,Collared Anteater
+Tragelaphus imberbis,Tragelaphus,Bovidae,Artiodactyla,99,Lesser Kudu
+Oena capensis,Oena,Columbidae,Columbiformes,99,NADO
+Chauna torquata,Chauna,Anhimidae,Anseriformes,99,Crested Screamer
+Lampropeltis abnorma,Lampropeltis,Colubridae,,99,Central American Milksnake
+Ambystoma mexicanum,Ambystoma,Ambystomatidae,Caudata,99,Axolote
+Neochen jubata,Neochen,Anatidae,Anseriformes,99,Orinoco Goose
+Varecia variegata,Varecia,Lemuridae,Primates,99,Black and White Ruffed Lemur
+Psephotus haematonotus,Psephotus,Psittacidae,Psittaciformes,99,Grass Parrot
+Grus vipio,Grus,Gruidae,Gruiformes,99,Japanese white-naped crane
+Aix galericulata,Aix,Anatidae,Anseriformes,99,
+Polihierax semitorquatus,Polihierax,Falconidae,Falconiformes,99,African Pygmy Falcon
+Callipepla californica,Callipepla,Odontophoridae,Galliformes,99,California Quail
+Giraffa camelopardalis,Giraffa,Giraffidae,Artiodactyla,99,Giraffa
+Clemmys guttata,Clemmys,Emydidae,,99,Spotted Turtle
+Eunectes murinus,Eunectes,Boidae,,99,Anaconda
+Nettapus auritus,Nettapus,Anatidae,Anseriformes,99,APGO
+Geronticus eremita,Geronticus,Threskiornithidae,Pelecaniformes,99,Bald Ibis
+Aythya americana,Aythya,Anatidae,Anseriformes,99,
+Gonyosoma oxycephalum,Gonyosoma,Colubridae,,99,Arboreal Rat Snake
+Melursus ursinus,Melursus,Ursidae,Carnivora,99,Bear-Sloth
+Cygnus atratus,Cygnus,Anatidae,Anseriformes,99,Black Swan
+Ateles geoffroyi,Ateles,Atelidae,Primates,99,Black-browed Spider Monkey (frontatus)
+Mus musculus,Mus,Muridae,Rodentia,99,Eastern House Mouse
+Pavo muticus,Pavo,Phasianidae,Galliformes,99,Green Peacock
+Burhinus oedicnemus,Burhinus,Burhinidae,Charadriiformes,99,
+Philantomba monticola,Philantomba,Bovidae,Artiodactyla,99,Blue Duiker
+Connochaetes taurinus,Connochaetes,Bovidae,Artiodactyla,99,Blouwildebees
+Colius striatus,Colius,Coliidae,Coliiformes,99,Bar-breasted Mousebird
+Trioceros jacksonii,Trioceros,Chamaeleonidae,,99,Jackson's Chameleon
+Sarcophilus harrisii,Sarcophilus,Dasyuridae,Dasyuromorphia,99,Bear Devil
+Callithrix penicillata,Callithrix,Callitrichidae,Primates,99,Black-penciled Marmoset
+Rousettus aegyptiacus,Rousettus,Pteropodidae,Chiroptera,99,Egyptian Fruit Bat
+Gyps fulvus,Gyps,Accipitridae,Accipitriformes,99,EUGR
+Tadorna tadorna,Tadorna,Anatidae,Anseriformes,99,COSH
+Semnopithecus entellus,Semnopithecus,Cercopithecidae,Primates,99,Bengal Gray Langur
+Pteropus vampyrus,Pteropus,Pteropodidae,Chiroptera,99,Andersen's Flying Fox
+Coturnix chinensis,Synoicus,Phasianidae,Galliformes,98,Blue-breasted Quail
+Bucephala clangula,Bucephala,Anatidae,Anseriformes,99,Butterball
+Anas melleri,Anas,Anatidae,Anseriformes,99,Meller's Duck
+Stigmochelys pardalis,Stigmochelys,Testudinidae,,99,Eastern Leopard Tortoise
+Madoqua kirkii,Madoqua,Bovidae,Artiodactyla,99,Kirk's Dik-dik
+Arvicola amphibius,Arvicola,Cricetidae,Rodentia,99,Eurasian Water Vole
+Saguinus labiatus,Saguinus,Callitrichidae,Primates,99,Geoffroy's Red-bellied Tamarin
+Macaca nemestrina,Macaca,Cercopithecidae,Primates,99,Pig-tailed Macaque
+Aix sponsa,Aix,Anatidae,Anseriformes,99,American Wood Duck
+Bos grunniens,Bos,Bovidae,Artiodactyla,99,Domestic Yak
+Cervus canadensis,Cervus,Cervidae,Artiodactyla,98,Alashan Wapiti
+Anser rossii,Anser,Anatidae,Anseriformes,99,Horned Wary Ross’ Goose
+Chinchilla lanigera,Chinchilla,Chinchillidae,Rodentia,97,Chilean Chinchilla
+Rattus norvegicus,Rattus,Muridae,Rodentia,99,Brown Rat
+Otus scops,Otus,Strigidae,Strigiformes,99,Common Scops Owl
+Phacochoerus africanus,Phacochoerus,Suidae,Artiodactyla,99,African Boar
+Aythya novaeseelandiae,Aythya,Anatidae,Anseriformes,99,Black Teal
+Vulpes corsac,Vulpes,Canidae,Carnivora,99,Corsac
+Falco biarmicus,Falco,Falconidae,Falconiformes,99,
+Pongo abelii,Pongo,Hominidae,Primates,99,Sumatran Orangutan
+Cygnus buccinator,Cygnus,Anatidae,Anseriformes,99,Trumpeter Swan
+Ploceus castaneiceps,Ploceus,Ploceidae,Passeriformes,99,TGWE
+Pulsatrix perspicillata,Pulsatrix,Strigidae,Strigiformes,99,
+Mandrillus leucophaeus,Mandrillus,Cercopithecidae,Primates,99,Bioko Drill (poensis)
+Rollulus rouloul,Rollulus,Phasianidae,Galliformes,99,Crested Partridge
+Myocastor coypus,Myocastor,Myocastoridae,Rodentia,99,
+Oxyura leucocephala,Oxyura,Anatidae,Anseriformes,99,
+Threskiornis spinicollis,Threskiornis,Threskiornithidae,Pelecaniformes,99,Straw-necked Ibis
+Pitta sordida,Pitta,Pittidae,Passeriformes,99,Hooded Pitta
+Chalcophaps indica,Chalcophaps,Columbidae,Columbiformes,99,Asian Emerald Dove
+Oryctolagus cuniculus,Oryctolagus,Leporidae,Lagomorpha,99,Common Rabbit
+Basiliscus plumifrons,Basiliscus,Corytophanidae,,99,Basiisk Verde
+Pteroglossus viridis,Pteroglossus,Ramphastidae,Piciformes,99,Green Aracari
+Liocichla omeiensis,Liocichla,Leiothrichidae,Passeriformes,99,Emei Shan Liocichla
+Kerodon rupestris,Kerodon,Caviidae,Rodentia,99,Moco
+Ursus americanus,Ursus,Ursidae,Carnivora,99,American Black Bear
+Leontopithecus rosalia,Leontopithecus,Callitrichidae,Primates,99,Golden Lion Tamarin
+Cacatua moluccensis,Cacatua,Psittacidae,Psittaciformes,99,Moluccan Cockatoo
+Potamochoerus porcus,Potamochoerus,Suidae,Artiodactyla,99,African Bush Pig
+Vulpes velox,Vulpes,Canidae,Carnivora,99,Swift Fox
+Micromys minutus,Micromys,Muridae,Rodentia,99,Eurasian Harvest Mouse
+Zalophus californianus,Zalophus,Otariidae,Carnivora,99,California Sea Lion
+Lamprotornis iris,Lamprotornis,Sturnidae,Passeriformes,99,EMST
+Agapornis canus,Agapornis,Psittacidae,Psittaciformes,99,Gray-headed Lovebird
+Testudo kleinmanni,Testudo,Testudinidae,,99,Egyptian Tortoise
+Tadorna cana,Tadorna,Anatidae,Anseriformes,99,African Shelduck
+Meriones unguiculatus,Meriones,Muridae,Rodentia,99,Clawed Jird
+Sarkidiornis melanotos,Sarkidiornis,Anatidae,Anseriformes,99,African Comb Duck
+Garrulax leucolophus,Garrulax,Leiothrichidae,Passeriformes,99,White-crested Laughingthrush
+Strix uralensis,Strix,Strigidae,Strigiformes,99,
+Pycnonotus jocosus,Pycnonotus,Pycnonotidae,Passeriformes,99,
+Dendrocygna arcuata,Dendrocygna,Anatidae,Anseriformes,99,Wandering Whistling Duck
+Gazella subgutturosa,Gazella,Bovidae,Artiodactyla,99,Goitered Gazelle
+Trichoglossus forsteni,Trichoglossus,Psittacidae,Psittaciformes,99,Scarlet-breasted Lorikeet
+Cuon alpinus,Cuon,Canidae,Carnivora,99,Asian Wild Dog
+Geopelia cuneata,Geopelia,Columbidae,Columbiformes,99,Diamond Dove
+Goura victoria,Goura,Columbidae,Columbiformes,99,Victoria Crowned Pigeon
+Trachyphonus erythrocephalus,Trachyphonus,Lybiidae,Piciformes,99,RAYB
+Copsychus saularis,Copsychus,Muscicapidae,Passeriformes,99,Oriental Magpie Robin
+Lyrurus tetrix,Lyrurus,Phasianidae,Galliformes,99,Black Grouse
+Rhinoceros unicornis,Rhinoceros,Rhinocerotidae,Perissodactyla,99,Greater Indian one-horned rhinoceros
+Eudocimus albus,Eudocimus,Threskiornithidae,Pelecaniformes,99,American White Ibis
+Lutra lutra,Lutra,Mustelidae,Carnivora,99,Common Otter
+Anser canagicus,Anser,Anatidae,Anseriformes,99,Emperor Goose
+Equus asinus,Equus,Equidae,Perissodactyla,99,African Wild Ass
+Saiga tatarica,Saiga,Bovidae,Artiodactyla,99,Mongolian Saiga
+Alcelaphus buselaphus,Alcelaphus,Bovidae,Artiodactyla,99,Bubal Hartebeest
+Peltophryne lemur,Peltophryne,Bufonidae,Anura,99,Puerto Rican Crested Toad
+Thamnophis sirtalis,Thamnophis,Colubridae,,99,Common Garter Snake
+Eurypyga helias,Eurypyga,Eurypygidae,Eurypygiformes,99,Sunbittern
+Zenaida graysoni,Zenaida,Columbidae,Columbiformes,99,Socorro Dove
+Shinisaurus crocodilurus,Shinisaurus,Shinisauridae,,99,Chinese Crocodile Lizard
+Diceros bicornis,Diceros,Rhinocerotidae,Perissodactyla,99,African black rhinoceros
+Dendrocygna autumnalis,Dendrocygna,Anatidae,Anseriformes,99,Black-bellied Whistling Duck
+Alouatta caraya,Alouatta,Atelidae,Primates,99,Black Howler
+Sceloporus serrifer,Sceloporus,Phrynosomatidae,,99,Blue Spiny Lizard
+Athene noctua,Athene,Strigidae,Strigiformes,99,Cucumiau
+Columba livia,Columba,Columbidae,Columbiformes,99,Common Pigeon
+Eunectes notaeus,Eunectes,Boidae,,99,
+Ammotragus lervia,Ammotragus,Bovidae,Artiodactyla,99,African Wild Sheep
+Oxyura jamaicensis,Oxyura,Anatidae,Anseriformes,99,
+Ptilinopus regina,Ptilinopus,Columbidae,Columbiformes,99,Rose-crowned Fruit Dove
+Anthropoides paradiseus,Anthropoides,Gruidae,Gruiformes,99,Blue Crane
+Balearica regulorum,Balearica,Gruidae,Gruiformes,99,African Crowned Crane
+Ptilinopus melanospilus,Ptilinopus,Columbidae,Columbiformes,99,Black-naped Fruit Dove
+Leporillus conditor,Leporillus,Muridae,Rodentia,98,Greater Stick-nest Rat
+Python molurus,Python,Pythonidae,,99,Asian Rock Python
+Crotalus durissus,Crotalus,Viperidae,,97,Cascabel Rattlesnake
+Equus caballus,Equus,Equidae,Perissodactyla,99,Alberta Mountain Horse
+Burhinus capensis,Burhinus,Burhinidae,Charadriiformes,99,Cape Thick-knee
+Stictonetta naevosa,Stictonetta,Anatidae,Anseriformes,99,Freckled Duck
+Rhea americana,Rhea,Rheidae,Rheiformes,99,Common Rhea
+Varanus komodoensis,Varanus,Varanidae,,99,Komodo Dragon
+Caloenas nicobarica,Caloenas,Columbidae,Columbiformes,99,Nicobar Dove
+Panurus biarmicus,Panurus,Panuridae,Passeriformes,99,Bearded Parrotbill
+Eublepharis macularius,Eublepharis,Eublepharidae,,99,Common Leopard Gecko
+Ara rubrogenys,Ara,Psittacidae,Psittaciformes,99,Red-fronted Macaw
+Mesocricetus auratus,Mesocricetus,Cricetidae,Rodentia,99,Golden Hamster
+Carollia perspicillata,Carollia,Phyllostomidae,Chiroptera,99,Common Short-tailed Bat
+Pantherophis obsoletus,Pantherophis,Colubridae,,99,Black Rat Snake
+Rusa unicolor,Rusa,Cervidae,Artiodactyla,99,Indian Sambar
+Psitteuteles goldiei,Psitteuteles,Psittacidae,Psittaciformes,99,Goldie's Lorikeet
+Dacelo novaeguineae,Dacelo,Alcedinidae,Coraciiformes,99,Laughing Jackass
+Hystrix indica,Hystrix,Hystricidae,Rodentia,99,Indian Crested Porcupine
+Acomys cahirinus,Acomys,Muridae,Rodentia,97,Cairo Spiny Mouse
+Serinus canaria,Serinus,Fringillidae,Passeriformes,99,Atlantic Canary
+Oryx gazella,Oryx,Bovidae,Artiodactyla,99,Gemsbok
+Capra hircus,Capra,Bovidae,Artiodactyla,99,Billy Goat
+Syrmaticus ellioti,Syrmaticus,Phasianidae,Galliformes,99,Chinese Barred-backed Pheasant
+Lygodactylus williamsi,Lygodactylus,Gekkonidae,,99,Electric blue gecko
+Camelus bactrianus,Camelus,Camelidae,Artiodactyla,99,Asiatic Camel
+Hystrix cristata,Hystrix,Hystricidae,Rodentia,99,African Crested Porcupine
+Tamiops swinhoei,Tamiops,Sciuridae,Rodentia,99,Swinhoe's Striped Squirrel
+Mergus merganser,Mergus,Anatidae,Anseriformes,99,Big fish-duck
+Alligator mississippiensis,Alligator,Alligatoridae,,99,Alligator
+Sciurus vulgaris,Sciurus,Sciuridae,Rodentia,99,Ardilla roja
+Leiothrix lutea,Leiothrix,Leiothrichidae,Passeriformes,99,Pekin Robin
+Tauraco persa,Tauraco,Musophagidae,Musophagiformes,99,GUTU
+Pygoscelis antarcticus,Pygoscelis,Spheniscidae,Sphenisciformes,99,Chinstrap Penguin
+Momotus momota,Momotus,Momotidae,Coraciiformes,99,Amazonian Blue-crowned Motmot
+Petrogale penicillata,Petrogale,Macropodidae,Diprotodontia,99,Brush-tailed Rock Wallaby
+Ara chloropterus,Ara,Psittacidae,Psittaciformes,99,Red-and-green Macaw
+Callimico goeldii,Callimico,Callitrichidae,Primates,99,Callimico
+Pelecanus crispus,Pelecanus,Pelecanidae,Pelecaniformes,99,Dalmatian Pelican
+Mareca americana,Mareca,Anatidae,Anseriformes,99,American Widgeon
+Mareca falcata,Mareca,Anatidae,Anseriformes,99,Falcated Duck
+Plegadis ridgwayi,Plegadis,Threskiornithidae,Pelecaniformes,99,Puna Ibis
+Petaurus breviceps,Petaurus,Petauridae,Diprotodontia,99,Coastal Sugar Glider
+Aythya nyroca,Aythya,Anatidae,Anseriformes,99,Common White-eye
+Panthera tigris,Panthera,Felidae,Carnivora,99,Bagh
+Pelecanus onocrotalus,Pelecanus,Pelecanidae,Pelecaniformes,99,Eastern White Pelican
+Potamotrygon leopoldi,Potamotrygon,Potamotrygonidae,Myliobatiformes,99,White-blotched river stingray
+Scissirostrum dubium,Scissirostrum,Sturnidae,Passeriformes,99,Finch-billed Myna
+Neofelis nebulosa,Neofelis,Felidae,Carnivora,99,Clouded Leopard
+Urocolius macrourus,Urocolius,Coliidae,Coliiformes,99,BNMO
+Castor canadensis,Castor,Castoridae,Rodentia,99,Admiralty Beaver
+Ciconia abdimii,Ciconia,Ciconiidae,Ciconiiformes,99,ABST
+Osphranter rufus,Macropus,Macropodidae,Diprotodontia,98,Blue Flier
+Felis chaus,Felis,Felidae,Carnivora,98,Chaus
+Spheniscus humboldti,Spheniscus,Spheniscidae,Sphenisciformes,99,Humboldt Penguin
+Nomascus leucogenys,Nomascus,Hylobatidae,Primates,99,Nordlicher Wei 3 wangengibbon
+Ovibos moschatus,Ovibos,Bovidae,Artiodactyla,99,Boeuf-musqué
+Spatula querquedula,Spatula,Anatidae,Anseriformes,99,Garganey
+Mico argentatus,Mico,Callitrichidae,Primates,99,Silvery Marmoset
+Amazona aestiva,Amazona,Psittacidae,Psittaciformes,99,Blue-fronted Amazon
+Lophodytes cucullatus,Lophodytes,Anatidae,Anseriformes,99,Hooded Merganser
+Phoeniconaias minor,Phoeniconaias,Phoenicopteridae,Phoenicopteriformes,99,Lesser Flamingo
+Ceratotherium simum,Ceratotherium,Rhinocerotidae,Perissodactyla,99,Burchell's Rhinoceros
+Gallus gallus,Gallus,Phasianidae,Galliformes,99,Bonmurag
+Trachypithecus auratus,Trachypithecus,Cercopithecidae,Primates,99,East Javan Langur
+Centrochelys sulcata,Centrochelys,Testudinidae,,98,African Spurred Tortoise
+Saguinus bicolor,Saguinus,Callitrichidae,Primates,99,Brazilian Bare-faced Tamarin
+Spatula hottentota,Spatula,Anatidae,Anseriformes,99,African Teal
+Saimiri sciureus,Saimiri,Cebidae,Primates,99,Collins's Squirrel Monkey
+Platalea alba,Platalea,Threskiornithidae,Pelecaniformes,99,AFSP
+Catagonus wagneri,Catagonus,Tayassuidae,Artiodactyla,98,Chaco Peccary
+Spilopelia senegalensis,Spilopelia,Columbidae,Columbiformes,99,LADO
+Lophura swinhoii,Lophura,Phasianidae,Galliformes,99,Swinhoe's Pheasant
+Spatula versicolor,Spatula,Anatidae,Anseriformes,99,Silver Teal
+Cairina moschata,Cairina,Anatidae,Anseriformes,98,Barbary Duck
+Anthropoides virgo,Anthropoides,Gruidae,Gruiformes,99,Demoiselle Crane
+Leucopsar rothschildi,Leucopsar,Sturnidae,Passeriformes,99,Bali Myna
+Macaca sylvanus,Macaca,Cercopithecidae,Primates,99,Barbary Ape
+Podocnemis unifilis,Podocnemis,Podocnemididae,,99,
+Tapirus terrestris,Tapirus,Tapiridae,Perissodactyla,99,Brazilian Tapir
+Anser cygnoid,Anser,Anatidae,Anseriformes,98,Swan Goose
+Spatula discors,Spatula,Anatidae,Anseriformes,99,Blue-winged Teal
+Apteryx mantelli,Apteryx,Apterygidae,Apterygiformes,99,Brown kiwi
+Axis porcinus,Axis,Cervidae,Artiodactyla,99,Common Hog Deer
+Pteronura brasiliensis,Pteronura,Mustelidae,Carnivora,97,Giant Otter
+Chilabothrus angulifer,Chilabothrus,Boidae,,99,Cuban Boa
+Cacatua leadbeateri,Cacatua,Psittacidae,Psittaciformes,99,Leadbeater's Cockatoo
+Nesoenas mayeri,Nesoenas,Columbidae,Columbiformes,99,PIPI
+Lophophorus impejanus,Lophophorus,Phasianidae,Galliformes,99,Himalayan Monal
+Vanellus spinosus,Vanellus,Charadriidae,Charadriiformes,99,African Spur-winged Lapwing
+Ctenodactylus gundi,Ctenodactylus,Ctenodactylidae,Rodentia,99,Atlas Gundi
+Chamaeleo calyptratus,Chamaeleo,Chamaeleonidae,,99,Camaleão de cabeça cônica
+Capra ibex,Capra,Bovidae,Artiodactyla,99,Alpine Ibex
+Prionailurus viverrinus,Prionailurus,Felidae,Carnivora,99,Fishing Cat
+Lynx lynx,Lynx,Felidae,Carnivora,99,Eurasian Lynx
+Pygathrix nemaeus,Pygathrix,Cercopithecidae,Primates,99,Dove Langur
+Sarcoramphus papa,Sarcoramphus,Cathartidae,Accipitriformes,99,King Vulture
+Aonyx cinereus,Amblonyx,Mustelidae,Carnivora,98,Asian Small-clawed Otter
+Caracal caracal,Caracal,Felidae,Carnivora,99,African Caracal
+Musophaga violacea,Musophaga,Musophagidae,Musophagiformes,99,Violet Turaco
+Eos bornea,Eos,Psittacidae,Psittaciformes,99,Red Lory
+Pogona vitticeps,Pogona,Agamidae,,99,Central Bearded Dragon
+Tiliqua scincoides,Tiliqua,Scincidae,,99,Common Blue-tongued Skink
+Heloderma horridum,Heloderma,Helodermatidae,,99,Beaded Lizard
+Pithecia pithecia,Pithecia,Pitheciidae,Primates,99,Guiana White-faced Saki
+Connochaetes gnou,Connochaetes,Bovidae,Artiodactyla,99,Black Wildebeest
+Irena puella,Irena,Irenidae,Passeriformes,99,Asian Fairy Bluebird
+Capra sibirica,Capra,Bovidae,Artiodactyla,99,Asiatic Ibex
+Lophura nycthemera,Lophura,Phasianidae,Galliformes,99,Silver Pheasant
+Columba guinea,Columba,Columbidae,Columbiformes,99,African Rock Pigeon
+Panthera onca,Panthera,Felidae,Carnivora,99,American Tiger
+Gorilla gorilla,Gorilla,Hominidae,Primates,99,Lowland Gorilla
+Bettongia penicillata,Bettongia,Potoroidae,Diprotodontia,99,Brush-tailed Bettong
+Phoenicopterus chilensis,Phoenicopterus,Phoenicopteridae,Phoenicopteriformes,99,Chilean Flamingo
+Nanger dama,Nanger,Bovidae,Artiodactyla,99,Addra Gazelle
+Papio papio,Papio,Cercopithecidae,Primates,99,Guinea Baboon
+Oryx dammah,Oryx,Bovidae,Artiodactyla,99,Algazel
+Eulemur rubriventer,Eulemur,Lemuridae,Primates,99,Red-bellied Lemur
+Lophura edwardsi,Lophura,Phasianidae,Galliformes,99,Edward's Pheasant
+Myrmecophaga tridactyla,Myrmecophaga,Myrmecophagidae,Pilosa,99,Ant Bear
+Psophia crepitans,Psophia,Psophiidae,Gruiformes,99,Gray-winged Trumpeter
+Anodorhynchus hyacinthinus,Anodorhynchus,Psittacidae,Psittaciformes,99,Hyacinth Macaw
+Choeropsis liberiensis,Hexaprotodon,Hippopotamidae,Artiodactyla,98,Heslop's Pygmy Hippopotamus (heslopi)
+Eudorcas thomsonii,Eudorcas,Bovidae,Artiodactyla,99,Eastern Thomson's Gazelle
+Urocissa erythrorhyncha,Urocissa,Corvidae,Passeriformes,96,Blue Magpie
+Pteropus lylei,Pteropus,Pteropodidae,Chiroptera,99,Lyle's Flying Fox
+Marmaronetta angustirostris,Marmaronetta,Anatidae,Anseriformes,99,MATE
+Rattus rattus,Rattus,Muridae,Rodentia,99,Black Rat
+Milvus migrans,Milvus,Accipitridae,Accipitriformes,99,BLKI
+Recurvirostra avosetta,Recurvirostra,Recurvirostridae,Charadriiformes,99,Avocet
+Cercopithecus diana,Cercopithecus,Cercopithecidae,Primates,99,Diana Guenon
+Odocoileus virginianus,Odocoileus,Cervidae,Artiodactyla,99,American Deer
+Margaroperdix madagarensis,Margaroperdix,Phasianidae,Galliformes,99,Madagascan Partridge
+Phasianus colchicus,Phasianus,Phasianidae,Galliformes,99,Common Pheasant
+Eolophus roseicapilla,Eolophus,Psittacidae,Psittaciformes,99,Galah
+Hyaena hyaena,Hyaena,Hyaenidae,Carnivora,99,Hyène rayée
+Nycticebus pygmaeus,Nycticebus,Lorisidae,Primates,99,Lesser Slow Loris
+Phoca vitulina,Phoca,Phocidae,Carnivora,99,Atlantic harbor seal
+Dasyurus maculatus,Dasyurus,Dasyuridae,Dasyuromorphia,99,Spotted-tail Quoll
+Arctocephalus pusillus,Arctocephalus,Otariidae,Carnivora,99,Afro-Australian Fur Seal
+Aratinga solstitialis,Aratinga,Psittacidae,Psittaciformes,99,Sun Parakeet
+Chrysolophus amherstiae,Chrysolophus,Phasianidae,Galliformes,99,Diamond Pheasant
+Neophema chrysogaster,Neophema,Psittacidae,Psittaciformes,99,Orange-bellied Parakeet
+Platalea leucorodia,Platalea,Threskiornithidae,Pelecaniformes,99,Eurasian Spoonbill
+Aythya baeri,Aythya,Anatidae,Anseriformes,99,Baer's Pochard
+Branta ruficollis,Branta,Anatidae,Anseriformes,99,
+Eidolon helvum,Eidolon,Pteropodidae,Chiroptera,99,African Straw-colored Fruit Bat
+Ramphiculus jambu,Ptilinopus,Columbidae,Columbiformes,98,Jambu Fruit-dove
+Aotus griseimembra,Aotus,Aotidae,Primates,99,Gray-handed Night Monkey
+Aythya fuligula,Aythya,Anatidae,Anseriformes,99,
+Pachyuromys duprasi,Pachyuromys,Muridae,Rodentia,99,Beer Mat Gerbil
+Antilope cervicapra,Antilope,Bovidae,Artiodactyla,99,Blackbuck
+Pygoscelis papua,Pygoscelis,Spheniscidae,Sphenisciformes,99,Gentoo Penguin
+Todiramphus cinnamominus,Todiramphus,Alcedinidae,Coraciiformes,99,Guam Kingfisher
+Anas capensis,Anas,Anatidae,Anseriformes,99,CATE
+Tayassu pecari,Tayassu,Tayassuidae,Artiodactyla,99,
+Tragelaphus eurycerus,Tragelaphus,Bovidae,Artiodactyla,99,Bongo
+Oreamnos americanus,Oreamnos,Bovidae,Artiodactyla,99,Mountain Goat
+Vanellus miles,Vanellus,Charadriidae,Charadriiformes,99,Australasian Spur-winged Plover
+Copsychus malabaricus,Copsychus,Muscicapidae,Passeriformes,99,Shama Thrush
+Hemiscyllium ocellatum,Hemiscyllium,Hemiscylliidae,Orectolobiformes,99,Blind Shark
+Erpeton tentaculatum,Erpeton,Homalopsidae,,99,Arowana snake
+Vulpes vulpes,Vulpes,Canidae,Carnivora,99,American Cross Fox
+Bitis rhinoceros,Bitis,Viperidae,,99,Rhinoceros Adder
+Rupicapra rupicapra,Rupicapra,Bovidae,Artiodactyla,99,(Pronounce: Sha-mee or Sham-wa)
+Bucephala albeola,Bucephala,Anatidae,Anseriformes,99,Buffel-headed Duck
+Myoprocta pratti,Myoprocta,Dasyproctidae,Rodentia,99,Green Acouchi
+Bos taurus,Bos,Bovidae,Artiodactyla,99,Aurochs
+Gallicolumba luzonica,Gallicolumba,Columbidae,Columbiformes,99,Bleeding Heart Dove
+Testudo hermanni,Testudo,Testudinidae,,99,Eastern Hermann’s Tortoise [boettgeri]
+Meleagris ocellata,Meleagris,Phasianidae,Galliformes,99,Ocellated Turkey
+Trachypithecus francoisi,Trachypithecus,Cercopithecidae,Primates,99,Black Leaf Monkey
+Bostrychia hagedash,Bostrychia,Threskiornithidae,Pelecaniformes,99,Flying Vuvuzela
+Tragelaphus oryx,Taurotragus,Bovidae,Artiodactyla,98,Common Eland
+Bos javanicus,Bos,Bovidae,Artiodactyla,99,Bali Cattle
+Kobus megaceros,Kobus,Bovidae,Artiodactyla,99,Gray's Waterbuck
+Physignathus cocincinus,Physignathus,Agamidae,,99,Asian water dragon
+Octodon degus,Octodon,Octodontidae,Rodentia,99,Common Degu
+Cricetomys gambianus,Cricetomys,Nesomyidae,Rodentia,99,African Giant Pouched Rat
+Dendrocygna javanica,Dendrocygna,Anatidae,Anseriformes,99,Indian whistling duck
+Notamacropus eugenii,Macropus,Macropodidae,Diprotodontia,98,Dama Wallaby
+Gracula religiosa,Gracula,Sturnidae,Passeriformes,99,Common Hill Myna
+Morelia viridis,Morelia,Pythonidae,,99,Green Python
+Rusa alfredi,Rusa,Cervidae,Artiodactyla,99,Philippine Spotted Deer
+Ovis canadensis,Ovis,Bovidae,Artiodactyla,99,American Bighorn
+Capromys pilorides,Capromys,Capromyidae,Rodentia,99,Cuban Ground Hutia
+Trichosurus vulpecula,Trichosurus,Phalangeridae,Diprotodontia,99,Australian Brushtail Possum
+Nyctereutes procyonoides,Nyctereutes,Canidae,Carnivora,99,Asian Raccoon

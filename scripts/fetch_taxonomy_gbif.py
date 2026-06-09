@@ -1,6 +1,6 @@
 """
 Query GBIF taxonomy for all species in zims_all.csv.
-Writes results/zims_taxonomy.csv with genus, family, order columns.
+Writes results/zims_taxonomy.csv with genus, family, order, common_name columns.
 Run once; the combined viewer build script reads this file.
 """
 import requests, pandas as pd
@@ -18,22 +18,38 @@ def fetch(species):
         r = requests.get("https://api.gbif.org/v1/species/match",
                          params={"name": species, "verbose": False}, timeout=10)
         d = r.json()
-        return species, {"genus": d.get("genus",""), "family": d.get("family",""),
-                         "order": d.get("order",""), "confidence": d.get("confidence",0)}
-    except:
-        return species, {"genus":"","family":"","order":"","confidence":0}
+        key = d.get("usageKey", "")
+        common = ""
+        if key:
+            vr = requests.get(f"https://api.gbif.org/v1/species/{key}/vernacularNames",
+                              params={"limit": 20}, timeout=10)
+            names = [x["vernacularName"] for x in vr.json().get("results", [])
+                     if x.get("language", "") == "eng"]
+            if names:
+                common = names[0]
+        return species, {
+            "genus": d.get("genus", ""),
+            "family": d.get("family", ""),
+            "order": d.get("order", ""),
+            "confidence": d.get("confidence", 0),
+            "common_name": common,
+        }
+    except Exception:
+        return species, {"genus": "", "family": "", "order": "",
+                         "confidence": 0, "common_name": ""}
 
 results = {}
-with ThreadPoolExecutor(max_workers=12) as ex:
+with ThreadPoolExecutor(max_workers=16) as ex:
     futures = {ex.submit(fetch, sp): sp for sp in species_list}
     for i, fut in enumerate(as_completed(futures)):
         sp, tax = fut.result()
         results[sp] = tax
-        if (i+1) % 100 == 0:
+        if (i + 1) % 100 == 0:
             print(f"  {i+1}/{len(species_list)}")
 
 rows = [{"binSpecies": sp, **tax} for sp, tax in results.items()]
-pd.DataFrame(rows).to_csv(OUT_CSV, index=False)
-print(f"Saved {OUT_CSV}  ({len(rows)} species, "
-      f"{pd.DataFrame(rows)['family'].nunique()} families, "
-      f"{pd.DataFrame(rows)['order'].nunique()} orders)")
+out = pd.DataFrame(rows)
+out.to_csv(OUT_CSV, index=False)
+n_with = (out["common_name"] != "").sum()
+print(f"Saved {OUT_CSV}  ({len(rows)} species, {n_with} with English common names, "
+      f"{out['family'].nunique()} families, {out['order'].nunique()} orders)")
