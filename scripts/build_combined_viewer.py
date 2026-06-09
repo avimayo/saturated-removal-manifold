@@ -433,14 +433,9 @@ input[type=range]{{width:100%;accent-color:#60a5fa;margin:2px 0;}}
       🗺 Manifold <span class="arrow">▶</span>
     </div>
     <div class="sec-body open">
-      <select id="man-sel" onchange="applyManifold()">
-        <option value="all">All elements</option>
-        <option value="surface">Surface only</option>
-        <option value="ridge">Ridge only</option>
-        <option value="omega">ω labels only</option>
-        <option value="surf_ridge">Surface + Ridge</option>
-        <option value="none">Hide all</option>
-      </select>
+      <label class="cb-row"><input type="checkbox" id="man-surface" checked onchange="applyManifold()"> Surface</label>
+      <label class="cb-row"><input type="checkbox" id="man-ridge"   checked onchange="applyManifold()"> Ridge</label>
+      <label class="cb-row"><input type="checkbox" id="man-omega"   checked onchange="applyManifold()"> ω labels</label>
     </div>
   </div>
 
@@ -638,16 +633,11 @@ tryAdd();
 
 // ── manifold elements filter ──────────────────────────────────────────────────
 window.applyManifold = function() {{
-  var v = document.getElementById('man-sel').value;
-  var show = {{
-    all:        [true, true, true],
-    surface:    [true, false,false],
-    ridge:      [false,true, false],
-    omega:      [false,false,true],
-    surf_ridge: [true, true, false],
-    none:       [false,false,false],
-  }}[v] || [true,true,true];
-  Plotly.restyle(DIVID, {{visible: show}}, [0, 1, 2]);
+  Plotly.restyle(DIVID, {{visible: [
+    document.getElementById('man-surface').checked,
+    document.getElementById('man-ridge').checked,
+    document.getElementById('man-omega').checked,
+  ]}}, [0, 1, 2]);
 }};
 
 // ── Naveh species filter ──────────────────────────────────────────────────────
