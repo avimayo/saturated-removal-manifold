@@ -116,13 +116,18 @@ def build_figure(selected_rows, km_cache):
             name=f'{lbl} (fit)', legendgroup=lbl, showlegend=False,
         ), row=2, col=1)
 
-    fig.update_xaxes(title_text='τ = t / L', gridcolor='#eee', zeroline=False)
-    fig.update_yaxes(gridcolor='#eee', zeroline=False, autorange=True)
+    fig.update_xaxes(title_text='τ = t / L', gridcolor='#eee', zeroline=False,
+                     title_font=dict(color='#333'), tickfont=dict(color='#333'))
+    fig.update_yaxes(gridcolor='#eee', zeroline=False, autorange=True,
+                     title_font=dict(color='#333'), tickfont=dict(color='#333'))
     fig.add_vline(x=1.0, line=dict(color='#aaa', width=1, dash='dot'),
-                  annotation_text='τ=1', annotation_position='top right')
+                  annotation_text='τ=1', annotation_position='top right',
+                  annotation_font=dict(color='#555'))
     fig.update_layout(
         height=700, plot_bgcolor='#fff', paper_bgcolor='#fff',
-        legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='left', x=0),
+        font=dict(color='#333'),
+        legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='left', x=0,
+                    font=dict(color='#333')),
         margin=dict(l=60, r=20, t=80, b=40),
     )
     return fig
@@ -154,10 +159,15 @@ def build_ks_scatter(df):
                   annotation_text=f'Bonferroni  p=0.05/{len(df)}',
                   annotation_position='top right')
     fig.update_layout(
-        title='KS effect size D vs −log₁₀(p)  [marker size ∝ n_dead]',
-        xaxis_title='KS D', yaxis_title='−log₁₀(p)',
+        title=dict(text='KS effect size D vs −log₁₀(p)  [marker size ∝ n_dead]',
+                   font=dict(color='#333')),
+        xaxis=dict(title='KS D', title_font=dict(color='#333'), tickfont=dict(color='#333'),
+                   gridcolor='#eee', zeroline=False),
+        yaxis=dict(title='−log₁₀(p)', title_font=dict(color='#333'), tickfont=dict(color='#333'),
+                   gridcolor='#eee'),
         height=450, plot_bgcolor='#fff', paper_bgcolor='#fff',
-        legend=dict(orientation='h', yanchor='bottom', y=1.02),
+        font=dict(color='#333'),
+        legend=dict(orientation='h', yanchor='bottom', y=1.02, font=dict(color='#333')),
         margin=dict(l=60, r=20, t=60, b=50),
     )
     return fig
@@ -173,8 +183,12 @@ def build_rms_box(df):
             boxpoints='outliers', jitter=0.3,
         ))
     fig.update_layout(
-        title='RMS by class', yaxis_title='RMS',
+        title=dict(text='RMS by class', font=dict(color='#333')),
+        yaxis=dict(title='RMS', title_font=dict(color='#333'), tickfont=dict(color='#333'),
+                   gridcolor='#eee'),
+        xaxis=dict(tickfont=dict(color='#333')),
         height=380, plot_bgcolor='#fff', paper_bgcolor='#fff',
+        font=dict(color='#333'),
         showlegend=False, margin=dict(l=60, r=20, t=50, b=40),
     )
     return fig
@@ -190,11 +204,16 @@ def build_flag_bar(df):
         vals.append((df['flags']=='ok').sum() if key=='ok'
                     else df['flags'].str.contains(key,na=False).sum())
     fig = go.Figure(go.Bar(x=labels, y=vals, marker_color=colors,
-                           text=vals, textposition='outside'))
+                           text=vals, textposition='outside',
+                           textfont=dict(color='#333')))
     fig.update_layout(
-        title=f'Quality flags  (N={len(df)} curves)', yaxis_title='Count',
+        title=dict(text=f'Quality flags  (N={len(df)} curves)', font=dict(color='#333')),
+        yaxis=dict(title='Count', title_font=dict(color='#333'), tickfont=dict(color='#333'),
+                   gridcolor='#eee', range=[0, max(vals)*1.15]),
+        xaxis=dict(tickfont=dict(color='#333')),
         height=350, plot_bgcolor='#fff', paper_bgcolor='#fff',
-        showlegend=False, yaxis=dict(range=[0, max(vals)*1.15]),
+        font=dict(color='#333'),
+        showlegend=False,
         margin=dict(l=60, r=20, t=50, b=50),
     )
     return fig
