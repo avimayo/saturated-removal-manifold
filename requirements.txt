@@ -4,4 +4,4 @@ scipy
 pandas
 plotly
 pyarrow
-numba
+mpmath
